@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>iPhone Store</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo"></div>
+      <div>
+        <div class="title">iPhone магазин</div>
+        <div class="subtitle" id="hello">Каталог</div>
+      </div>
+    </div>
+    <button class="cartbtn" id="openCart">Корзина <span class="badge" id="cartCount">0</span></button>
+  </header>
+
+  <main class="wrap">
+    <section class="controls">
+      <input id="q" class="input" placeholder="Поиск: 13 Pro, 256, белый..." />
+      <select id="filterModel" class="input">
+        <option value="">Все модели</option>
+      </select>
+      <select id="filterCond" class="input">
+        <option value="">Состояние</option>
+        <option value="A">A</option>
+        <option value="B">B</option>
+        <option value="C">C</option>
+      </select>
+    </section>
+
+    <section id="grid" class="grid"></section>
+  </main>
+
+  <div class="drawer" id="drawer">
+    <div class="drawerPanel">
+      <div class="drawerHeader">
+        <div class="drawerTitle">Корзина</div>
+        <button class="iconbtn" id="closeCart">✕</button>
+      </div>
+
+      <div id="cartItems" class="cartItems"></div>
+
+      <div class="summary">
+        <div class="row">
+          <div>Итого</div>
+          <div class="total" id="total">0 ₽</div>
+        </div>
+        <button class="btn" id="checkout">Оформить</button>
+        <button class="btn ghost" id="clear">Очистить</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="modal">
+    <div class="modalPanel">
+      <div class="drawerHeader">
+        <div class="drawerTitle">Оформление</div>
+        <button class="iconbtn" id="closeModal">✕</button>
+      </div>
+
+      <div class="form">
+        <label>Имя</label>
+        <input id="name" class="input" placeholder="Как к вам обращаться" />
+        <label>Телефон</label>
+        <input id="phone" class="input" placeholder="+7..." />
+        <label>Комментарий</label>
+        <textarea id="comment" class="input" rows="3" placeholder="Например: нужен самовывоз сегодня"></textarea>
+
+        <div class="hint">Нажимая «Отправить заказ», вы отправляете заявку администратору.</div>
+        <button class="btn" id="send">Отправить заказ</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
