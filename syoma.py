@@ -502,7 +502,14 @@ def load_all_items(db_path: str = DB_PATH) -> List[Item]:
     con.row_factory = sqlite3.Row
     rows = con.execute("SELECT * FROM prices").fetchall()
     con.close()
-    return [Item(**dict(r)) for r in rows]
+    items: List[Item] = []
+    for r in rows:
+        d = dict(r)
+        if "image_hash" in d and "image_key" not in d:
+            d["image_key"] = d.pop("image_hash")
+        d = {k: d[k] for k in d if k in _ITEM_FIELDS}
+        items.append(Item(**d))
+    return items
 
 
 def load_prev_map(db_path: str = DB_PATH) -> Dict[str, Tuple[int, str]]:
