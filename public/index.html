@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>iPhone Магазин</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-title">iPhone магазин</div>
+        <div class="brand-sub">Каталог</div>
+      </div>
+      <button class="cart-btn" id="cartButton">
+        Корзина <span id="cartCount">0</span>
+      </button>
+    </header>
+
+    <section class="controls">
+      <input id="searchInput" type="search" placeholder="Поиск: 13 Pro, 256, eSIM..." />
+      <select id="sortSelect">
+        <option value="price_asc">Сначала дешевле</option>
+        <option value="price_desc">Сначала дороже</option>
+        <option value="title">По названию</option>
+      </select>
+    </section>
+
+    <main>
+      <div id="grid" class="grid"></div>
+    </main>
+
+    <div id="cartDrawer" class="cart">
+      <div class="cart-header">
+        <div class="cart-title">Корзина</div>
+        <button id="cartClose">Закрыть</button>
+      </div>
+      <div id="cartItems" class="cart-items"></div>
+      <div class="cart-footer">
+        <div class="cart-total">
+          Итого: <span id="cartTotal">0</span> ₽
+        </div>
+        <button id="checkoutBtn" class="checkout-btn">Оформить заказ</button>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
