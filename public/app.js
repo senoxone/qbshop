@@ -80,6 +80,16 @@ function buildSearchText(item) {
   return parts.filter(Boolean).join(" ").toLowerCase();
 }
 
+function displayTitle(rawTitle) {
+  const title = String(rawTitle || "").trim();
+  if (!title) return "";
+  return title
+    .replace(/^Смартфон\s+Apple\s+/i, "")
+    .replace(/^Смартфон\s+/i, "")
+    .replace(/^Smartphone\s+Apple\s+/i, "")
+    .replace(/^Smartphone\s+/i, "");
+}
+
 function cartSummary() {
   let count = 0;
   let total = 0;
@@ -105,7 +115,7 @@ function renderCart() {
     row.innerHTML = `
       <img src="${item.image}" alt="${item.title}" onerror="this.src='${placeholderSrc}';this.onerror=null;" />
       <div>
-        <div class="cart-item-title">${item.title}</div>
+        <div class="cart-item-title">${displayTitle(item.title)}</div>
         <div class="cart-item-meta">${metaLine}</div>
         <div class="qty">
           <button data-id="${item.id}" data-delta="-1">-</button>
@@ -164,7 +174,7 @@ function renderGrid() {
         <img src="${item.image}" alt="${item.title}" loading="lazy" onerror="this.src='${placeholderSrc}';this.onerror=null;" />
       </div>
       <div class="card-body">
-        <div class="card-title">${item.title}</div>
+        <div class="card-title">${displayTitle(item.title)}</div>
         <div class="card-meta">${metaLine}</div>
         <div class="card-actions">
           <div class="price">
