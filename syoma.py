@@ -800,6 +800,22 @@ def _abs_url(url: str) -> str:
     return urljoin(BASE_URL, url)
 
 
+def _is_product_image_url(url: str) -> bool:
+    if not url:
+        return False
+    return "/wa-data/public/shop/products/" in url.lower()
+
+
+def _clean_image_url(url: str) -> str:
+    if not url:
+        return ""
+    url = url.split("?", 1)[0]
+    url = _abs_url(url)
+    if not _is_product_image_url(url):
+        return ""
+    return url
+
+
 def _extract_image_from_block(block) -> str:
     for img in block.find_all("img"):
         for attr in ("data-src", "data-original", "data-lazy-src", "src"):
@@ -808,7 +824,9 @@ def _extract_image_from_block(block) -> str:
                 continue
             if "logo" in val.lower():
                 continue
-            return _abs_url(val)
+            cleaned = _clean_image_url(val)
+            if cleaned:
+                return cleaned
     return ""
 
 
@@ -821,7 +839,17 @@ def _extract_image_from_product_page(html: str) -> str:
     ]:
         tag = soup.select_one(sel)
         if tag and tag.get("content"):
-            return _abs_url(tag["content"])
+            cleaned = _clean_image_url(tag["content"])
+            if cleaned:
+                return cleaned
+    for img in soup.find_all("img"):
+        for attr in ("data-src", "data-original", "data-lazy-src", "src"):
+            val = img.get(attr)
+            if not val:
+                continue
+            cleaned = _clean_image_url(val)
+            if cleaned:
+                return cleaned
     return ""
 
 
@@ -936,9 +964,9 @@ def refresh(base_markup_rub: int, markup_cfg: Optional[MarkupConfig] = None, deb
             prev_img = prev_images.get(title)
             if prev_img:
                 prev_url, prev_local, prev_key = prev_img
-                if not image_url and prev_url:
+                if not image_url and prev_url and _is_product_image_url(prev_url):
                     image_url = prev_url
-                if image_url and prev_url and image_url == prev_url:
+                if image_url and prev_url and image_url == prev_url and _is_product_image_url(prev_url):
                     image_local = prev_local or ""
                     image_key = prev_key or ""
 

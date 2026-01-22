@@ -24,6 +24,7 @@ try:
         normalize_text,
         refresh,
         _extract_image_from_product_page,
+        _is_product_image_url,
     )
 except ModuleNotFoundError:
     import importlib.util
@@ -43,6 +44,7 @@ except ModuleNotFoundError:
     normalize_text = _syoma.normalize_text
     refresh = _syoma.refresh
     _extract_image_from_product_page = _syoma._extract_image_from_product_page
+    _is_product_image_url = getattr(_syoma, "_is_product_image_url", None)
 
 from scripts.image_cache import ensure_cached, make_key
 
@@ -69,11 +71,19 @@ def _update_image_fields(title: str, image_url: str, image_local: str, image_key
 
 def _fetch_image_url(item, session) -> str:
     if item.image_url:
-        return item.image_url
+        if _is_product_image_url and _is_product_image_url(item.image_url):
+            return item.image_url
+        if not _is_product_image_url and "/wa-data/public/shop/products/" in item.image_url.lower():
+            return item.image_url
     try:
         code, html = fetch_html(session, item.url, timeout=20, retries=2)
         if code < 400:
-            return _extract_image_from_product_page(html) or ""
+            img = _extract_image_from_product_page(html) or ""
+            if _is_product_image_url and not _is_product_image_url(img):
+                return ""
+            if not _is_product_image_url and img and "/wa-data/public/shop/products/" not in img.lower():
+                return ""
+            return img
     except Exception:
         pass
     return ""
