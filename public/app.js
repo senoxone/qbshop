@@ -18,6 +18,7 @@ const cartTotal = document.getElementById("cartTotal");
 const checkoutBtn = document.getElementById("checkoutBtn");
 const clearBtn = document.getElementById("clearBtn");
 const scrollTopBtn = document.getElementById("scrollTopBtn");
+const placeholderSrc = "assets/placeholder.png";
 
 const fmt = new Intl.NumberFormat("ru-RU");
 
@@ -102,7 +103,7 @@ function renderCart() {
     const row = document.createElement("div");
     row.className = "cart-item";
     row.innerHTML = `
-      <img src="${item.image}" alt="${item.title}" />
+      <img src="${item.image}" alt="${item.title}" onerror="this.src='${placeholderSrc}';this.onerror=null;" />
       <div>
         <div class="cart-item-title">${item.title}</div>
         <div class="cart-item-meta">${metaLine}</div>
@@ -160,7 +161,7 @@ function renderGrid() {
     card.className = "card";
     card.innerHTML = `
       <div class="card-media">
-        <img src="${item.image}" alt="${item.title}" loading="lazy" />
+        <img src="${item.image}" alt="${item.title}" loading="lazy" onerror="this.src='${placeholderSrc}';this.onerror=null;" />
       </div>
       <div class="card-body">
         <div class="card-title">${item.title}</div>

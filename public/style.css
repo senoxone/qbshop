@@ -51,10 +51,11 @@ body {
   place-items: center;
 }
 
-.brand-logo img {
+.brand-icon {
   width: 20px;
   height: 20px;
   display: block;
+  color: var(--text);
 }
 
 .brand-title {
@@ -125,13 +126,13 @@ body {
 }
 
 .control {
-  min-width: 130px;
+  min-width: 110px;
   flex: 0 0 auto;
 }
 
 .control-search {
-  min-width: 200px;
-  flex: 1 0 200px;
+  min-width: 160px;
+  flex: 1 0 160px;
 }
 
 .controls input,
@@ -179,8 +180,11 @@ main {
 
 .card-media {
   height: 240px;
-  padding: 12px;
-  background: var(--surface);
+  padding: 10px;
+  background: #0f1115;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .card img {
@@ -236,12 +240,12 @@ main {
 }
 
 .price-amount {
-  font-size: 20px;
+  font-size: 21px;
   font-weight: 700;
 }
 
 .price-currency {
-  font-size: 13px;
+  font-size: 12px;
   color: var(--text);
   margin-top: 4px;
 }
@@ -417,6 +421,6 @@ main {
 
 @media (max-width: 640px) {
   .card-media {
-    height: 210px;
+    height: 220px;
   }
 }
