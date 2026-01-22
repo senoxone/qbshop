@@ -77,33 +77,69 @@ function updateCart(id, delta) {
   renderCart();
 }
 
+function getMemoryGB(item) {
+  const meta = item.meta || {};
+  if (meta.memory_gb) return Number(meta.memory_gb);
+  if (item.storage) {
+    const m = String(item.storage).match(/(\d{2,4})/);
+    if (m) return Number(m[1]);
+  }
+  const t = (item.title || "").match(/(\d{2,4})\s*GB/i);
+  return t ? Number(t[1]) : 0;
+}
+
+function buildSearchText(item) {
+  const meta = item.meta || {};
+  const parts = [
+    item.title,
+    item.model,
+    meta.model,
+    item.storage,
+    meta.memory_gb ? `${meta.memory_gb}GB` : "",
+    item.color,
+    meta.color_en,
+    meta.color_ru,
+    item.sim,
+    meta.sim,
+    item.condition,
+  ];
+  return parts.filter(Boolean).join(" ").toLowerCase();
+}
+
 function renderGrid() {
   const q = (searchInput.value || "").trim().toLowerCase();
   const selectedModel = modelSelect.value || "";
-  let items = state.items.filter((it) => it.title.toLowerCase().includes(q));
+  let items = state.items.slice();
+
+  if (q) {
+    items = items.filter((it) => buildSearchText(it).includes(q));
+  }
 
   if (selectedModel) {
-    items = items.filter((it) => (it.meta?.model || "") === selectedModel);
+    items = items.filter((it) => (it.meta?.model || it.model || "") === selectedModel);
   }
 
   const sort = sortSelect.value;
   items = items.slice().sort((a, b) => {
     if (sort === "price_desc") return b.price - a.price;
-    if (sort === "title") return a.title.localeCompare(b.title);
+    if (sort === "updated_desc") return (b.updated_ts || 0) - (a.updated_ts || 0);
+    if (sort === "memory_desc") return getMemoryGB(b) - getMemoryGB(a);
     return a.price - b.price;
   });
 
   grid.innerHTML = "";
   for (const item of items) {
     const meta = item.meta || {};
-    const storage = meta.memory_gb ? `${meta.memory_gb}GB` : "";
-    const sim = (meta.sim || "").toUpperCase();
-    const color = meta.color_en || meta.color_ru || "";
+    const storage = meta.memory_gb ? `${meta.memory_gb}GB` : (item.storage || "");
+    const sim = meta.sim || item.sim || "";
+    const color = meta.color_en || meta.color_ru || item.color || "";
     const metaLine = [storage, sim, color].filter(Boolean).join(" • ");
     const card = document.createElement("div");
     card.className = "card";
     card.innerHTML = `
-      <img src="${item.image}" alt="${item.title}" loading="lazy" />
+      <div class="card-media">
+        <img src="${item.image}" alt="${item.title}" loading="lazy" />
+      </div>
       <div class="card-body">
         <div class="card-title">${item.title}</div>
         <div class="card-meta">${metaLine}</div>
@@ -120,7 +156,7 @@ async function loadProducts() {
   const data = await res.json();
   state.items = data.items || [];
   const models = Array.from(
-    new Set(state.items.map((it) => (it.meta?.model || "").trim()).filter(Boolean))
+    new Set(state.items.map((it) => (it.meta?.model || it.model || "").trim()).filter(Boolean))
   ).sort((a, b) => a.localeCompare(b));
   modelSelect.innerHTML = `<option value="">Все модели</option>`;
   for (const m of models) {
@@ -158,9 +194,10 @@ function checkout() {
     items: orderItems,
     total: cartSummary().total,
     ts: Date.now(),
-    tg_user: (window.Telegram && Telegram.WebApp && Telegram.WebApp.initDataUnsafe)
-      ? Telegram.WebApp.initDataUnsafe.user || null
-      : null,
+    tg_user:
+      window.Telegram && Telegram.WebApp && Telegram.WebApp.initDataUnsafe
+        ? Telegram.WebApp.initDataUnsafe.user || null
+        : null,
   };
 
   if (window.Telegram && Telegram.WebApp) {

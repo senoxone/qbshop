@@ -3,30 +3,43 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>iPhone Магазин</title>
+    <title>iPhone магазин</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header class="topbar">
       <div class="brand">
-        <div class="brand-title">iPhone магазин</div>
-        <div class="brand-sub">Каталог</div>
+        <div class="brand-logo" aria-hidden="true"></div>
+        <div class="brand-text">
+          <div class="brand-title">iPhone магазин</div>
+          <div class="brand-sub">Каталог</div>
+        </div>
       </div>
       <button class="cart-btn" id="cartButton">
-        Корзина <span id="cartCount">0</span>
+        Корзина
+        <span class="cart-badge" id="cartCount">0</span>
       </button>
     </header>
 
     <section class="controls">
-      <input id="searchInput" type="search" placeholder="Поиск: 13 Pro, 256, eSIM..." />
-      <select id="modelSelect">
-        <option value="">Все модели</option>
-      </select>
-      <select id="sortSelect">
-        <option value="price_asc">Сначала дешевле</option>
-        <option value="price_desc">Сначала дороже</option>
-        <option value="title">По названию</option>
-      </select>
+      <div class="controls-row">
+        <div class="control">
+          <input id="searchInput" type="search" placeholder="Поиск: 13 Pro, 256, eSIM" />
+        </div>
+        <div class="control">
+          <select id="modelSelect">
+            <option value="">Все модели</option>
+          </select>
+        </div>
+        <div class="control">
+          <select id="sortSelect">
+            <option value="price_asc">Сначала дешевле</option>
+            <option value="price_desc">Сначала дороже</option>
+            <option value="updated_desc">Сначала новые</option>
+            <option value="memory_desc">Больше память</option>
+          </select>
+        </div>
+      </div>
     </section>
 
     <main>
