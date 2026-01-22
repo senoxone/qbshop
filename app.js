@@ -26,6 +26,16 @@ function money(x){
   return new Intl.NumberFormat("ru-RU").format(x) + " ₽";
 }
 
+function fmtSim(sim){
+  const s = String(sim || "").trim();
+  if (!s) return "";
+  const key = s.toLowerCase();
+  if (key === "dualsim") return "Dual SIM";
+  if (key === "sim+esim" || key === "sim + esim") return "SIM + eSIM";
+  if (key === "esim") return "eSIM";
+  return s;
+}
+
 async function loadProducts(){
   const r = await fetch("products.json?ts=" + Date.now());
   state.products = await r.json();
@@ -49,17 +59,22 @@ function buildModelFilter(){
 function applyFilters(){
   const q = el("q").value.trim().toLowerCase();
   const model = el("filterModel").value;
-  const cond = el("filterCond").value;
+  const sortPrice = el("sortPrice").value;
 
   state.filtered = state.products.filter(p=>{
     if (model && p.model !== model) return false;
-    if (cond && (p.condition||"").toUpperCase() !== cond) return false;
     if (!q) return true;
 
-    const hay = [p.title, p.model, p.storage, p.color, String(p.battery||""), p.condition]
+    const hay = [p.title, p.model, p.storage, p.color, p.sim]
       .join(" ").toLowerCase();
     return hay.includes(q);
   });
+
+  if (sortPrice === "asc") {
+    state.filtered.sort((a,b)=>Number(a.price||0)-Number(b.price||0));
+  } else if (sortPrice === "desc") {
+    state.filtered.sort((a,b)=>Number(b.price||0)-Number(a.price||0));
+  }
   render();
 }
 
@@ -102,11 +117,12 @@ function render(){
     const card = document.createElement("div");
     card.className = "card";
     const img = (p.photos && p.photos[0]) ? p.photos[0] : "https://placehold.co/600x750/png";
-    const meta = `${p.storage || ""} • АКБ ${p.battery || "?"}% • ${p.color || ""} • ${String(p.condition||"").toUpperCase() || ""}`
-      .replace(/\s•\s/g," • ").trim();
+    const meta = [p.storage || "", fmtSim(p.sim), p.color || ""]
+      .filter(Boolean)
+      .join(" • ");
 
     card.innerHTML = `
-      <div class="photo"><img src="${img}" alt=""></div>
+      <div class="photo"><img src="${img}" alt="" referrerpolicy="no-referrer" loading="lazy"></div>
       <div class="p">
         <div class="h">${escapeHtml(p.title || p.model || "iPhone")}</div>
         <div class="meta">${escapeHtml(meta)}</div>
@@ -140,11 +156,12 @@ function renderCart(){
     const row = document.createElement("div");
     row.className = "cartItem";
     const img = (it.photos && it.photos[0]) ? it.photos[0] : "https://placehold.co/600x750/png";
-    const meta = `${it.storage || ""} • АКБ ${it.battery || "?"}% • ${it.color || ""} • ${String(it.condition||"").toUpperCase() || ""}`
-      .replace(/\s•\s/g," • ").trim();
+    const meta = [it.storage || "", fmtSim(it.sim), it.color || ""]
+      .filter(Boolean)
+      .join(" • ");
 
     row.innerHTML = `
-      <div class="thumb"><img src="${img}" alt=""></div>
+      <div class="thumb"><img src="${img}" alt="" referrerpolicy="no-referrer" loading="lazy"></div>
       <div>
         <div class="cTitle">${escapeHtml(it.title || "iPhone")}</div>
         <div class="cMeta">${escapeHtml(meta)}</div>
@@ -232,7 +249,7 @@ function bind(){
 
   el("q").addEventListener("input", applyFilters);
   el("filterModel").addEventListener("change", applyFilters);
-  el("filterCond").addEventListener("change", applyFilters);
+  el("sortPrice").addEventListener("change", applyFilters);
 
   const u = tg?.initDataUnsafe?.user;
   if (u) el("hello").textContent = `Привет, ${u.first_name || "друг"}!`;
