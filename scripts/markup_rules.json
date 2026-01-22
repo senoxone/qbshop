@@ -1,9 +1,0 @@
-{
-  "default": 5000,
-  "models": {
-    "iPhone 12 mini": 4000,
-    "iPhone 14": 5000,
-    "iPhone 16": 7000,
-    "iPhone 16 Pro Max": 9000
-  }
-}
