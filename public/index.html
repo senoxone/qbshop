@@ -23,7 +23,7 @@
 
     <section class="controls">
       <div class="controls-row">
-        <div class="control">
+        <div class="control control-search">
           <input id="searchInput" type="search" placeholder="Поиск: 13 Pro, 256, eSIM" />
         </div>
         <div class="control">
@@ -49,14 +49,17 @@
     <div id="cartDrawer" class="cart">
       <div class="cart-header">
         <div class="cart-title">Корзина</div>
-        <button id="cartClose">Закрыть</button>
+        <button id="cartClose" class="cart-close">Закрыть</button>
       </div>
       <div id="cartItems" class="cart-items"></div>
       <div class="cart-footer">
         <div class="cart-total">
           Итого: <span id="cartTotal">0</span> ₽
         </div>
-        <button id="checkoutBtn" class="checkout-btn">Оформить заказ</button>
+        <div class="cart-actions">
+          <button id="clearBtn" class="clear-btn">Очистить</button>
+          <button id="checkoutBtn" class="checkout-btn">Оформить заказ</button>
+        </div>
       </div>
     </div>
 

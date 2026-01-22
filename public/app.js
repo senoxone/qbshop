@@ -16,6 +16,7 @@ const cartItems = document.getElementById("cartItems");
 const cartCount = document.getElementById("cartCount");
 const cartTotal = document.getElementById("cartTotal");
 const checkoutBtn = document.getElementById("checkoutBtn");
+const clearBtn = document.getElementById("clearBtn");
 
 const fmt = new Intl.NumberFormat("ru-RU");
 
@@ -29,6 +30,52 @@ function loadCart() {
 
 function saveCart() {
   localStorage.setItem("cart", JSON.stringify(state.cart));
+}
+
+function cleanValue(value) {
+  if (!value) return "";
+  const s = String(value).trim();
+  if (!s || s.toLowerCase() === "unknown") return "";
+  return s;
+}
+
+function getMemoryGB(item) {
+  const meta = item.meta || {};
+  if (meta.memory_gb) return Number(meta.memory_gb);
+  const fromStorage = String(item.storage || "").match(/(\d{2,4})/);
+  if (fromStorage) return Number(fromStorage[1]);
+  const fromTitle = String(item.title || "").match(/(\d{2,4})\s*GB/i);
+  return fromTitle ? Number(fromTitle[1]) : 0;
+}
+
+function buildMetaLine(item) {
+  const meta = item.meta || {};
+  let storage = cleanValue(meta.memory_gb ? `${meta.memory_gb}GB` : item.storage);
+  if (!storage) {
+    const mem = getMemoryGB(item);
+    storage = mem ? `${mem}GB` : "";
+  }
+  const sim = cleanValue(meta.sim || item.sim);
+  const color = cleanValue(meta.color_en || meta.color_ru || item.color || item.color_ru);
+  return [storage, sim, color].filter(Boolean).join(" • ");
+}
+
+function buildSearchText(item) {
+  const meta = item.meta || {};
+  const parts = [
+    item.title,
+    item.model,
+    meta.model,
+    item.storage,
+    meta.memory_gb ? `${meta.memory_gb}GB` : "",
+    item.color,
+    meta.color_en,
+    meta.color_ru,
+    item.sim,
+    meta.sim,
+    item.condition,
+  ];
+  return parts.filter(Boolean).join(" ").toLowerCase();
 }
 
 function cartSummary() {
@@ -50,16 +97,21 @@ function renderCart() {
   for (const item of state.items) {
     const qty = state.cart[item.id] || 0;
     if (!qty) continue;
+    const metaLine = buildMetaLine(item);
     const row = document.createElement("div");
     row.className = "cart-item";
     row.innerHTML = `
-      <div class="cart-item-name">${item.title}</div>
-      <div class="qty">
-        <button data-id="${item.id}" data-delta="-1">-</button>
-        <span>${qty}</span>
-        <button data-id="${item.id}" data-delta="1">+</button>
+      <img src="${item.image}" alt="${item.title}" />
+      <div>
+        <div class="cart-item-title">${item.title}</div>
+        <div class="cart-item-meta">${metaLine}</div>
+        <div class="qty">
+          <button data-id="${item.id}" data-delta="-1">-</button>
+          <span>${qty}</span>
+          <button data-id="${item.id}" data-delta="1">+</button>
+        </div>
       </div>
-      <div>${fmt.format(item.price * qty)} ₽</div>
+      <div class="cart-item-price">${fmt.format(item.price * qty)} ₽</div>
     `;
     cartItems.appendChild(row);
   }
@@ -75,35 +127,6 @@ function updateCart(id, delta) {
   }
   saveCart();
   renderCart();
-}
-
-function getMemoryGB(item) {
-  const meta = item.meta || {};
-  if (meta.memory_gb) return Number(meta.memory_gb);
-  if (item.storage) {
-    const m = String(item.storage).match(/(\d{2,4})/);
-    if (m) return Number(m[1]);
-  }
-  const t = (item.title || "").match(/(\d{2,4})\s*GB/i);
-  return t ? Number(t[1]) : 0;
-}
-
-function buildSearchText(item) {
-  const meta = item.meta || {};
-  const parts = [
-    item.title,
-    item.model,
-    meta.model,
-    item.storage,
-    meta.memory_gb ? `${meta.memory_gb}GB` : "",
-    item.color,
-    meta.color_en,
-    meta.color_ru,
-    item.sim,
-    meta.sim,
-    item.condition,
-  ];
-  return parts.filter(Boolean).join(" ").toLowerCase();
 }
 
 function renderGrid() {
@@ -129,11 +152,8 @@ function renderGrid() {
 
   grid.innerHTML = "";
   for (const item of items) {
-    const meta = item.meta || {};
-    const storage = meta.memory_gb ? `${meta.memory_gb}GB` : (item.storage || "");
-    const sim = meta.sim || item.sim || "";
-    const color = meta.color_en || meta.color_ru || item.color || "";
-    const metaLine = [storage, sim, color].filter(Boolean).join(" • ");
+    const metaLine = buildMetaLine(item);
+    const priceText = fmt.format(item.price);
     const card = document.createElement("div");
     card.className = "card";
     card.innerHTML = `
@@ -143,8 +163,13 @@ function renderGrid() {
       <div class="card-body">
         <div class="card-title">${item.title}</div>
         <div class="card-meta">${metaLine}</div>
-        <div class="card-price">${fmt.format(item.price)} ₽</div>
-        <button class="card-btn" data-id="${item.id}">В корзину</button>
+        <div class="card-actions">
+          <div class="price">
+            <div class="price-amount">${priceText}</div>
+            <div class="price-currency">₽</div>
+          </div>
+          <button class="card-btn" data-id="${item.id}">В корзину</button>
+        </div>
       </div>
     `;
     grid.appendChild(card);
@@ -165,6 +190,9 @@ async function loadProducts() {
     opt.textContent = m;
     modelSelect.appendChild(opt);
   }
+  if (models.includes("iPhone 17 Pro")) {
+    modelSelect.value = "iPhone 17 Pro";
+  }
   renderGrid();
   renderCart();
 }
@@ -175,6 +203,12 @@ function openCart() {
 
 function closeCart() {
   cartDrawer.classList.remove("open");
+}
+
+function clearCart() {
+  state.cart = {};
+  saveCart();
+  renderCart();
 }
 
 function checkout() {
@@ -222,6 +256,7 @@ cartItems.addEventListener("click", (e) => {
 cartButton.addEventListener("click", openCart);
 cartClose.addEventListener("click", closeCart);
 checkoutBtn.addEventListener("click", checkout);
+clearBtn.addEventListener("click", clearCart);
 searchInput.addEventListener("input", renderGrid);
 sortSelect.addEventListener("change", renderGrid);
 modelSelect.addEventListener("change", renderGrid);
