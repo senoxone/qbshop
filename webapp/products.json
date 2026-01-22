@@ -2715,6 +2715,21 @@
     "url": "https://syomastore.ru/product/smartfon-apple-iphone-17-512gb-seryy-steel-gray/"
   },
   {
+    "id": "ba90688a5e0c",
+    "title": "iPhone 17 Pro 256GB Cosmic Orange",
+    "price": 35690,
+    "storage": "256GB",
+    "battery": null,
+    "color": "Cosmic Orange",
+    "condition": "",
+    "sim": "eSIM",
+    "model": "iPhone 17 Pro",
+    "photos": [
+      "https://syomastore.ru/wa-data/public/shop/products/55/60/6055/images/28032/28032.750x0.jpg"
+    ],
+    "url": "https://syomastore.ru/product/smartfon-apple-iphone-17-pro-256gb-oranzhevyy-orange-esim/#reviews"
+  },
+  {
     "id": "f800eee1d938",
     "title": "iPhone 17 Pro 256GB Silver",
     "price": 104490,
@@ -2728,21 +2743,6 @@
       "https://syomastore.ru/wa-data/public/shop/products/55/60/6055/images/28032/28032.750x0.jpg"
     ],
     "url": "https://syomastore.ru/product/smartfon-apple-iphone-17-pro-256gb-belyy-white-esim/"
-  },
-  {
-    "id": "a259f6121c7e",
-    "title": "iPhone 17 Pro 256GB Cosmic Orange",
-    "price": 104990,
-    "storage": "256GB",
-    "battery": null,
-    "color": "Cosmic Orange",
-    "condition": "",
-    "sim": "eSIM",
-    "model": "iPhone 17 Pro",
-    "photos": [
-      "https://syomastore.ru/wa-data/public/shop/products/59/60/6059/images/28055/28055.750x0.jpg"
-    ],
-    "url": "https://syomastore.ru/product/smartfon-apple-iphone-17-pro-256gb-oranzhevyy-orange-esim/"
   },
   {
     "id": "51c548ed8674",
@@ -3268,6 +3268,21 @@
       "https://syomastore.ru/wa-data/public/shop/products/06/58/5806/images/28180/28180.750x0.jpg"
     ],
     "url": "https://syomastore.ru/product/smartfon-apple-iphone-17-pro-max-1024gb-serebro-silver/"
+  },
+  {
+    "id": "9d965e744abf",
+    "title": "iPhone 17 pro max 2048GB",
+    "price": 35690,
+    "storage": "2048GB",
+    "battery": null,
+    "color": "",
+    "condition": "",
+    "sim": "",
+    "model": "iPhone 17 pro max",
+    "photos": [
+      "https://syomastore.ru/wa-data/public/shop/products/14/61/6114/images/28281/28281.750x0.jpg"
+    ],
+    "url": "https://syomastore.ru/product/smartfon-apple-iphone-17-pro-max-2048gb-siniy-dark-blue-dualsim/"
   },
   {
     "id": "9674a76c25cb",
