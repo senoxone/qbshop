@@ -32,7 +32,10 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         return
     button = KeyboardButton(text="Открыть магазин", web_app=WebAppInfo(url=WEBAPP_URL))
     markup = ReplyKeyboardMarkup([[button]], resize_keyboard=True)
-    await update.message.reply_text("Открой магазин:", reply_markup=markup)
+    await update.message.reply_text(
+        "Открой витрину кнопкой ниже. Собери корзину и нажми «Оформить» — заказ прилетит администратору.",
+        reply_markup=markup,
+    )
 
 
 async def shop(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:

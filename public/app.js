@@ -7,6 +7,7 @@ const state = {
 
 const grid = document.getElementById("grid");
 const searchInput = document.getElementById("searchInput");
+const modelSelect = document.getElementById("modelSelect");
 const sortSelect = document.getElementById("sortSelect");
 const cartButton = document.getElementById("cartButton");
 const cartDrawer = document.getElementById("cartDrawer");
@@ -78,7 +79,12 @@ function updateCart(id, delta) {
 
 function renderGrid() {
   const q = (searchInput.value || "").trim().toLowerCase();
+  const selectedModel = modelSelect.value || "";
   let items = state.items.filter((it) => it.title.toLowerCase().includes(q));
+
+  if (selectedModel) {
+    items = items.filter((it) => (it.meta?.model || "") === selectedModel);
+  }
 
   const sort = sortSelect.value;
   items = items.slice().sort((a, b) => {
@@ -89,12 +95,18 @@ function renderGrid() {
 
   grid.innerHTML = "";
   for (const item of items) {
+    const meta = item.meta || {};
+    const storage = meta.memory_gb ? `${meta.memory_gb}GB` : "";
+    const sim = (meta.sim || "").toUpperCase();
+    const color = meta.color_en || meta.color_ru || "";
+    const metaLine = [storage, sim, color].filter(Boolean).join(" • ");
     const card = document.createElement("div");
     card.className = "card";
     card.innerHTML = `
       <img src="${item.image}" alt="${item.title}" loading="lazy" />
       <div class="card-body">
         <div class="card-title">${item.title}</div>
+        <div class="card-meta">${metaLine}</div>
         <div class="card-price">${fmt.format(item.price)} ₽</div>
         <button class="card-btn" data-id="${item.id}">В корзину</button>
       </div>
@@ -107,6 +119,16 @@ async function loadProducts() {
   const res = await fetch(`products.json?ts=${Date.now()}`);
   const data = await res.json();
   state.items = data.items || [];
+  const models = Array.from(
+    new Set(state.items.map((it) => (it.meta?.model || "").trim()).filter(Boolean))
+  ).sort((a, b) => a.localeCompare(b));
+  modelSelect.innerHTML = `<option value="">Все модели</option>`;
+  for (const m of models) {
+    const opt = document.createElement("option");
+    opt.value = m;
+    opt.textContent = m;
+    modelSelect.appendChild(opt);
+  }
   renderGrid();
   renderCart();
 }
@@ -165,6 +187,7 @@ cartClose.addEventListener("click", closeCart);
 checkoutBtn.addEventListener("click", checkout);
 searchInput.addEventListener("input", renderGrid);
 sortSelect.addEventListener("change", renderGrid);
+modelSelect.addEventListener("change", renderGrid);
 
 loadCart();
 loadProducts();
