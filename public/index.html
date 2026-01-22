@@ -9,7 +9,9 @@
   <body>
     <header class="topbar">
       <div class="brand">
-        <div class="brand-logo" aria-hidden="true"></div>
+        <div class="brand-logo" aria-hidden="true">
+          <img src="assets/apple.svg" alt="" />
+        </div>
         <div class="brand-text">
           <div class="brand-title">iPhone магазин</div>
           <div class="brand-sub">Каталог</div>
@@ -21,7 +23,7 @@
       </button>
     </header>
 
-    <section class="controls">
+    <section class="controls" id="filtersBar">
       <div class="controls-row">
         <div class="control control-search">
           <input id="searchInput" type="search" placeholder="Поиск: 13 Pro, 256, eSIM" />
@@ -33,10 +35,11 @@
         </div>
         <div class="control">
           <select id="sortSelect">
-            <option value="price_asc">Сначала дешевле</option>
-            <option value="price_desc">Сначала дороже</option>
-            <option value="updated_desc">Сначала новые</option>
-            <option value="memory_desc">Больше память</option>
+            <option value="popular">Популярные</option>
+            <option value="price_asc">Дешевле</option>
+            <option value="price_desc">Дороже</option>
+            <option value="updated_desc">Новые</option>
+            <option value="memory_desc">Память</option>
           </select>
         </div>
       </div>
@@ -62,6 +65,8 @@
         </div>
       </div>
     </div>
+
+    <button id="scrollTopBtn" class="scroll-top" aria-label="Наверх">↑</button>
 
     <script src="app.js"></script>
   </body>

@@ -17,6 +17,7 @@ const cartCount = document.getElementById("cartCount");
 const cartTotal = document.getElementById("cartTotal");
 const checkoutBtn = document.getElementById("checkoutBtn");
 const clearBtn = document.getElementById("clearBtn");
+const scrollTopBtn = document.getElementById("scrollTopBtn");
 
 const fmt = new Intl.NumberFormat("ru-RU");
 
@@ -144,6 +145,7 @@ function renderGrid() {
 
   const sort = sortSelect.value;
   items = items.slice().sort((a, b) => {
+    if (sort === "popular") return 0;
     if (sort === "price_desc") return b.price - a.price;
     if (sort === "updated_desc") return (b.updated_ts || 0) - (a.updated_ts || 0);
     if (sort === "memory_desc") return getMemoryGB(b) - getMemoryGB(a);
@@ -189,9 +191,6 @@ async function loadProducts() {
     opt.value = m;
     opt.textContent = m;
     modelSelect.appendChild(opt);
-  }
-  if (models.includes("iPhone 17 Pro")) {
-    modelSelect.value = "iPhone 17 Pro";
   }
   renderGrid();
   renderCart();
@@ -241,6 +240,14 @@ function checkout() {
   }
 }
 
+function handleScroll() {
+  if (window.scrollY > 600) {
+    scrollTopBtn.classList.add("show");
+  } else {
+    scrollTopBtn.classList.remove("show");
+  }
+}
+
 grid.addEventListener("click", (e) => {
   const btn = e.target.closest("button[data-id]");
   if (!btn) return;
@@ -260,6 +267,10 @@ clearBtn.addEventListener("click", clearCart);
 searchInput.addEventListener("input", renderGrid);
 sortSelect.addEventListener("change", renderGrid);
 modelSelect.addEventListener("change", renderGrid);
+scrollTopBtn.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+window.addEventListener("scroll", handleScroll);
 
 loadCart();
 loadProducts();
