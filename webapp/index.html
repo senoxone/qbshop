@@ -25,10 +25,11 @@
       <select id="filterModel" class="input">
         <option value="">Все модели</option>
       </select>
-      <div class="priceRange">
-        <input id="priceMin" class="input" type="number" min="0" placeholder="Цена от" />
-        <input id="priceMax" class="input" type="number" min="0" placeholder="до" />
-      </div>
+      <select id="sortPrice" class="input">
+        <option value="">По цене</option>
+        <option value="desc">Сначала дороже</option>
+        <option value="asc">Сначала дешевле</option>
+      </select>
     </section>
 
     <section id="grid" class="grid"></section>

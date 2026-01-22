@@ -59,22 +59,22 @@ function buildModelFilter(){
 function applyFilters(){
   const q = el("q").value.trim().toLowerCase();
   const model = el("filterModel").value;
-  const minRaw = el("priceMin").value.trim();
-  const maxRaw = el("priceMax").value.trim();
-  const minPrice = minRaw ? Number(minRaw.replace(/\s/g, "")) : null;
-  const maxPrice = maxRaw ? Number(maxRaw.replace(/\s/g, "")) : null;
+  const sortPrice = el("sortPrice").value;
 
   state.filtered = state.products.filter(p=>{
     if (model && p.model !== model) return false;
-    const price = Number(p.price || 0);
-    if (minPrice !== null && !Number.isNaN(minPrice) && price < minPrice) return false;
-    if (maxPrice !== null && !Number.isNaN(maxPrice) && price > maxPrice) return false;
     if (!q) return true;
 
     const hay = [p.title, p.model, p.storage, p.color, p.sim]
       .join(" ").toLowerCase();
     return hay.includes(q);
   });
+
+  if (sortPrice === "asc") {
+    state.filtered.sort((a,b)=>Number(a.price||0)-Number(b.price||0));
+  } else if (sortPrice === "desc") {
+    state.filtered.sort((a,b)=>Number(b.price||0)-Number(a.price||0));
+  }
   render();
 }
 
@@ -249,8 +249,7 @@ function bind(){
 
   el("q").addEventListener("input", applyFilters);
   el("filterModel").addEventListener("change", applyFilters);
-  el("priceMin").addEventListener("input", applyFilters);
-  el("priceMax").addEventListener("input", applyFilters);
+  el("sortPrice").addEventListener("change", applyFilters);
 
   const u = tg?.initDataUnsafe?.user;
   if (u) el("hello").textContent = `Привет, ${u.first_name || "друг"}!`;
