@@ -97,10 +97,30 @@ def main() -> int:
     markup_cfg = MarkupConfig(MARKUP_PATH)
     markup_cfg.load()
 
+    refresh_ok = True
     if not args.no_refresh:
-        refresh(base_markup_rub=markup_cfg.default, markup_cfg=markup_cfg, debug=False)
+        try:
+            refresh(base_markup_rub=markup_cfg.default, markup_cfg=markup_cfg, debug=False)
+        except Exception as e:
+            refresh_ok = False
+            print(f"[WARN] refresh failed: {e}")
 
     items = _filter_items(load_all_items())
+    existing_items = []
+    if os.path.exists(OUT_PATH):
+        try:
+            with open(OUT_PATH, "r", encoding="utf-8") as f:
+                existing_items = json.load(f).get("items", [])
+        except Exception:
+            existing_items = []
+
+    if not items:
+        if existing_items:
+            print("[WARN] No items from DB, keeping existing products.json")
+            return 0
+        if not refresh_ok:
+            raise RuntimeError("No cached items and refresh failed.")
+        raise RuntimeError("No items to export.")
     items.sort(
         key=lambda it: (
             normalize_text(it.model or ""),

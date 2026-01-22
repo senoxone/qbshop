@@ -888,8 +888,8 @@ def refresh(base_markup_rub: int, markup_cfg: Optional[MarkupConfig] = None, deb
     try:
         sess = make_session()
         code, first = fetch_html(sess, CATALOG_URL, timeout=40, retries=3)
-        if code >= 400 or "Смартфон Apple iPhone" not in first:
-            raise RuntimeError(f"Syoma недоступен или верстка изменилась. HTTP={code}")
+        if code >= 400:
+            raise RuntimeError(f"Syoma недоступен. HTTP={code}")
 
         pages = detect_pages(first)
         raw = parse_catalog_page(first)
@@ -906,6 +906,10 @@ def refresh(base_markup_rub: int, markup_cfg: Optional[MarkupConfig] = None, deb
             except Exception as e:
                 log(f"[WARN] page {p} skipped: {e}")
                 continue
+
+        if not raw:
+            log("[WARN] Syoma parsed 0 items. Keeping previous cache.")
+            return 0
 
         uniq: Dict[str, Tuple[str, str, int, str, Optional[str], str]] = {}
         for title, url, price, status, cashback, image_url in raw:

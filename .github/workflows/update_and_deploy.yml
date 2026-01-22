@@ -28,6 +28,9 @@ jobs:
           if [ -d "gh-pages/assets/products" ]; then
             cp -r gh-pages/assets/products/* public/assets/products/ || true
           fi
+          if [ -f "gh-pages/products.json" ]; then
+            cp gh-pages/products.json public/products.json || true
+          fi
 
       - uses: actions/setup-python@v5
         with:
