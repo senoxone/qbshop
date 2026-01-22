@@ -98,6 +98,22 @@ def _filter_items(items) -> List:
     return out
 
 
+def _sim_rank(sim: str) -> int:
+    s = (sim or "").lower()
+    if "dual" in s:
+        return 0
+    if "sim+esim" in s or "sim + esim" in s:
+        return 1
+    if "esim" in s:
+        return 2
+    return 3
+
+
+def _color_key(it) -> str:
+    color = it.color_en or it.color_ru or ""
+    return normalize_text(color)
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--no-refresh", action="store_true", help="use cached DB only")
@@ -141,18 +157,41 @@ def main() -> int:
     )
 
     session = make_session()
-    exported = []
+    image_candidates = []
     for it in items:
         image_url = _fetch_image_url(it, session)
-        image_key = make_key(it.url, image_url) if image_url else ""
+        image_candidates.append((it, image_url))
+
+    # Prefer the best SIM variant image per model+color to avoid mismatched photos.
+    best_image_by_key = {}
+    for it, image_url in image_candidates:
+        if not image_url:
+            continue
+        key = (it.model or "", _color_key(it))
+        cur = best_image_by_key.get(key)
+        if not cur:
+            best_image_by_key[key] = (image_url, _sim_rank(it.sim_desc), int(it.price_site or 0))
+            continue
+        _url, cur_rank, cur_price = cur
+        rank = _sim_rank(it.sim_desc)
+        price = int(it.price_site or 0)
+        if rank < cur_rank or (rank == cur_rank and price > cur_price):
+            best_image_by_key[key] = (image_url, rank, price)
+
+    exported = []
+    for it, image_url in image_candidates:
+        key = (it.model or "", _color_key(it))
+        preferred = best_image_by_key.get(key, (image_url, None, None))[0]
+        use_url = preferred or image_url
+        image_key = make_key(it.url, use_url) if use_url else ""
         try:
-            image_local = ensure_cached(it.url, image_url)
+            image_local = ensure_cached(it.url, use_url)
         except Exception:
             image_local = PLACEHOLDER
 
         if not image_local:
             image_local = PLACEHOLDER
-        _update_image_fields(it.title, image_url or "", image_local, image_key)
+        _update_image_fields(it.title, use_url or "", image_local, image_key)
 
         markup = int(it.price_my or 0) - int(it.price_site or 0)
         exported.append(
