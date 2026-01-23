@@ -1,0 +1,66 @@
+﻿<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>QBstore</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-icon">
+          <img src="assets/apple.svg" alt="Apple" />
+        </span>
+        <div class="brand-text">
+          <div class="brand-title">iPhone магазин</div>
+          <div class="brand-sub">Каталог</div>
+        </div>
+      </div>
+      <button class="cart-btn" id="cartBtn">
+        Корзина
+        <span class="badge" id="cartCount">0</span>
+      </button>
+    </header>
+
+    <div class="filters-bar" id="filtersBar">
+      <input class="filter-input" id="searchInput" type="search" placeholder="Поиск: 13 Pro, 256, eSIM" />
+      <select class="filter-select" id="modelFilter">
+        <option value="">Все модели</option>
+      </select>
+      <select class="filter-select" id="sortFilter">
+        <option value="popular">Популярные</option>
+        <option value="cheap">Дешевле</option>
+        <option value="expensive">Дороже</option>
+        <option value="new">Новые</option>
+        <option value="memory">Память</option>
+      </select>
+    </div>
+
+    <main class="grid" id="productGrid"></main>
+  </div>
+
+  <button class="scroll-top" id="scrollTopBtn" aria-label="Наверх">↑</button>
+
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="drawer-header">
+      <div class="drawer-title">Корзина</div>
+      <button class="drawer-close" id="drawerClose">✕</button>
+    </div>
+    <div class="drawer-content" id="cartItems"></div>
+    <div class="drawer-footer">
+      <div class="total-row">
+        <span>Итого</span>
+        <span id="cartTotal">0 ₽</span>
+      </div>
+      <div class="tg-hint" id="tgHint">Откройте магазин в Telegram</div>
+      <button class="btn-primary" id="checkoutBtn">Оформить</button>
+      <button class="btn-ghost" id="clearCartBtn">Очистить</button>
+    </div>
+  </aside>
+
+  <script src="app.js"></script>
+</body>
+</html>
