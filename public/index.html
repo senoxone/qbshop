@@ -3,51 +3,27 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>iPhone магазин</title>
+    <title>iPhone Магазин</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header class="topbar">
       <div class="brand">
-        <div class="brand-logo" aria-hidden="true">
-          <svg class="brand-icon" viewBox="0 0 384 512" aria-hidden="true">
-            <path
-              fill="currentColor"
-              d="M318.7 268.6c-.3-48.2 39.4-71.1 41.1-72.2-22.5-32.8-57.4-37.3-69.8-37.8-29.7-3-58 17.4-73 17.4-15.1 0-38.3-17-63-16.6-32.4.5-62.3 18.8-79 47.6-33.8 58.6-8.7 145.4 24.3 193 16.1 23.3 35.2 49.5 60.3 48.6 24.3-.9 33.5-15.7 62.8-15.7 29.3 0 37.7 15.7 63.4 15.2 26.2-.5 42.8-23.7 58.8-47.2 18.5-27.1 26.1-53.4 26.4-54.8-.6-.3-50.5-19.4-50.3-77.5zM259.9 120.9c13.4-16.2 22.4-38.7 19.9-61.1-19.3.8-42.7 12.9-56.6 29.1-12.4 14.4-23.2 37.4-20.3 59.4 21.5 1.7 43.6-10.9 57-27.4z"
-            />
-          </svg>
-        </div>
-        <div class="brand-text">
-          <div class="brand-title">iPhone магазин</div>
-          <div class="brand-sub">Каталог</div>
-        </div>
+        <div class="brand-title">iPhone магазин</div>
+        <div class="brand-sub">Каталог</div>
       </div>
       <button class="cart-btn" id="cartButton">
-        Корзина
-        <span class="cart-badge" id="cartCount">0</span>
+        Корзина <span id="cartCount">0</span>
       </button>
     </header>
 
-    <section class="controls" id="filtersBar">
-      <div class="controls-row">
-        <div class="control control-search">
-          <input id="searchInput" type="search" placeholder="Поиск: 13 Pro, 256, eSIM" />
-        </div>
-        <div class="control">
-          <select id="modelSelect">
-            <option value="">Все модели</option>
-          </select>
-        </div>
-        <div class="control">
-          <select id="sortSelect">
-            <option value="popular">Популярные</option>
-            <option value="price_asc">Дешевле</option>
-            <option value="price_desc">Дороже</option>
-            <option value="updated_desc">Новые</option>
-            <option value="memory_desc">Память</option>
-          </select>
-        </div>
-      </div>
+    <section class="controls">
+      <input id="searchInput" type="search" placeholder="Поиск: 13 Pro, 256, eSIM..." />
+      <select id="sortSelect">
+        <option value="price_asc">Сначала дешевле</option>
+        <option value="price_desc">Сначала дороже</option>
+        <option value="title">По названию</option>
+      </select>
     </section>
 
     <main>
@@ -57,21 +33,16 @@
     <div id="cartDrawer" class="cart">
       <div class="cart-header">
         <div class="cart-title">Корзина</div>
-        <button id="cartClose" class="cart-close">Закрыть</button>
+        <button id="cartClose">Закрыть</button>
       </div>
       <div id="cartItems" class="cart-items"></div>
       <div class="cart-footer">
         <div class="cart-total">
           Итого: <span id="cartTotal">0</span> ₽
         </div>
-        <div class="cart-actions">
-          <button id="clearBtn" class="clear-btn">Очистить</button>
-          <button id="checkoutBtn" class="checkout-btn">Оформить заказ</button>
-        </div>
+        <button id="checkoutBtn" class="checkout-btn">Оформить заказ</button>
       </div>
     </div>
-
-    <button id="scrollTopBtn" class="scroll-top" aria-label="Наверх">↑</button>
 
     <script src="app.js"></script>
   </body>
