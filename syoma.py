@@ -860,13 +860,84 @@ def _extract_image_from_product_page(html: str) -> str:
     return ""
 
 
+
+def _extract_price_from_product_page(html: str) -> Optional[int]:
+    m = re.search(r'data-price="(\d+)"', html)
+    if m:
+        try:
+            return int(m.group(1))
+        except ValueError:
+            return None
+    m = re.search(r"\"price\"\s*:\s*(\d+)", html)
+    if m:
+        try:
+            return int(m.group(1))
+        except ValueError:
+            return None
+    return None
+
+
+def _parse_products_from_js(html: str) -> List[Tuple[str, str]]:
+    m = re.search(r"var\s+products\s*=\s*(\[[^\n]+?\]);", html, re.S)
+    if not m:
+        return []
+    try:
+        raw = json.loads(m.group(1))
+    except Exception:
+        return []
+    out: List[Tuple[str, str]] = []
+    for item in raw:
+        name = str(item.get("name") or "").strip()
+        url = str(item.get("frontend_url") or "").strip()
+        if name and url:
+            out.append((name, url))
+    return out
+
+
 def parse_catalog_page(html: str) -> List[Tuple[str, str, int, str, Optional[str], str]]:
     soup = BeautifulSoup(html, "html.parser")
     out: List[Tuple[str, str, int, str, Optional[str], str]] = []
 
+    forms = soup.find_all(attrs={"data-name": True, "data-price": True})
+    form_map: Dict[str, Tuple[int, str, Optional[str], str]] = {}
+    for form in forms:
+        name = str(form.get("data-name") or "").strip()
+        if not name:
+            continue
+        raw_price = str(form.get("data-price") or "")
+        digits = re.sub(r"[^\d]", "", raw_price)
+        if not digits:
+            continue
+        price = int(digits)
+        card = form.find_parent(class_="p-thumbs__inner") or form
+        card_text = card.get_text("\n", strip=True)
+        status = parse_stock_status(card_text)
+        image_url = _extract_image_from_block(card)
+
+        cashback: Optional[str] = None
+        tx_block = normalize_text(card_text)
+        m_cb = re.search(r"(??????|??????|??????|cashback)\s*\+?\s*([0-9]+)", tx_block)
+        if m_cb:
+            cashback = f"?????? + {m_cb.group(2)}"
+
+        form_map[name] = (price, status, cashback, image_url)
+
+    products = _parse_products_from_js(html)
+    if products:
+        for title, frontend_url in products:
+            price = 0
+            status = ""
+            cashback = None
+            image_url = ""
+            if title in form_map:
+                price, status, cashback, image_url = form_map[title]
+            url = urljoin(BASE_URL, frontend_url)
+            out.append((title, url, price, status, cashback, image_url))
+        return out
+
     for a in soup.find_all("a", href=True):
         title = a.get_text(" ", strip=True)
-        if not title.startswith("Смартфон Apple iPhone"):
+        if not title.startswith("?????????? Apple iPhone"):
             continue
 
         url = urljoin(BASE_URL, a["href"])
@@ -889,20 +960,14 @@ def parse_catalog_page(html: str) -> List[Tuple[str, str, int, str, Optional[str
         status = parse_stock_status(block_text)
         image_url = _extract_image_from_block(block)
 
-        # Пытаемся вытащить строку про кешбэк прямо из блока карточки.
-        # На сайте обычно что-то типа:
-        # "Кешбек +698", иногда "+ 698" отдельным элементом.
         cashback: Optional[str] = None
         tx_block = normalize_text(block_text)
-        m_cb = re.search(r"(кешбек|кэшбек|кэшбэк|cashback)\s*\+?\s*([0-9]+)", tx_block)
+        m_cb = re.search(r"(??????|??????|??????|cashback)\s*\+?\s*([0-9]+)", tx_block)
         if m_cb:
-            # Нормализуем вид как на сайте: "Кешбек + 698"
-            cashback = f"Кешбек + {m_cb.group(2)}"
+            cashback = f"?????? + {m_cb.group(2)}"
 
         out.append((title, url, price, status, cashback, image_url))
     return out
-
-
 
 def detect_pages(html: str) -> int:
     soup = BeautifulSoup(html, "html.parser")
@@ -977,11 +1042,28 @@ def refresh(base_markup_rub: int, markup_cfg: Optional[MarkupConfig] = None, deb
                     image_local = prev_local or ""
                     image_key = prev_key or ""
 
-            if not image_url:
+            page_html: Optional[str] = None
+            if price_site <= 0 or not status:
                 try:
                     code, html = fetch_html(sess, url, timeout=20, retries=2)
                     if code < 400:
-                        image_url = _extract_image_from_product_page(html)
+                        page_html = html
+                        price_page = _extract_price_from_product_page(html)
+                        if price_page:
+                            price_site = price_page
+                        if not status:
+                            status = parse_stock_status(BeautifulSoup(html, "html.parser").get_text(" ", strip=True))
+                except Exception:
+                    pass
+
+            if not image_url:
+                try:
+                    if page_html is None:
+                        code, html = fetch_html(sess, url, timeout=20, retries=2)
+                        if code < 400:
+                            page_html = html
+                    if page_html:
+                        image_url = _extract_image_from_product_page(page_html)
                 except Exception:
                     pass
 
