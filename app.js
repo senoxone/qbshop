@@ -25,6 +25,13 @@ function formatPrice(value) {
   return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
 }
 
+function formatTitle(title) {
+  return String(title || "")
+    .replace(/^Смартфон\s+Apple\s+iPhone\s+/i, "iPhone ")
+    .replace(/^Смартфон\s+Apple\s+/i, "")
+    .trim();
+}
+
 function getStorage(item) {
   const meta = item.meta || {};
   const storage = meta.storage || meta.memory_gb || item.storage || item.memory_gb;
@@ -155,13 +162,14 @@ function updateQty(id, qty) {
 }
 
 function addToCart(item) {
+  const cleanTitle = formatTitle(item.title);
   const existing = state.cart.items.find((it) => it.id === item.id);
   if (existing) {
     existing.qty += 1;
   } else {
     state.cart.items.push({
       id: item.id,
-      title: item.title,
+      title: cleanTitle,
       price: item.price,
       qty: 1,
       image: item.image,
@@ -204,7 +212,7 @@ function renderItems(items) {
 
     const title = document.createElement("div");
     title.className = "card-title";
-    title.textContent = item.title;
+    title.textContent = formatTitle(item.title);
 
     const meta = document.createElement("div");
     meta.className = "card-meta";
