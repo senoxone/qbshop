@@ -117,8 +117,10 @@ body {
   padding: 8px 12px 12px;
   margin: 0 -12px 12px;
   overflow-x: auto;
-  background: rgba(11, 12, 16, 0.9);
+  background: rgba(11, 12, 16, 0.96);
   backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.35);
 }
 
 .filters-bar::-webkit-scrollbar {
@@ -164,98 +166,137 @@ body {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 18px;
-  padding: 12px;
+  padding: 0;
   display: flex;
   flex-direction: column;
-  height: 330px;
+  height: 370px;
   box-shadow: 0 8px 22px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
 }
 
 .card-media {
-  background: #101217;
-  border-radius: 14px;
-  height: 190px;
+  background: #ffffff;
+  height: 240px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px;
+  padding: 0;
+  border-radius: 18px 18px 0 0;
+  overflow: hidden;
 }
 
 .card-media img {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  transform: scale(1);
+  background: #ffffff;
 }
 
 .card-body {
   display: flex;
   flex-direction: column;
   flex: 1;
-  margin-top: 10px;
+  padding: 12px;
 }
 
 .card-title {
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 1.25;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
   min-height: 36px;
+  overflow: hidden;
+}
+
+.card-title .title-main {
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.2px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.card-title .title-sub {
+  font-size: 10.8px;
+  font-weight: 600;
+  line-height: 1.15;
+  color: var(--text);
+  letter-spacing: -0.2px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .card-meta {
-  font-size: 12px;
+  font-size: 10.5px;
   color: var(--muted);
   margin-top: 4px;
   display: -webkit-box;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  min-height: 14px;
 }
 
 .card-footer {
   margin-top: auto;
   display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 10px;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 8px;
 }
 
 .card-price {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 4px;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 14px;
   line-height: 1;
+  width: 100%;
+  white-space: nowrap;
 }
 
 .card-price .currency {
-  font-size: 12px;
+  font-size: 10px;
   color: var(--muted);
-  margin-top: 2px;
+  margin-top: 0;
 }
 
 .add-btn {
-  border: 1px solid rgba(78, 140, 255, 0.45);
-  background: var(--accent-soft);
-  color: var(--text);
-  border-radius: 999px;
+  border: 1px solid rgba(78, 140, 255, 0.6);
+  background: linear-gradient(180deg, #2f6dff, #2456d6);
+  color: #fff;
+  border-radius: 12px;
   height: 34px;
   padding: 0 12px;
-  font-size: 12px;
+  font-size: 11.5px;
   cursor: pointer;
-  flex: 0 0 auto;
+  width: 100%;
+  transition: transform 0.08s ease, box-shadow 0.15s ease, background 0.15s ease;
+  box-shadow: 0 6px 14px rgba(46, 109, 255, 0.32);
+}
+
+.add-btn:active {
+  transform: scale(0.98);
+}
+
+.add-btn.added {
+  background: linear-gradient(180deg, #24a35a, #1e8a4c);
+  border-color: rgba(66, 201, 120, 0.7);
+  box-shadow: 0 6px 14px rgba(36, 163, 90, 0.35);
 }
 
 @media (max-width: 420px) {
   .product-card {
-    height: 320px;
+    height: 350px;
   }
 
   .card-media {
-    height: 175px;
+    height: 230px;
   }
 }
 
@@ -436,6 +477,11 @@ body {
   cursor: pointer;
 }
 
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 .btn-ghost {
   background: transparent;
   color: var(--text);
@@ -454,4 +500,160 @@ body {
 
 .tg-hint.show {
   display: block;
+}
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  z-index: 40;
+}
+
+.modal-backdrop.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0.98);
+  width: min(360px, 92vw);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 14px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  z-index: 41;
+}
+
+.modal.open {
+  opacity: 1;
+  pointer-events: all;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.field input,
+.field textarea {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: 12px;
+  padding: 10px 12px;
+  font-size: 14px;
+  outline: none;
+}
+
+.field textarea {
+  resize: vertical;
+  min-height: 72px;
+}
+
+.switch-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--text);
+}
+
+.modal-hint {
+  display: none;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.modal-hint.show {
+  display: block;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.modal-actions .btn-ghost,
+.modal-actions .btn-primary {
+  flex: 1;
+}
+
+.tg-status {
+  position: fixed;
+  left: 12px;
+  bottom: calc(12px + var(--safe-bottom));
+  font-size: 11px;
+  color: var(--muted);
+  background: rgba(11, 12, 16, 0.8);
+  padding: 4px 8px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  z-index: 50;
+}
+
+.debug-panel {
+  position: fixed;
+  left: 12px;
+  right: 12px;
+  bottom: calc(52px + var(--safe-bottom));
+  background: rgba(20, 21, 27, 0.95);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 8px 10px;
+  font-size: 11px;
+  color: var(--text);
+  z-index: 60;
+  display: none;
+  gap: 6px;
+}
+
+.debug-panel.show {
+  display: flex;
+  flex-direction: column;
+}
+
+.debug-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.debug-btn {
+  flex: 1;
+  height: 28px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+  color: var(--text);
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.debug-status {
+  color: var(--muted);
 }
