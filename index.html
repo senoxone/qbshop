@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>QBstore</title>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -60,6 +61,44 @@
       <button class="btn-ghost" id="clearCartBtn">Очистить</button>
     </div>
   </aside>
+
+  <div class="modal-backdrop" id="leadBackdrop"></div>
+  <div class="modal" id="leadModal" role="dialog" aria-modal="true">
+    <div class="modal-header">Оформление</div>
+    <div class="modal-body">
+      <label class="field">
+        <span>Имя</span>
+        <input id="leadName" type="text" placeholder="Ваше имя" />
+      </label>
+      <label class="field">
+        <span>Телефон</span>
+        <input id="leadPhone" type="tel" placeholder="+7 (999) 123-45-67" />
+      </label>
+      <label class="field">
+        <span>Комментарий</span>
+        <textarea id="leadComment" rows="3" placeholder="Адрес, время, пожелания"></textarea>
+      </label>
+      <label class="switch-row">
+        <input id="leadTg" type="checkbox" checked />
+        <span>Написать в Telegram</span>
+      </label>
+      <div class="modal-hint" id="leadHint">Откройте магазин внутри Telegram</div>
+    </div>
+    <div class="modal-actions">
+      <button class="btn-ghost" id="leadCancel">Отмена</button>
+      <button class="btn-primary" id="leadSend" disabled>Отправить заявку</button>
+    </div>
+  </div>
+
+  <div class="tg-status" id="tgStatus">TG: NO</div>
+  <div class="debug-panel" id="debugPanel">
+    <div class="debug-info" id="debugInfo">DEBUG</div>
+    <div class="debug-actions">
+      <button class="debug-btn" id="debugCopy">COPY DEBUG</button>
+      <button class="debug-btn" id="debugTest">TEST SEND</button>
+    </div>
+    <div class="debug-status" id="debugStatus"></div>
+  </div>
 
   <script src="app.js"></script>
 </body>

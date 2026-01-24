@@ -13,12 +13,75 @@ const clearCartBtn = document.getElementById("clearCartBtn");
 const checkoutBtn = document.getElementById("checkoutBtn");
 const scrollTopBtn = document.getElementById("scrollTopBtn");
 const tgHint = document.getElementById("tgHint");
+const tgStatus = document.getElementById("tgStatus");
+const leadBackdrop = document.getElementById("leadBackdrop");
+const leadModal = document.getElementById("leadModal");
+const leadName = document.getElementById("leadName");
+const leadPhone = document.getElementById("leadPhone");
+const leadComment = document.getElementById("leadComment");
+const leadTg = document.getElementById("leadTg");
+const leadHint = document.getElementById("leadHint");
+const leadCancel = document.getElementById("leadCancel");
+const leadSend = document.getElementById("leadSend");
 
 const state = {
   baseItems: [],
   items: [],
   cart: loadCart(),
 };
+
+function getTgContext() {
+  const tg = window.Telegram?.WebApp || null;
+  const initData = tg?.initData || "";
+  const qid = tg?.initDataUnsafe?.query_id || null;
+  const user = tg?.initDataUnsafe?.user || null;
+  return { tg, initData, qid, user };
+}
+
+const ctx = getTgContext();
+const tg = ctx.tg;
+const tgReady = Boolean(tg);
+if (tgStatus) {
+  tgStatus.textContent = tgReady ? "TG: OK" : "TG: NO";
+  tgStatus.title = `qid=${ctx.qid ? String(ctx.qid).slice(0, 10) : "none"} host=${location.hostname}`;
+}
+try {
+  tg?.ready();
+  tg?.expand();
+} catch {}
+
+const debugEnabled =
+  new URLSearchParams(location.search).get("debug") === "1" ||
+  localStorage.getItem("DEBUG") === "1";
+const debugPanel = document.getElementById("debugPanel");
+const debugInfo = document.getElementById("debugInfo");
+const debugStatus = document.getElementById("debugStatus");
+const debugCopy = document.getElementById("debugCopy");
+const debugTest = document.getElementById("debugTest");
+
+function setDebugStatus(text) {
+  if (debugStatus) debugStatus.textContent = text;
+}
+
+function renderDebugInfo() {
+  if (!debugInfo) return;
+  const local = getTgContext();
+  const info = [
+    `TG_API: ${local.tg ? "OK" : "NO"}`,
+    `initData: ${local.initData?.length || 0}`,
+    `qid: ${local.qid ? String(local.qid).slice(0, 10) : "none"}`,
+    `user: ${local.user?.id || "none"}`,
+    `platform: ${local.tg?.platform || "n/a"}`,
+    `version: ${local.tg?.version || "n/a"}`,
+  ].join(" | ");
+  debugInfo.textContent = info;
+}
+
+if (debugEnabled && debugPanel) {
+  debugPanel.classList.add("show");
+  renderDebugInfo();
+  setDebugStatus(tgReady ? "READY" : "NO TG");
+}
 
 function formatPrice(value) {
   const num = Number(value || 0);
@@ -58,6 +121,18 @@ function getColor(item) {
 function buildMetaLine(item) {
   const parts = [getStorage(item), getSim(item), getColor(item)].filter(Boolean);
   return parts.join(" • ");
+}
+
+function buildTitleParts(item) {
+  const meta = item.meta || {};
+  const model = meta.model || item.model || "";
+  const storage = getStorage(item);
+  const color = getColor(item);
+  const main = [model, storage].filter(Boolean).join(" ").trim();
+  return {
+    main: main || formatTitle(item.title),
+    sub: color || "",
+  };
 }
 
 function normalize(text) {
@@ -147,6 +222,7 @@ function renderCart() {
 
   updateCartBadge();
   updateCartTotal();
+  checkoutBtn.disabled = state.cart.items.length === 0;
 }
 
 function updateQty(id, qty) {
@@ -161,7 +237,7 @@ function updateQty(id, qty) {
   renderCart();
 }
 
-function addToCart(item) {
+function addToCart(item, btn) {
   const cleanTitle = formatTitle(item.title);
   const existing = state.cart.items.find((it) => it.id === item.id);
   if (existing) {
@@ -178,6 +254,25 @@ function addToCart(item) {
   }
   saveCart();
   renderCart();
+
+  if (btn) {
+    if (btn._timer) {
+      clearTimeout(btn._timer);
+    }
+    btn.textContent = "Добавлено";
+    btn.classList.add("added");
+    btn.disabled = true;
+    btn._timer = setTimeout(() => {
+      btn.textContent = "В корзину";
+      btn.classList.remove("added");
+      btn.disabled = false;
+      btn._timer = null;
+    }, 900);
+  }
+
+  if (window.Telegram?.WebApp?.HapticFeedback) {
+    window.Telegram.WebApp.HapticFeedback.impactOccurred("light");
+  }
 }
 
 function openDrawer() {
@@ -188,6 +283,37 @@ function openDrawer() {
 function closeDrawer() {
   cartDrawer.classList.remove("open");
   drawerBackdrop.classList.remove("open");
+}
+
+function openLeadModal() {
+  leadHint.classList.remove("show");
+  leadModal.classList.add("open");
+  leadBackdrop.classList.add("open");
+  updateLeadState();
+  setTimeout(() => leadName.focus(), 0);
+}
+
+function closeLeadModal() {
+  leadModal.classList.remove("open");
+  leadBackdrop.classList.remove("open");
+}
+
+function normalizePhone(value) {
+  return String(value || "").replace(/\D/g, "");
+}
+
+function updateLeadState() {
+  const nameOk = leadName.value.trim().length >= 2;
+  const phoneOk = normalizePhone(leadPhone.value).length >= 10;
+  leadSend.disabled = !(nameOk && phoneOk && state.cart.items.length);
+}
+
+function makeOrderId() {
+  const d = new Date();
+  const pad = (n) => String(n).padStart(2, "0");
+  const ts = `${d.getFullYear()}${pad(d.getMonth() + 1)}${pad(d.getDate())}-${pad(d.getHours())}${pad(d.getMinutes())}${pad(d.getSeconds())}`;
+  const rand = Math.random().toString(36).slice(2, 6).toUpperCase();
+  return `QB-${ts}-${rand}`;
 }
 
 function renderItems(items) {
@@ -212,7 +338,17 @@ function renderItems(items) {
 
     const title = document.createElement("div");
     title.className = "card-title";
-    title.textContent = formatTitle(item.title);
+    const titleParts = buildTitleParts(item);
+
+    const titleMain = document.createElement("div");
+    titleMain.className = "title-main";
+    titleMain.textContent = titleParts.main;
+
+    const titleSub = document.createElement("div");
+    titleSub.className = "title-sub";
+    titleSub.textContent = titleParts.sub;
+
+    title.append(titleMain, titleSub);
 
     const meta = document.createElement("div");
     meta.className = "card-meta";
@@ -228,7 +364,7 @@ function renderItems(items) {
     const btn = document.createElement("button");
     btn.className = "add-btn";
     btn.textContent = "В корзину";
-    btn.onclick = () => addToCart(item);
+    btn.onclick = () => addToCart(item, btn);
 
     footer.append(price, btn);
     body.append(title, meta, footer);
@@ -314,25 +450,10 @@ clearCartBtn.addEventListener("click", () => {
 });
 
 checkoutBtn.addEventListener("click", () => {
-  const total = state.cart.items.reduce((sum, it) => sum + it.price * it.qty, 0);
-  const payload = {
-    items: state.cart.items.map((it) => ({
-      id: it.id,
-      title: it.title,
-      price: it.price,
-      qty: it.qty,
-    })),
-    total,
-    ts: Math.floor(Date.now() / 1000),
-    tg_user: window.Telegram?.WebApp?.initDataUnsafe?.user || null,
-  };
-
-  if (window.Telegram?.WebApp?.sendData) {
-    tgHint.classList.remove("show");
-    window.Telegram.WebApp.sendData(JSON.stringify(payload));
-  } else {
-    tgHint.classList.add("show");
+  if (state.cart.items.length === 0) {
+    return;
   }
+  openLeadModal();
 });
 
 window.addEventListener("scroll", () => {
@@ -343,9 +464,170 @@ window.addEventListener("scroll", () => {
   }
 });
 
+leadBackdrop.addEventListener("click", closeLeadModal);
+leadCancel.addEventListener("click", closeLeadModal);
+leadName.addEventListener("input", updateLeadState);
+leadPhone.addEventListener("input", updateLeadState);
+leadComment.addEventListener("input", updateLeadState);
+leadTg.addEventListener("change", updateLeadState);
+
+leadSend.addEventListener("click", () => {
+  const name = leadName.value.trim();
+  const phoneRaw = leadPhone.value.trim();
+  const phoneDigits = normalizePhone(phoneRaw);
+  if (name.length < 2 || phoneDigits.length < 10 || state.cart.items.length === 0) {
+    updateLeadState();
+    return;
+  }
+
+  leadSend.disabled = true;
+  leadSend.textContent = "Отправка...";
+
+  const total = state.cart.items.reduce((sum, it) => sum + it.price * it.qty, 0);
+  const localCtx = getTgContext();
+  const tgUser = localCtx.user || {};
+  const payload = {
+    type: "lead_order",
+    order_id: makeOrderId(),
+    ts: Date.now(),
+    contact: {
+      name,
+      phone: phoneRaw,
+      comment: leadComment.value.trim() || "",
+    },
+    items: state.cart.items.map((it) => ({
+      id: it.id,
+      title: it.title,
+      price: it.price,
+      qty: it.qty,
+    })),
+    total,
+    source: {
+      webapp: true,
+      page_url: location.href,
+    },
+    tg_user: {
+      id: tgUser.id ?? null,
+      username: tgUser.username ?? null,
+      first_name: tgUser.first_name ?? null,
+      last_name: tgUser.last_name ?? null,
+    },
+  };
+
+  console.log(
+    "tg exists",
+    !!localCtx.tg,
+    "initData",
+    localCtx.initData?.length,
+    "initDataUnsafe",
+    localCtx.tg?.initDataUnsafe
+  );
+  if (debugEnabled) {
+    setDebugStatus("SENDING...");
+  }
+
+  const payloadStr = JSON.stringify(payload);
+  if (!localCtx.tg) {
+    leadHint.textContent = "Откройте магазин через кнопку бота";
+    leadHint.classList.add("show");
+    leadSend.disabled = false;
+    leadSend.textContent = "Отправить заявку";
+    if (debugEnabled) {
+      setDebugStatus("NO TG");
+    }
+    return;
+  }
+  if (!localCtx.qid || !localCtx.initData) {
+    leadHint.textContent = "Открыто не как Mini App. Откройте магазин через кнопку в боте.";
+    leadHint.classList.add("show");
+    leadSend.disabled = false;
+    leadSend.textContent = "Отправить заявку";
+    if (debugEnabled) {
+      setDebugStatus("NO QUERY_ID");
+    }
+    return;
+  }
+  if (payloadStr.length > 3800) {
+    leadHint.textContent = "Слишком большой заказ, уберите часть позиций";
+    leadHint.classList.add("show");
+    leadSend.disabled = false;
+    leadSend.textContent = "Отправить заявку";
+    if (debugEnabled) {
+      setDebugStatus("PAYLOAD TOO LARGE");
+    }
+    return;
+  }
+  try {
+    localCtx.tg.sendData(payloadStr);
+    if (localCtx.tg?.HapticFeedback) {
+      localCtx.tg.HapticFeedback.notificationOccurred("success");
+    }
+    leadHint.textContent = "Заявка отправлена, менеджер свяжется";
+    leadHint.classList.add("show");
+    state.cart.items = [];
+    saveCart();
+    renderCart();
+    if (debugEnabled) {
+      setDebugStatus("SENT");
+    }
+    if (localCtx.tg?.showPopup) {
+      localCtx.tg.showPopup({ message: "✅ Заявка отправлена" });
+    } else if (localCtx.tg?.showAlert) {
+      localCtx.tg.showAlert("✅ Заявка отправлена");
+    }
+    setTimeout(() => {
+      closeLeadModal();
+      closeDrawer();
+      leadHint.classList.remove("show");
+      localCtx.tg?.close?.();
+    }, 600);
+  } catch {
+    leadHint.textContent = "Не удалось отправить заявку, попробуйте еще раз";
+    leadHint.classList.add("show");
+    leadSend.disabled = false;
+    leadSend.textContent = "Отправить заявку";
+    if (debugEnabled) {
+      setDebugStatus("SEND FAILED");
+    }
+  }
+});
+
 scrollTopBtn.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
+
+if (debugEnabled) {
+  debugCopy?.addEventListener("click", async () => {
+    renderDebugInfo();
+    const text = debugInfo?.textContent || "";
+    try {
+      await navigator.clipboard.writeText(text);
+      setDebugStatus("COPIED");
+    } catch {
+      setDebugStatus("COPY FAILED");
+    }
+  });
+
+  debugTest?.addEventListener("click", () => {
+    const payload = JSON.stringify({ type: "ping", ts: Date.now() });
+    const local = getTgContext();
+    if (!local.tg) {
+      setDebugStatus("NO TG");
+      return;
+    }
+    if (!local.qid || !local.initData) {
+      setDebugStatus("NO QUERY_ID");
+      return;
+    }
+    setDebugStatus("TEST SENDING...");
+    try {
+      local.tg.sendData(payload);
+      setDebugStatus("TEST SENT");
+    } catch {
+      setDebugStatus("TEST FAILED");
+    }
+  });
+}
 
 renderCart();
 loadCatalog();
