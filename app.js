@@ -63,6 +63,16 @@ function setDebugStatus(text) {
   if (debugStatus) debugStatus.textContent = text;
 }
 
+function debugAlert(message) {
+  if (!debugEnabled) return;
+  const local = getTgContext();
+  if (local.tg?.showAlert) {
+    local.tg.showAlert(message);
+  } else if (local.tg?.showPopup) {
+    local.tg.showPopup({ message });
+  }
+}
+
 function renderDebugInfo() {
   if (!debugInfo) return;
   const local = getTgContext();
@@ -472,6 +482,7 @@ leadComment.addEventListener("input", updateLeadState);
 leadTg.addEventListener("change", updateLeadState);
 
 leadSend.addEventListener("click", () => {
+  console.log("CLICK submit");
   const name = leadName.value.trim();
   const phoneRaw = leadPhone.value.trim();
   const phoneDigits = normalizePhone(phoneRaw);
@@ -527,6 +538,7 @@ leadSend.addEventListener("click", () => {
   }
 
   const payloadStr = JSON.stringify(payload);
+  console.log("PAYLOAD", payloadStr);
   if (!localCtx.tg) {
     leadHint.textContent = "Откройте магазин через кнопку бота";
     leadHint.classList.add("show");
@@ -558,7 +570,9 @@ leadSend.addEventListener("click", () => {
     return;
   }
   try {
+    debugAlert(`DEBUG: sendData called, len=${payloadStr.length}`);
     localCtx.tg.sendData(payloadStr);
+    debugAlert("DEBUG: sendData done");
     if (localCtx.tg?.HapticFeedback) {
       localCtx.tg.HapticFeedback.notificationOccurred("success");
     }
