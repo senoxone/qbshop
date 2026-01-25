@@ -50,14 +50,44 @@ try {
   tg?.expand();
 } catch {}
 
-const debugEnabled =
-  new URLSearchParams(location.search).get("debug") === "1" ||
-  localStorage.getItem("DEBUG") === "1";
+const urlParams = new URLSearchParams(location.search);
+const debugEnabled = urlParams.get("debug") === "1" || localStorage.getItem("DEBUG") === "1";
+const debugBot = urlParams.get("bot") || "";
+const debugNonce = urlParams.get("nonce") || "";
 const debugPanel = document.getElementById("debugPanel");
 const debugInfo = document.getElementById("debugInfo");
 const debugStatus = document.getElementById("debugStatus");
 const debugCopy = document.getElementById("debugCopy");
 const debugTest = document.getElementById("debugTest");
+const MINI_APP_ERROR = "Открыто НЕ как Mini App. Открой через кнопку бота.";
+const miniAppReady = Boolean(ctx.tg && ctx.initData && ctx.qid && ctx.user);
+
+function applyMiniAppLock() {
+  if (miniAppReady) {
+    if (tgHint) {
+      tgHint.classList.remove("show");
+      tgHint.style.color = "";
+    }
+    if (leadHint) {
+      leadHint.style.color = "";
+    }
+    if (debugTest) debugTest.disabled = false;
+    return;
+  }
+  if (tgHint) {
+    tgHint.textContent = MINI_APP_ERROR;
+    tgHint.style.color = "#ff5a5a";
+    tgHint.classList.add("show");
+  }
+  if (leadHint) {
+    leadHint.textContent = MINI_APP_ERROR;
+    leadHint.style.color = "#ff5a5a";
+    leadHint.classList.add("show");
+  }
+  if (checkoutBtn) checkoutBtn.disabled = true;
+  if (leadSend) leadSend.disabled = true;
+  if (debugTest) debugTest.disabled = true;
+}
 
 function setDebugStatus(text) {
   if (debugStatus) debugStatus.textContent = text;
@@ -81,6 +111,8 @@ function renderDebugInfo() {
     `initData: ${local.initData?.length || 0}`,
     `qid: ${local.qid ? String(local.qid).slice(0, 10) : "none"}`,
     `user: ${local.user?.id || "none"}`,
+    `bot: ${debugBot || "none"}`,
+    `nonce: ${debugNonce || "none"}`,
     `platform: ${local.tg?.platform || "n/a"}`,
     `version: ${local.tg?.version || "n/a"}`,
   ].join(" | ");
@@ -92,6 +124,8 @@ if (debugEnabled && debugPanel) {
   renderDebugInfo();
   setDebugStatus(tgReady ? "READY" : "NO TG");
 }
+
+applyMiniAppLock();
 
 function formatPrice(value) {
   const num = Number(value || 0);
@@ -232,7 +266,7 @@ function renderCart() {
 
   updateCartBadge();
   updateCartTotal();
-  checkoutBtn.disabled = state.cart.items.length === 0;
+  checkoutBtn.disabled = !miniAppReady || state.cart.items.length === 0;
 }
 
 function updateQty(id, qty) {
@@ -313,6 +347,10 @@ function normalizePhone(value) {
 }
 
 function updateLeadState() {
+  if (!miniAppReady) {
+    leadSend.disabled = true;
+    return;
+  }
   const nameOk = leadName.value.trim().length >= 2;
   const phoneOk = normalizePhone(leadPhone.value).length >= 10;
   leadSend.disabled = !(nameOk && phoneOk && state.cart.items.length);
@@ -483,6 +521,13 @@ leadTg.addEventListener("change", updateLeadState);
 
 leadSend.addEventListener("click", () => {
   console.log("CLICK submit");
+  if (!miniAppReady) {
+    leadHint.textContent = MINI_APP_ERROR;
+    leadHint.style.color = "#ff5a5a";
+    leadHint.classList.add("show");
+    leadSend.disabled = true;
+    return;
+  }
   const name = leadName.value.trim();
   const phoneRaw = leadPhone.value.trim();
   const phoneDigits = normalizePhone(phoneRaw);
@@ -499,6 +544,8 @@ leadSend.addEventListener("click", () => {
   const tgUser = localCtx.user || {};
   const payload = {
     type: "lead_order",
+    bot: debugBot || null,
+    nonce: debugNonce || null,
     order_id: makeOrderId(),
     ts: Date.now(),
     contact: {
@@ -540,7 +587,7 @@ leadSend.addEventListener("click", () => {
   const payloadStr = JSON.stringify(payload);
   console.log("PAYLOAD", payloadStr);
   if (!localCtx.tg) {
-    leadHint.textContent = "Откройте магазин через кнопку бота";
+    leadHint.textContent = MINI_APP_ERROR;
     leadHint.classList.add("show");
     leadSend.disabled = false;
     leadSend.textContent = "Отправить заявку";
@@ -550,7 +597,7 @@ leadSend.addEventListener("click", () => {
     return;
   }
   if (!localCtx.qid || !localCtx.initData) {
-    leadHint.textContent = "Открыто не как Mini App. Откройте магазин через кнопку в боте.";
+    leadHint.textContent = MINI_APP_ERROR;
     leadHint.classList.add("show");
     leadSend.disabled = false;
     leadSend.textContent = "Отправить заявку";
@@ -570,7 +617,7 @@ leadSend.addEventListener("click", () => {
     return;
   }
   try {
-    debugAlert(`DEBUG: sendData called, len=${payloadStr.length}`);
+    debugAlert(`DEBUG: sendData called nonce=${debugNonce || "none"} len=${payloadStr.length}`);
     localCtx.tg.sendData(payloadStr);
     debugAlert("DEBUG: sendData done");
     if (localCtx.tg?.HapticFeedback) {
@@ -623,7 +670,11 @@ if (debugEnabled) {
   });
 
   debugTest?.addEventListener("click", () => {
-    const payload = JSON.stringify({ type: "ping", ts: Date.now() });
+    if (!miniAppReady) {
+      setDebugStatus("NO MINI APP");
+      return;
+    }
+    const payload = JSON.stringify({ type: "ping", bot: debugBot || null, nonce: debugNonce || null, ts: Date.now() });
     const local = getTgContext();
     if (!local.tg) {
       setDebugStatus("NO TG");
@@ -635,6 +686,7 @@ if (debugEnabled) {
     }
     setDebugStatus("TEST SENDING...");
     try {
+      debugAlert(`DEBUG: sendData called nonce=${debugNonce || "none"} len=${payload.length}`);
       local.tg.sendData(payload);
       setDebugStatus("TEST SENT");
     } catch {
