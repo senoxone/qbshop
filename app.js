@@ -60,10 +60,14 @@ const debugStatus = document.getElementById("debugStatus");
 const debugCopy = document.getElementById("debugCopy");
 const debugTest = document.getElementById("debugTest");
 const MINI_APP_ERROR = "Открыто НЕ как Mini App. Открой через кнопку бота.";
-const miniAppReady = Boolean(ctx.tg && ctx.initData && ctx.qid && ctx.user);
+
+function isMiniAppReady() {
+  const local = getTgContext();
+  return Boolean(local.tg && local.initData && local.qid && local.user);
+}
 
 function applyMiniAppLock() {
-  if (miniAppReady) {
+  if (isMiniAppReady()) {
     if (tgHint) {
       tgHint.classList.remove("show");
       tgHint.style.color = "";
@@ -126,6 +130,10 @@ if (debugEnabled && debugPanel) {
 }
 
 applyMiniAppLock();
+setTimeout(() => {
+  applyMiniAppLock();
+  if (debugEnabled) renderDebugInfo();
+}, 200);
 
 function formatPrice(value) {
   const num = Number(value || 0);
@@ -266,7 +274,7 @@ function renderCart() {
 
   updateCartBadge();
   updateCartTotal();
-  checkoutBtn.disabled = !miniAppReady || state.cart.items.length === 0;
+  checkoutBtn.disabled = !isMiniAppReady() || state.cart.items.length === 0;
 }
 
 function updateQty(id, qty) {
@@ -347,7 +355,7 @@ function normalizePhone(value) {
 }
 
 function updateLeadState() {
-  if (!miniAppReady) {
+  if (!isMiniAppReady()) {
     leadSend.disabled = true;
     return;
   }
@@ -521,7 +529,7 @@ leadTg.addEventListener("change", updateLeadState);
 
 leadSend.addEventListener("click", () => {
   console.log("CLICK submit");
-  if (!miniAppReady) {
+  if (!isMiniAppReady()) {
     leadHint.textContent = MINI_APP_ERROR;
     leadHint.style.color = "#ff5a5a";
     leadHint.classList.add("show");
@@ -641,7 +649,7 @@ leadSend.addEventListener("click", () => {
       closeDrawer();
       leadHint.classList.remove("show");
       localCtx.tg?.close?.();
-    }, 600);
+    }, 200);
   } catch {
     leadHint.textContent = "Не удалось отправить заявку, попробуйте еще раз";
     leadHint.classList.add("show");
@@ -670,7 +678,7 @@ if (debugEnabled) {
   });
 
   debugTest?.addEventListener("click", () => {
-    if (!miniAppReady) {
+    if (!isMiniAppReady()) {
       setDebugStatus("NO MINI APP");
       return;
     }
@@ -689,6 +697,9 @@ if (debugEnabled) {
       debugAlert(`DEBUG: sendData called nonce=${debugNonce || "none"} len=${payload.length}`);
       local.tg.sendData(payload);
       setDebugStatus("TEST SENT");
+      setTimeout(() => {
+        local.tg?.close?.();
+      }, 200);
     } catch {
       setDebugStatus("TEST FAILED");
     }
