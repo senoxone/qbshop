@@ -63,7 +63,7 @@ const MINI_APP_ERROR = "Открыто НЕ как Mini App. Открой чер
 
 function isMiniAppReady() {
   const local = getTgContext();
-  return Boolean(local.tg && local.initData && local.qid && local.user);
+  return Boolean(local.tg && local.initData);
 }
 
 function getBotUsername() {
@@ -654,13 +654,13 @@ leadSend.addEventListener("click", async () => {
     }
     return;
   }
-  if (!localCtx.qid || !localCtx.initData) {
+  if (!localCtx.initData) {
     leadHint.textContent = MINI_APP_ERROR;
     leadHint.classList.add("show");
     leadSend.disabled = false;
     leadSend.textContent = "Отправить заявку";
     if (debugEnabled) {
-      setDebugStatus("NO QUERY_ID");
+      setDebugStatus("NO INIT_DATA");
     }
     return;
   }
@@ -734,8 +734,8 @@ if (debugEnabled) {
       setDebugStatus("NO TG");
       return;
     }
-    if (!local.qid || !local.initData) {
-      setDebugStatus("NO QUERY_ID");
+    if (!local.initData) {
+      setDebugStatus("NO INIT_DATA");
       return;
     }
     setDebugStatus("TEST SENDING...");
