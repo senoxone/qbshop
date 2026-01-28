@@ -66,6 +66,30 @@ function isMiniAppReady() {
   return Boolean(local.tg && local.initData && local.qid && local.user);
 }
 
+function getBotUsername() {
+  let value = debugBot || "";
+  if (value.startsWith("@")) value = value.slice(1);
+  return value;
+}
+
+function buildDeepLink(nonce) {
+  const botName = getBotUsername();
+  if (!botName) return "";
+  const token = nonce || "1";
+  return `https://t.me/${botName}?startapp=${encodeURIComponent(token)}`;
+}
+
+function openViaDeepLink() {
+  const link = buildDeepLink(debugNonce);
+  if (!link) return;
+  const local = getTgContext();
+  if (local.tg?.openTelegramLink) {
+    local.tg.openTelegramLink(link);
+  } else {
+    window.location.href = link;
+  }
+}
+
 function applyMiniAppLock() {
   if (isMiniAppReady()) {
     if (tgHint) {
@@ -127,6 +151,17 @@ if (debugEnabled && debugPanel) {
   debugPanel.classList.add("show");
   renderDebugInfo();
   setDebugStatus(tgReady ? "READY" : "NO TG");
+}
+
+if (debugPanel) {
+  const debugActions = debugPanel.querySelector(".debug-actions");
+  if (debugActions) {
+    const openBtn = document.createElement("button");
+    openBtn.className = "debug-btn";
+    openBtn.textContent = "OPEN VIA BOT";
+    openBtn.addEventListener("click", openViaDeepLink);
+    debugActions.appendChild(openBtn);
+  }
 }
 
 applyMiniAppLock();
