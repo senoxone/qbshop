@@ -90,7 +90,7 @@ function applyMiniAppLock() {
   }
   if (checkoutBtn) checkoutBtn.disabled = true;
   if (leadSend) leadSend.disabled = true;
-  if (debugTest) debugTest.disabled = true;
+  if (debugTest) debugTest.disabled = false;
 }
 
 function setDebugStatus(text) {
@@ -130,10 +130,25 @@ if (debugEnabled && debugPanel) {
 }
 
 applyMiniAppLock();
-setTimeout(() => {
+let miniCheckCount = 0;
+const miniCheckTimer = setInterval(() => {
   applyMiniAppLock();
   if (debugEnabled) renderDebugInfo();
-}, 200);
+  miniCheckCount += 1;
+  if (isMiniAppReady() || miniCheckCount >= 15) {
+    clearInterval(miniCheckTimer);
+  }
+}, 300);
+
+async function waitForInitData(timeoutMs = 2500) {
+  const started = Date.now();
+  while (Date.now() - started < timeoutMs) {
+    const local = getTgContext();
+    if (local.tg && local.initData && local.qid && local.user) return local;
+    await new Promise((resolve) => setTimeout(resolve, 200));
+  }
+  return getTgContext();
+}
 
 function formatPrice(value) {
   const num = Number(value || 0);
@@ -527,7 +542,7 @@ leadPhone.addEventListener("input", updateLeadState);
 leadComment.addEventListener("input", updateLeadState);
 leadTg.addEventListener("change", updateLeadState);
 
-leadSend.addEventListener("click", () => {
+leadSend.addEventListener("click", async () => {
   console.log("CLICK submit");
   if (!isMiniAppReady()) {
     leadHint.textContent = MINI_APP_ERROR;
@@ -548,7 +563,7 @@ leadSend.addEventListener("click", () => {
   leadSend.textContent = "Отправка...";
 
   const total = state.cart.items.reduce((sum, it) => sum + it.price * it.qty, 0);
-  const localCtx = getTgContext();
+  const localCtx = await waitForInitData();
   const tgUser = localCtx.user || {};
   const payload = {
     type: "lead_order",
@@ -677,13 +692,9 @@ if (debugEnabled) {
     }
   });
 
-  debugTest?.addEventListener("click", () => {
-    if (!isMiniAppReady()) {
-      setDebugStatus("NO MINI APP");
-      return;
-    }
+  debugTest?.addEventListener("click", async () => {
     const payload = JSON.stringify({ type: "ping", bot: debugBot || null, nonce: debugNonce || null, ts: Date.now() });
-    const local = getTgContext();
+    const local = await waitForInitData();
     if (!local.tg) {
       setDebugStatus("NO TG");
       return;
