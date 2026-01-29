@@ -7,6 +7,8 @@
   --muted: rgba(242, 244, 248, 0.55);
   --accent: #4e8cff;
   --accent-soft: rgba(78, 140, 255, 0.14);
+  --sticky-bg: rgba(11, 12, 16, 0.96);
+  --topbar-h: 62px;
   --safe-top: env(safe-area-inset-top);
   --safe-bottom: env(safe-area-inset-bottom);
 }
@@ -44,7 +46,8 @@ body {
   justify-content: space-between;
   gap: 12px;
   padding: calc(12px + var(--safe-top)) 12px 12px;
-  background: rgba(11, 12, 16, 0.9);
+  margin-bottom: 0;
+  background: var(--sticky-bg);
   backdrop-filter: blur(8px);
 }
 
@@ -108,7 +111,7 @@ body {
 
 .filters-bar {
   position: sticky;
-  top: calc(12px + var(--safe-top) + 62px);
+  top: calc(var(--safe-top) + var(--topbar-h));
   z-index: 9;
   display: flex;
   align-items: center;
@@ -117,7 +120,7 @@ body {
   padding: 8px 12px 12px;
   margin: 0 -12px 12px;
   overflow-x: auto;
-  background: rgba(11, 12, 16, 0.96);
+  background: var(--sticky-bg);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--border);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.35);
