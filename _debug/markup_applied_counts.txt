@@ -1,8 +1,8 @@
 source=worker
 default=5000
 map_size=16
-iphone 12	markup=20000	count=2
-iphone 12 mini	markup=20000	count=1
+iphone 12	markup=5000	count=2
+iphone 12 mini	markup=5000	count=1
 iphone 13	markup=5500	count=9
 iphone 13 mini	markup=5500	count=1
 iphone 14	markup=5500	count=18
