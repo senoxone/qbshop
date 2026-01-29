@@ -1,4 +1,4 @@
 source=worker
-default=5000
+default=6000
 map_size=6
-unknown	markup=5000	count=253
+unknown	markup=6000	count=253
