@@ -1,5 +1,5 @@
 {
-  "generated_ts": 1769659001,
+  "generated_ts": 1769659641,
   "items": [
     {
       "id": "7448097bcaedaab68a0b2a612898491fee7321ce",
@@ -15,7 +15,7 @@
         "sim": "",
         "color": "Purple"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "de7d9e4042e6590d09fd23c3c01bdc24f177c304",
@@ -31,14 +31,14 @@
         "sim": "",
         "color": "Green"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "d935e7555924f3565265c5c360253e05b67820e4",
       "title": "iPhone 12 mini 64GB Красный (Red)",
-      "price": 42590,
+      "price": 43590,
       "price_site": 38590,
-      "markup": 4000,
+      "markup": 5000,
       "image": "assets/images2/a065a6fec7d128ad196e961b9cfbf27d812e48a1.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-12-mini-64gb-krasnyy-red/",
       "meta": {
@@ -47,7 +47,7 @@
         "sim": "",
         "color": "Red"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "513741b022ec2416eddefda033422413c9718bb3",
@@ -63,7 +63,7 @@
         "sim": "",
         "color": "Starlight"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "f97629e00b2e324dd8d5309c1ae7eb5ec68a5f7f",
@@ -79,7 +79,7 @@
         "sim": "",
         "color": "Midnight"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "6880a07b58a04bda0c49f6441c47761293fa05b7",
@@ -95,7 +95,7 @@
         "sim": "",
         "color": "Pink"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "356f489f455a2a63d5f7049b4478555d00f55e82",
@@ -111,7 +111,7 @@
         "sim": "",
         "color": "Blue"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "e5fff045cfaa49639933f1ecf3cb46b3f8b9e5d5",
@@ -127,7 +127,7 @@
         "sim": "",
         "color": "Green"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "bbb29acee08f8574da705fa876ae4253395d790d",
@@ -143,7 +143,7 @@
         "sim": "",
         "color": "Green"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "2f3504e64c528e15c85af83c8b9771e47ec4c90f",
@@ -159,7 +159,7 @@
         "sim": "",
         "color": "Starlight"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "e13e2f215bf124b3e8ba9d770fe2b8427547ec82",
@@ -175,7 +175,7 @@
         "sim": "",
         "color": "Midnight"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "4496d7b0e3b23bebd58962e0922e2648fa5245c7",
@@ -191,7 +191,7 @@
         "sim": "",
         "color": "Blue"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "d4ffcc16dfd873e519990c0f4930236ab926a000",
@@ -207,7 +207,7 @@
         "sim": "",
         "color": "Red"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "28162f5fbb51ddc4af7495b7f92f01dedc69de6e",
@@ -223,7 +223,7 @@
         "sim": "",
         "color": "Starlight"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "534cbf86349fd35fcc68685d8e06afeab2a7cdd0",
@@ -239,7 +239,7 @@
         "sim": "",
         "color": "Midnight"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "91a404f14c3222c3b1b94750d3bbbc6eddba2ad0",
@@ -255,7 +255,7 @@
         "sim": "DualSim",
         "color": "Yellow"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "b6699deeb395c3cdcffd4c8f587018ff82279fdd",
@@ -271,7 +271,7 @@
         "sim": "",
         "color": "Blue"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "48e7ec7828e64ef54f6e86911b3f0bba1ec3e402",
@@ -287,7 +287,7 @@
         "sim": "",
         "color": "Yellow"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "06640cab11b56296023c9f7e6ef601ff5c4eec5c",
@@ -303,7 +303,7 @@
         "sim": "",
         "color": "Starlight"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "41e3a7ce476a350a217852163cfa5714634aeed3",
@@ -319,7 +319,7 @@
         "sim": "",
         "color": "Red"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "ed118b4093325a8cdf03a90daf5e0315e3df2509",
@@ -335,7 +335,7 @@
         "sim": "",
         "color": "Purple"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "38d36caecd285de5bdbc9b18e17925d75b1589a0",
@@ -351,7 +351,7 @@
         "sim": "",
         "color": "Blue"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "33e9c07d770a570c47922fadd7ab79ca28964c24",
@@ -367,7 +367,7 @@
         "sim": "",
         "color": "Midnight"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "c37e68e0723921dcf4b3eb35a63e5ae429e487ec",
@@ -383,7 +383,7 @@
         "sim": "",
         "color": "Red"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "c2d0b2653de6fce804b5bb71d4902f1d1cdea525",
@@ -399,7 +399,7 @@
         "sim": "",
         "color": "Yellow"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "26aace471991fa7f36bd8e1f3d3fa4f462da6780",
@@ -415,7 +415,7 @@
         "sim": "",
         "color": "Starlight"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "897b54547af9b85afa5196771dcc4630eb7f1afe",
@@ -431,7 +431,7 @@
         "sim": "",
         "color": "Yellow"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "a7741bcdce6f8c17c65ffd707d3bcc7dd80ad8de",
@@ -447,7 +447,7 @@
         "sim": "DualSim",
         "color": "Yellow"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "df066c2089ff342d7c2504ac789893877522b10b",
@@ -463,7 +463,7 @@
         "sim": "",
         "color": "Starlight"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "f6cc76990e51e38916c114848ccce1576e2d7d7e",
@@ -479,7 +479,7 @@
         "sim": "",
         "color": "Blue"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "24683828e3429dc47e9d649c86380d0f3dd794d6",
@@ -495,7 +495,7 @@
         "sim": "",
         "color": "Red"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "0b8c4eab8e7ff29f0480e31245c1dc7da592a238",
@@ -511,7 +511,7 @@
         "sim": "",
         "color": "Midnight"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "5b206f9ad75b00d62852e83e91be98fa3c56ae81",
@@ -527,7 +527,7 @@
         "sim": "",
         "color": "Yellow"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "34d8d23f684609234c110ff7f822751ab053ff7d",
@@ -543,7 +543,7 @@
         "sim": "",
         "color": "Red"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "f992e9de875a14306de80411d1e0131cc02295a4",
@@ -559,7 +559,7 @@
         "sim": "",
         "color": "Red"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "6cfa39bce6be5fcdbaa065176df6bc4ff6e1129a",
@@ -575,7 +575,7 @@
         "sim": "",
         "color": "Starlight"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "b47860dd7f4cff2cd3e1c58f0389248b955fbea6",
@@ -591,7 +591,7 @@
         "sim": "",
         "color": "Yellow"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "97de5e9bb9b07dfff10f813c0102ddc9b1c918ba",
@@ -607,7 +607,7 @@
         "sim": "",
         "color": "Blue"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "21ee1ea401398e6bf5b7c4a07a5c12f03198e83d",
@@ -623,7 +623,7 @@
         "sim": "",
         "color": "Midnight"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "148db1aef07f748d574529be20e7ae045101780c",
@@ -639,7 +639,7 @@
         "sim": "",
         "color": "Blue"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "9fd327c5bb96a02d59152ee8957fdf8f78a158f0",
@@ -655,7 +655,7 @@
         "sim": "",
         "color": "Red"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "97a183d1b72f37621524a773b7537a2a4d1a3a3c",
@@ -671,7 +671,7 @@
         "sim": "",
         "color": "Starlight"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "808aa2031cdc9eea6dd17220906da1a7d5752ffb",
@@ -687,7 +687,7 @@
         "sim": "",
         "color": "Purple"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "cbc5984500c36f74aeac2b20ec006575c8fadb84",
@@ -703,14 +703,14 @@
         "sim": "",
         "color": "Midnight"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "d501bffd4d21ff08cfa03bd9121af1a84e7d5132",
       "title": "iPhone 15 128GB Розовый (Pink)",
-      "price": 56490,
+      "price": 53490,
       "price_site": 48490,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/9e421745a0e12c30fb79f0a586dfa1ad88bf452e.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-15-128gb-rozovyy-pink-1/",
       "meta": {
@@ -719,14 +719,14 @@
         "sim": "",
         "color": "Pink"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "3296e16b7c761aec0065bd34513f6f406fb648e7",
       "title": "iPhone 15 128GB Голубой (Blue)",
-      "price": 56590,
+      "price": 53590,
       "price_site": 48590,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/c307e06d2879690e9e4a395b57e188a1b4775ddf.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-15-128gb-goluboy-blue-1/",
       "meta": {
@@ -735,14 +735,14 @@
         "sim": "",
         "color": "Blue"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "58282b760f4b6c0793da95e07e66769ce60d7847",
       "title": "iPhone 15 128GB Черный (Black)",
-      "price": 56690,
+      "price": 53690,
       "price_site": 48690,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/2d93a45919413e23e3e35a5f46c7699dd3c4f156.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-15-128gb-chernyy-black-1/",
       "meta": {
@@ -751,14 +751,14 @@
         "sim": "",
         "color": "Black"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "d9178b99ed70abfc8f5a9b8aaaf98bc5c00b00f5",
       "title": "iPhone 15 128GB Зеленый (Green)",
-      "price": 58990,
+      "price": 55990,
       "price_site": 50990,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/c47a39665136c41439d9eff2d669218fe4f80731.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-15-128gb-zelenyy-green-1/",
       "meta": {
@@ -767,14 +767,14 @@
         "sim": "",
         "color": "Green"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "3545b5a6fa38e4ff924784edc3e1087afe3a3982",
       "title": "iPhone 15 128GB Желтый (Yellow)",
-      "price": 59590,
+      "price": 56590,
       "price_site": 51590,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/d8bf60bfdbc958c9d39d1a86c5371fe6b139b4e7.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-15-128gb-zheltyy-yellow-1/",
       "meta": {
@@ -783,14 +783,14 @@
         "sim": "",
         "color": "Yellow"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "83aa56c5d33e407665a81095cc8a8fbf538e95b9",
       "title": "iPhone 15 256GB Голубой (Blue)",
-      "price": 66390,
+      "price": 63390,
       "price_site": 58390,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/24d68cb43466ed5b0f3243c1d5f6a85458512d8e.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-15-256gb-goluboy-blue/",
       "meta": {
@@ -799,14 +799,14 @@
         "sim": "",
         "color": "Blue"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "e2ac2962f51a69cd41cf35f070b55b0a126b797c",
       "title": "iPhone 15 256GB Черный (Black)",
-      "price": 66390,
+      "price": 63390,
       "price_site": 58390,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/9d177ac8a056d86f064d97fc89c55adc60b665e9.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-15-256gb-chernyy-black/",
       "meta": {
@@ -815,14 +815,14 @@
         "sim": "",
         "color": "Black"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "e436962ab33cf411dc686c6f5cb2c8c2bdeb006b",
       "title": "iPhone 15 256GB Розовый (Pink)",
-      "price": 66390,
+      "price": 63390,
       "price_site": 58390,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/575f3f08ab9bb5c9be63095158cb1cfbcb69c3fa.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-15-256gb-rozovyy-pink/",
       "meta": {
@@ -831,14 +831,14 @@
         "sim": "",
         "color": "Pink"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "84b8f1eff20789d3328523070e7e8e4200bb0e87",
       "title": "iPhone 15 256GB Зеленый (Green)",
-      "price": 69690,
+      "price": 66690,
       "price_site": 61690,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/7e4d84f57b1b9ef247880b6a3ccaef47c50da7f7.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-15-256gb-zelenyy-green-1/",
       "meta": {
@@ -847,14 +847,14 @@
         "sim": "",
         "color": "Green"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "8515595394deef7066200d7e044158d2d3c78cfb",
       "title": "iPhone 15 256GB Желтый (Yellow) DualSim",
-      "price": 70590,
+      "price": 67590,
       "price_site": 62590,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/7472fd63aac2828ae69782e62c9712ae01840238.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-15-256gb-zheltyy-yellow-dualsim/",
       "meta": {
@@ -863,14 +863,14 @@
         "sim": "DualSim",
         "color": "Yellow"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "f37f3394f954427b32da872394ae8a93ecc0b2b5",
       "title": "iPhone 15 256GB Желтый (Yellow)",
-      "price": 72090,
+      "price": 69090,
       "price_site": 64090,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/6486693d4085cd7630f44d3afbe3e33e7ddb60c7.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-15-256gb-zheltyy-yellow/",
       "meta": {
@@ -879,14 +879,14 @@
         "sim": "",
         "color": "Yellow"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "811b6140c54be212b06e00c1e87a74405bdcba02",
       "title": "iPhone 15 512GB Голубой (Blue)",
-      "price": 75890,
+      "price": 72890,
       "price_site": 67890,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/c5b8761e86cfde3c2f3b3cf1255760de829eed99.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-15-512gb-goluboy-blue/",
       "meta": {
@@ -895,14 +895,14 @@
         "sim": "",
         "color": "Blue"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "8eb70ca7ddf9ecf39ebbc64b9e31311fdd65dafd",
       "title": "iPhone 15 512GB Зеленый (Green)",
-      "price": 75890,
+      "price": 72890,
       "price_site": 67890,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/89c86dea3855c98485ee9d882248a1eae7855d28.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-15-512gb-zelenyy-green/",
       "meta": {
@@ -911,14 +911,14 @@
         "sim": "",
         "color": "Green"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "674596eb9efbfd54f0531030ceebaaf21cbd38ef",
       "title": "iPhone 15 Plus 128GB Голубой (Blue)",
-      "price": 61390,
+      "price": 58390,
       "price_site": 53390,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/7de4f947c24d26341f7d0c8e3750bee358feea98.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-15-plus-128gb-goluboy-blue-1/",
       "meta": {
@@ -927,14 +927,14 @@
         "sim": "",
         "color": "Blue"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "9ae5ee9e364fb0468e7ff8e1a3fb4b35e1908a4b",
       "title": "iPhone 15 Plus 128GB Зеленый (Green)",
-      "price": 61390,
+      "price": 58390,
       "price_site": 53390,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/35ee4c7168629398fc6e23dc03c845f9525dd7ee.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-15-plus-128gb-zelenyy-green/",
       "meta": {
@@ -943,14 +943,14 @@
         "sim": "",
         "color": "Green"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "50cab4bac41dde4773033fedecdee330e839f1ad",
       "title": "iPhone 15 Plus 128GB Желтый (Yellow)",
-      "price": 61990,
+      "price": 58990,
       "price_site": 53990,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/18f7923cea6df4ef2f2dbae406279c11ad52d337.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-15-plus-128gb-zheltyy-yellow/",
       "meta": {
@@ -959,14 +959,14 @@
         "sim": "",
         "color": "Yellow"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "bf042026c067ffb6bbf34e46584fe5cf875e6aea",
       "title": "iPhone 15 Plus 128GB Розовый (Pink)",
-      "price": 62890,
+      "price": 59890,
       "price_site": 54890,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/26f6bb4cb1bcd9960fdb3d0328b58de33b5e1724.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-15-plus-128gb-rozovyy-pink-1/",
       "meta": {
@@ -975,14 +975,14 @@
         "sim": "",
         "color": "Pink"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "e0a9d3bf0a8a49af2085c82aff947d1fed1e6021",
       "title": "iPhone 15 Plus 128GB Желтый (Yellow) DualSim",
-      "price": 66590,
+      "price": 63590,
       "price_site": 58590,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/e0f33c4a49a13ab0c76ace41ca5d015309207b9b.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-15-plus-128gb-zheltyy-yellow-dualsim/",
       "meta": {
@@ -991,14 +991,14 @@
         "sim": "DualSim",
         "color": "Yellow"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "fcb1462a41fcdd6336cae8285de84ae53f07750e",
       "title": "iPhone 15 Plus 128GB Черный (Black)",
-      "price": 67390,
+      "price": 64390,
       "price_site": 59390,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/1ee47920524cce14fcd630a9945244a73781b347.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-15-plus-128gb-chernyy-black/",
       "meta": {
@@ -1007,14 +1007,14 @@
         "sim": "",
         "color": "Black"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "572c2a36904ffcfd50a9f00853fde46b45ababad",
       "title": "iPhone 15 Plus 256GB Желтый (Yellow)",
-      "price": 65990,
+      "price": 62990,
       "price_site": 57990,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/388c2dfa24aa77669c3fb7439550dcceb806f740.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-15-plus-256gb-zheltyy-yellow/",
       "meta": {
@@ -1023,14 +1023,14 @@
         "sim": "",
         "color": "Yellow"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "ea6a10b6d429ce85c4d63c4eee1f88d3b5272674",
       "title": "iPhone 15 Plus 256GB Розовый (Pink)",
-      "price": 67890,
+      "price": 64890,
       "price_site": 59890,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/540ff32062156c0d96d1b98caa19b0921aed7388.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-15-plus-256gb-rozovyy-pink-1/",
       "meta": {
@@ -1039,14 +1039,14 @@
         "sim": "",
         "color": "Pink"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "4d0ce69819be7f9c07ee1368a508125cd9dfc70a",
       "title": "iPhone 15 Plus 256GB Голубой (Blue)",
-      "price": 67890,
+      "price": 64890,
       "price_site": 59890,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/c26477b1b6c0bf92036baf513ec417e84a7d99a6.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-15-plus-256gb-goluboy-blue/",
       "meta": {
@@ -1055,14 +1055,14 @@
         "sim": "",
         "color": "Blue"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "ad853e1479319b6c187510bed71b7d574b60fcfa",
       "title": "iPhone 15 Plus 256GB Зеленый (Green)",
-      "price": 67890,
+      "price": 64890,
       "price_site": 59890,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/53277da61d28c0336617d7e92a2fd6a8860fe8cc.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-15-plus-256gb-zelenyy-green-1/",
       "meta": {
@@ -1071,14 +1071,14 @@
         "sim": "",
         "color": "Green"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "4d69925bcb88f9d1174789122260711944d1cf3e",
       "title": "iPhone 15 Plus 256GB Зеленый (Green) DualSim",
-      "price": 69490,
+      "price": 66490,
       "price_site": 61490,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/82d3b3c38caf20f7793efe9de4f302b4d3b51a30.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-15-plus-256gb-zelenyy-green-dualsim/",
       "meta": {
@@ -1087,14 +1087,14 @@
         "sim": "DualSim",
         "color": "Green"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "72a01c0a67c87f1e48bca8bafb4e135ec05dd743",
       "title": "iPhone 15 Plus 256GB Голубой (Blue) DualSim",
-      "price": 69490,
+      "price": 66490,
       "price_site": 61490,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/b50214cb6d6d2402fe0e43dd63ee592864965819.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-15-plus-256gb-goluboy-blue-dualsim/",
       "meta": {
@@ -1103,14 +1103,14 @@
         "sim": "DualSim",
         "color": "Blue"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "d69702d35264d5da6a7942181d620c66802430f5",
       "title": "iPhone 15 Plus 256GB Черный (Black)",
-      "price": 76490,
+      "price": 73490,
       "price_site": 68490,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/a78e72bb638784d0003bac90c540b49f1ebae406.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-15-plus-256gb-chernyy-black/",
       "meta": {
@@ -1119,14 +1119,14 @@
         "sim": "",
         "color": "Black"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "08c64d3d149bd35c7da94a5b81f7629fc0da5974",
       "title": "iPhone 15 Plus 512GB Желтый (Yellow)",
-      "price": 72190,
+      "price": 69190,
       "price_site": 64190,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/84cd3f3956f64bc798278afce608c117e3a06e67.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-15-plus-512gb-zheltyy-yellow-1/",
       "meta": {
@@ -1135,14 +1135,14 @@
         "sim": "",
         "color": "Yellow"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "a54eee1465c6dd53766163a7c36ba76e6acd0290",
       "title": "iPhone 15 Plus 512GB Розовый (Pink)",
-      "price": 75390,
+      "price": 72390,
       "price_site": 67390,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/209e599a779d2fc168da9540b592eec3d19cf8e2.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-15-plus-512gb-rozovyy-pink/",
       "meta": {
@@ -1151,14 +1151,14 @@
         "sim": "",
         "color": "Pink"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "e706654afbaaed8f873121922c6095788770371e",
       "title": "iPhone 15 Plus 512GB Зеленый (Green)",
-      "price": 75390,
+      "price": 72390,
       "price_site": 67390,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/f572605c488e863d2985b79f35b0047c518c0ef4.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-15-plus-512gb-zelenyy-green/",
       "meta": {
@@ -1167,14 +1167,14 @@
         "sim": "",
         "color": "Green"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "9143b862eb925ba87320228a950478f6d689df32",
       "title": "iPhone 15 Plus 512GB Голубой (Blue)",
-      "price": 79190,
+      "price": 76190,
       "price_site": 71190,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/89e28dc4c089a1edc26b9c41750b862b7e305e2e.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-15-plus-512gb-goluboy-blue/",
       "meta": {
@@ -1183,14 +1183,14 @@
         "sim": "",
         "color": "Blue"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "892604cce409a164442ddf53259826283d3a56ec",
       "title": "iPhone 15 Pro 128GB Синий титан (Blue Titanium)",
-      "price": 88790,
+      "price": 85790,
       "price_site": 80790,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/a851572b01745b91389a02ae8b9e3aae38f2df37.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-15-pro-128gb-siniy-titan-blue-titanium/",
       "meta": {
@@ -1199,14 +1199,14 @@
         "sim": "",
         "color": "Blue Titanium"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "6e2f1a05015003b088ed0de20264a5539baf5eef",
       "title": "iPhone 15 Pro 128GB Белый титан (White Titanium)",
-      "price": 89290,
+      "price": 86290,
       "price_site": 81290,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/33b419f02c96fe2f8f007b43b1b2751c8bdec50a.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-15-pro-128gb-belyy-titan-white-titanium/",
       "meta": {
@@ -1215,14 +1215,14 @@
         "sim": "",
         "color": "White Titanium"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "c84b063f147f575bf51ff41cc71e0ed915760778",
       "title": "iPhone 15 Pro 128GB Натуральный титан (Natural Titanium)",
-      "price": 93590,
+      "price": 90590,
       "price_site": 85590,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/b79a2001885387c91fd93b96268ecc807b7bc6fb.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-15-pro-128gb-naturalnyy-titan-natural-titanium/",
       "meta": {
@@ -1231,14 +1231,14 @@
         "sim": "",
         "color": "Natural Titanium"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "3fc3d7d08dca1e4d120f80c23d55f9b7b7c1b89f",
       "title": "iPhone 15 Pro 128GB Черный титан (Black Titanium)",
-      "price": 116390,
+      "price": 113390,
       "price_site": 108390,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/00a0421c772104ca9e799aca69b5991c04f61429.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-15-pro-128gb-chernyy-titan-black-titanium-1/",
       "meta": {
@@ -1247,14 +1247,14 @@
         "sim": "",
         "color": "Black Titanium"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "656211cec1ce165f4590c97f004b64b7569388a8",
       "title": "iPhone 15 Pro 256GB Синий титан (Blue Titanium)",
-      "price": 98990,
+      "price": 95990,
       "price_site": 90990,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/9a11de18af31d07a21de6a7ce3c450ec3befe535.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-15-pro-256gb-siniy-titan-blue-titanium-1/",
       "meta": {
@@ -1263,14 +1263,14 @@
         "sim": "",
         "color": "Blue Titanium"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "3b0a9590bfeebb64b78d9f2215c933b237c8a3df",
       "title": "iPhone 15 Pro 256GB Синий титан (Blue Titanium) DualSim",
-      "price": 99990,
+      "price": 96990,
       "price_site": 91990,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/278350325a003ec84e02664f835dc304702c1c33.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-15-pro-256gb-siniy-titan-blue-titanium-dualsim/",
       "meta": {
@@ -1279,14 +1279,14 @@
         "sim": "DualSim",
         "color": "Blue Titanium"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "1913fb16adb4d425c2f875c98f98ffe21859e57b",
       "title": "iPhone 15 Pro 256GB Черный титан (Black Titanium)",
-      "price": 152390,
+      "price": 149390,
       "price_site": 144390,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/7cb8d30f45d20e9ecbc23663b853e2e2bc8a5f4e.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-15-pro-256gb-chernyy-titan-black-titanium-1/",
       "meta": {
@@ -1295,14 +1295,14 @@
         "sim": "",
         "color": "Black Titanium"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "bf4c0586d324d02a2880b4395839be81986c20ab",
       "title": "iPhone 15 Pro 512GB Синий титан (Blue Titanium)",
-      "price": 111790,
+      "price": 108790,
       "price_site": 103790,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/49ac2740225f5f76fab000c8286c5d58ba3235c5.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-15-pro-512gb-siniy-titan-blue-titanium-1/",
       "meta": {
@@ -1311,14 +1311,14 @@
         "sim": "",
         "color": "Blue Titanium"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "ec426a87c1fb58e78341e35bb12ff39c679d232e",
       "title": "iPhone 15 Pro 512GB Натуральный титан (Natural Titanium)",
-      "price": 132590,
+      "price": 129590,
       "price_site": 124590,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/4516797e8c2460c7219d495f27482031362aa909.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-15-pro-512gb-naturalnyy-titan-natural-titanium-1/",
       "meta": {
@@ -1327,14 +1327,14 @@
         "sim": "",
         "color": "Natural Titanium"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "b38ecd118645bd79923ab8567392661205b58d0b",
       "title": "iPhone 15 Pro 1024GB Синий титан (Blue Titanium)",
-      "price": 117390,
+      "price": 114390,
       "price_site": 109390,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/ec0264beda0023423952a18ab50ca74fde0bb6b6.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-15-pro-1024gb-siniy-titan-blue-titanium/",
       "meta": {
@@ -1343,14 +1343,14 @@
         "sim": "",
         "color": "Blue Titanium"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "fd7f16ec724e46aa81a638e9ef527feae0103b90",
       "title": "iPhone 15 Pro 1024GB Белый титан (White Titanium)",
-      "price": 122490,
+      "price": 119490,
       "price_site": 114490,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/ed1e2f5e303ee80a7ae01a63ee72f70c1b931bb9.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-15-pro-1024gb-belyy-titan-white-titanium/",
       "meta": {
@@ -1359,14 +1359,14 @@
         "sim": "",
         "color": "White Titanium"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "a1d3d8db3f72a5c8c06d27c2e4a368ffe9b003ff",
       "title": "iPhone 15 Pro 1024GB Черный титан (Black Titanium)",
-      "price": 123590,
+      "price": 120590,
       "price_site": 115590,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/5c1f5284eea9f0717eec8473a1f800f0b1a065f9.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-15-pro-1024gb-chernyy-titan-black-titanium/",
       "meta": {
@@ -1375,14 +1375,14 @@
         "sim": "",
         "color": "Black Titanium"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "a9bb3eba8eaa29204e424c2b5e86522a8f5d8ab8",
       "title": "iPhone 15 Pro Max 256GB Натуральный титан (Natural Titanium)",
-      "price": 105890,
+      "price": 102890,
       "price_site": 97890,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/8cc3a9cf5048ab1e48adb5faebdc66c885442b5f.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-15-pro-max-256gb-naturalnyy-titan-natural-titanium-1/",
       "meta": {
@@ -1391,14 +1391,14 @@
         "sim": "",
         "color": "Natural Titanium"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "19e91dc57fa46e05f55471b69e71781936aa8776",
       "title": "iPhone 15 Pro Max 256GB Белый титан (White Titanium)",
-      "price": 138490,
+      "price": 135490,
       "price_site": 130490,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/1cffd211c77db20d828a529349a32d1fe08cbfee.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-15-pro-max-256gb-belyy-titan-white-titanium-1/",
       "meta": {
@@ -1407,14 +1407,14 @@
         "sim": "",
         "color": "White Titanium"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "ae6150194910a1a25340c52ce5cd305d846db89b",
       "title": "iPhone 15 Pro Max 256GB Синий титан (Blue Titanium)",
-      "price": 152390,
+      "price": 149390,
       "price_site": 144390,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/d0438270039e2657038eddfa34dc50dbc73a9550.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-15-pro-max-256gb-siniy-titan-blue-titanium-1/",
       "meta": {
@@ -1423,14 +1423,14 @@
         "sim": "",
         "color": "Blue Titanium"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "f312893dac36a8349bef3f14251fab5891b3ee39",
       "title": "iPhone 15 Pro Max 512GB Белый титан (White Titanium)",
-      "price": 121390,
+      "price": 118390,
       "price_site": 113390,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/cdb5aa9ade6e0a6023b39e8dfee0bdc73a51098f.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-15-pro-max-512gb-belyy-titan-white-titanium/",
       "meta": {
@@ -1439,14 +1439,14 @@
         "sim": "",
         "color": "White Titanium"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "1d5c9fa544c93cf683ab5b3f8812a08b74e0fa2c",
       "title": "iPhone 15 Pro Max 512GB Черный титан (Black Titanium)",
-      "price": 125190,
+      "price": 122190,
       "price_site": 117190,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/63b3024bfd0661bc01ebe41307c2b2afb1752b3e.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-15-pro-max-512gb-chernyy-titan-black-titanium/",
       "meta": {
@@ -1455,14 +1455,14 @@
         "sim": "",
         "color": "Black Titanium"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "04319ff354b9b6d7e994ccf58902e1b5bc6fb4d6",
       "title": "iPhone 15 Pro Max 512GB Синий титан (Blue Titanium)",
-      "price": 165590,
+      "price": 162590,
       "price_site": 157590,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/3a6f6870b8f40fcba516c3d0eed0f8b36e029fe7.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-15-pro-max-512gb-siniy-titan-blue-titanium/",
       "meta": {
@@ -1471,14 +1471,14 @@
         "sim": "",
         "color": "Blue Titanium"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "a2c69ca8d9a3ca781845a96081215a6a93f7a7b1",
       "title": "iPhone 15 Pro Max 1024GB Натуральный титан (Natural Titanium)",
-      "price": 127790,
+      "price": 124790,
       "price_site": 119790,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/eb7464ba61106297f5fb19b4f1ddf5ed5eca5f4a.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-15-pro-max-1024gb-naturalnyy-titan-natural-titanium/",
       "meta": {
@@ -1487,14 +1487,14 @@
         "sim": "",
         "color": "Natural Titanium"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "88bd8c3bfcf25b927b1d469f0337401194efadcd",
       "title": "iPhone 15 Pro Max 1024GB Натуральный титан (Natural Titanium) ...",
-      "price": 142090,
+      "price": 139090,
       "price_site": 134090,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/02584a5cfb2c666c03e4aaac224b4138266e1968.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-15-pro-max-1024gb-naturalnyy-titan-natural-titanium-dualsim/",
       "meta": {
@@ -1503,14 +1503,14 @@
         "sim": "",
         "color": "Natural Titanium"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "e25d65daa35aced50a967b00219adb61053ae961",
       "title": "iPhone 15 Pro Max 1024GB Черный титан (Black Titanium)",
-      "price": 176290,
+      "price": 173290,
       "price_site": 168290,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/8fa4803954c54fc2e53cf7db875911ca6ac79680.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-15-pro-max-1024gb-chernyy-titan-black-titanium-1/",
       "meta": {
@@ -1519,14 +1519,14 @@
         "sim": "",
         "color": "Black Titanium"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "3b8ace98ac49bd8cd851634d6f0314d9ef9cab36",
       "title": "iPhone 15 Pro Max 1024GB Белый титан (White Titanium)",
-      "price": 183490,
+      "price": 180490,
       "price_site": 175490,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/5086b32b9547d42e2716d7522c9d33c59b06eb22.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-15-pro-max-1024gb-belyy-titan-white-titanium-1/",
       "meta": {
@@ -1535,14 +1535,14 @@
         "sim": "",
         "color": "White Titanium"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "37eed7344bdf9fea12de7d4c86f41ad68c0fee88",
       "title": "iPhone 15 Pro Max 1024GB Синий титан (Blue Titanium)",
-      "price": 183490,
+      "price": 180490,
       "price_site": 175490,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/a7c41d17716e435800c6206ba4fcff7e2aebb087.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-15-pro-max-1024gb-siniy-titan-blue-titanium-1/",
       "meta": {
@@ -1551,14 +1551,14 @@
         "sim": "",
         "color": "Blue Titanium"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "44e0db938a66e755e732839f81e478594b32bc3b",
       "title": "iPhone 16 128GB Бирюзовый (Teal)",
-      "price": 63090,
+      "price": 61090,
       "price_site": 56090,
-      "markup": 7000,
+      "markup": 5000,
       "image": "assets/images2/fd3a1d4deb97ba727c86504dfcd3b55e94122a02.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-16-128gb-biryuzovyy-teal/",
       "meta": {
@@ -1567,14 +1567,14 @@
         "sim": "",
         "color": "Teal"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "1ab0ac528a9cbcd3ecc704af937ee050d3cea25e",
       "title": "iPhone 16 128GB Черный (Black)",
-      "price": 63690,
+      "price": 61690,
       "price_site": 56690,
-      "markup": 7000,
+      "markup": 5000,
       "image": "assets/images2/a485f09cd97dc3e5a4788481ad91f9d4d45050f8.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-16-128gb-chernyy-black-1/",
       "meta": {
@@ -1583,14 +1583,14 @@
         "sim": "",
         "color": "Black"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "2ad70831d411af31affb7dbcd460ef085c4e2859",
       "title": "iPhone 16 128GB Белый (White)",
-      "price": 64190,
+      "price": 62190,
       "price_site": 57190,
-      "markup": 7000,
+      "markup": 5000,
       "image": "assets/images2/7bd3f9517dd0b1671e0bd71baca3de19f70b3be3.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-16-128gb-belyy-white-1/",
       "meta": {
@@ -1599,14 +1599,14 @@
         "sim": "",
         "color": "White"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "8720901a4fa9cae13e22b2deda6748a0eb627028",
       "title": "iPhone 16 128GB Ультрамарин (Ultramarine)",
-      "price": 64190,
+      "price": 62190,
       "price_site": 57190,
-      "markup": 7000,
+      "markup": 5000,
       "image": "assets/images2/793ec9f330076b031aa6e74c85bfd1ae6294c69c.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-16-128gb-ultramarin-ultramarine-1/",
       "meta": {
@@ -1615,14 +1615,14 @@
         "sim": "",
         "color": "Ultramarine"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "2fa2a75ce298e83e7bbbcb5d6540154da6054b65",
       "title": "iPhone 16 128GB Розовый (Pink)",
-      "price": 64190,
+      "price": 62190,
       "price_site": 57190,
-      "markup": 7000,
+      "markup": 5000,
       "image": "assets/images2/f74450d24a37bfb50d8933e96828cffbfb8b09a1.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-16-128gb-rozovyy-pink-1/",
       "meta": {
@@ -1631,14 +1631,14 @@
         "sim": "",
         "color": "Pink"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "fcc6a787ce8089726e2265d02bc332fedf6a84a6",
       "title": "iPhone 16 256GB Белый (White) DualSim",
-      "price": 69690,
+      "price": 67690,
       "price_site": 62690,
-      "markup": 7000,
+      "markup": 5000,
       "image": "assets/images2/0d64fa74b3e5749b4c3f8daaea0fff43a6f3e1f7.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-16-256gb-belyy-white-dualsim-1/",
       "meta": {
@@ -1647,14 +1647,14 @@
         "sim": "DualSim",
         "color": "White"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "3bdd7abe49753b7c5f821bb7d19b7dbad2fcf667",
       "title": "iPhone 16 256GB Черный (Black)",
-      "price": 70090,
+      "price": 68090,
       "price_site": 63090,
-      "markup": 7000,
+      "markup": 5000,
       "image": "assets/images2/c43d272edd6174b7a205946c86dbfd525c607ffd.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-16-256gb-chernyy-black-1/",
       "meta": {
@@ -1663,14 +1663,14 @@
         "sim": "",
         "color": "Black"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "6dac6a7569c180693e904821365cfefae02c3ebc",
       "title": "iPhone 16 256GB Бирюзовый (Teal)",
-      "price": 70090,
+      "price": 68090,
       "price_site": 63090,
-      "markup": 7000,
+      "markup": 5000,
       "image": "assets/images2/1975a57524c4bf38c52c7a3073423a6e3420acdf.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-16-256gb-biryuzovyy-teal/",
       "meta": {
@@ -1679,14 +1679,14 @@
         "sim": "",
         "color": "Teal"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "14722ee8ca3a713e6bd57422a3d4583461a8b553",
       "title": "iPhone 16 256GB Розовый (Pink)",
-      "price": 70090,
+      "price": 68090,
       "price_site": 63090,
-      "markup": 7000,
+      "markup": 5000,
       "image": "assets/images2/83ee31a1c1dbc5b04ae4f66ac17623f6d514ea74.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-16-256gb-rozovyy-pink/",
       "meta": {
@@ -1695,14 +1695,14 @@
         "sim": "",
         "color": "Pink"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "303dcef101a20af387fb65baee1569bd2019e181",
       "title": "iPhone 16 256GB Ультрамарин (Ultramarine)",
-      "price": 70090,
+      "price": 68090,
       "price_site": 63090,
-      "markup": 7000,
+      "markup": 5000,
       "image": "assets/images2/eb0537cfa063afe74f38ca491a5695cd814f471b.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-16-256gb-ultramarin-ultramarine-1/",
       "meta": {
@@ -1711,14 +1711,14 @@
         "sim": "",
         "color": "Ultramarine"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "7bd4b8b1d568254a95160d0b5720d7a548a3e5c1",
       "title": "iPhone 16 256GB Белый (White)",
-      "price": 70890,
+      "price": 68890,
       "price_site": 63890,
-      "markup": 7000,
+      "markup": 5000,
       "image": "assets/images2/f861c73d017810865277cb33edf9bcfa8fd26f77.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-16-256gb-belyy-white-1/",
       "meta": {
@@ -1727,14 +1727,14 @@
         "sim": "",
         "color": "White"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "c2569889067e46044e6489a105735ee88c96e02f",
       "title": "iPhone 16 256GB Бирюзовый (Teal) DualSim",
-      "price": 72190,
+      "price": 70190,
       "price_site": 65190,
-      "markup": 7000,
+      "markup": 5000,
       "image": "assets/images2/21a622b5e6a0a4a99517fb45e0d55d9fd0944a94.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-16-256gb-biryuzovyy-teal-dualsim/",
       "meta": {
@@ -1743,14 +1743,14 @@
         "sim": "DualSim",
         "color": "Teal"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "b462018e828f86708bbe04afbebbd3ba259c7c5b",
       "title": "iPhone 16 512GB Белый (White)",
-      "price": 88290,
+      "price": 86290,
       "price_site": 81290,
-      "markup": 7000,
+      "markup": 5000,
       "image": "assets/images2/71d5e2d981d1566eff3284c2eb2065988e1f14de.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-16-512gb-belyy-white/",
       "meta": {
@@ -1759,14 +1759,14 @@
         "sim": "",
         "color": "White"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "b7491d069e328d1530372f3c7d6d228e85f72033",
       "title": "iPhone 16 Plus 128GB Белый (White)",
-      "price": 68790,
+      "price": 65790,
       "price_site": 60790,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/09172d726521dba2a02638dab934fdcb09555b4e.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-16-plus-128gb-belyy-white-1/",
       "meta": {
@@ -1775,14 +1775,14 @@
         "sim": "",
         "color": "White"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "53142f62f4006d8a2866a9d8bfef5c975fedc0a9",
       "title": "iPhone 16 Plus 128GB Черный (Black)",
-      "price": 69490,
+      "price": 66490,
       "price_site": 61490,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/70b7c8eacf06df9aabbb9c94f18e87075f9286a5.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-16-plus-128gb-chernyy-black/",
       "meta": {
@@ -1791,14 +1791,14 @@
         "sim": "",
         "color": "Black"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "56a48a7a809eb2d083dce7f4abfa6df99fd8827c",
       "title": "iPhone 16 Plus 128GB Ультрамарин (Ultramarine)",
-      "price": 69490,
+      "price": 66490,
       "price_site": 61490,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/5a76504e131b46c99bcfaf88e1d8c5986e198618.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-16-plus-128gb-ultramarin-ultramarine/",
       "meta": {
@@ -1807,14 +1807,14 @@
         "sim": "",
         "color": "Ultramarine"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "07202914fbd4922504bd6cabf786e91a70d8fee1",
       "title": "iPhone 16 Plus 128GB Розовый (Pink)",
-      "price": 73290,
+      "price": 70290,
       "price_site": 65290,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/ffa8d2c3940f7c0aa66a0163fa7cc739c23b6acb.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-16-plus-128gb-rozovyy-pink/",
       "meta": {
@@ -1823,14 +1823,14 @@
         "sim": "",
         "color": "Pink"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "744e36b4b5753f814c149210c6af9a38f0182834",
       "title": "iPhone 16 Plus 128GB Бирюзовый (Teal)",
-      "price": 73790,
+      "price": 70790,
       "price_site": 65790,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/9b6e76129f8ae25baa2f9902284645477765617e.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-16-plus-128gb-biryuzovyy-teal/",
       "meta": {
@@ -1839,14 +1839,14 @@
         "sim": "",
         "color": "Teal"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "0df2049cba7620840f86bbb444e83c8239f9895e",
       "title": "iPhone 16 Plus 256GB Ультрамарин (Ultramarine)",
-      "price": 83990,
+      "price": 80990,
       "price_site": 75990,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/52e12d4eea26c50efaab1978f8da5cb60ee1f1f7.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-16-plus-256gb-ultramarin-ultramarine/",
       "meta": {
@@ -1855,14 +1855,14 @@
         "sim": "",
         "color": "Ultramarine"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "890fadb8f60eef33cc8f5b8ba43d866b2384afbc",
       "title": "iPhone 16 Plus 256GB Белый (White)",
-      "price": 83990,
+      "price": 80990,
       "price_site": 75990,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/c1414a0ce53e02f4fde8f67c02152142cc7c25da.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-16-plus-256gb-belyy-white/",
       "meta": {
@@ -1871,14 +1871,14 @@
         "sim": "",
         "color": "White"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "1f9adeecc6b5ece7afa247993cb8d7e15db34ca7",
       "title": "iPhone 16 Plus 256GB Розовый (Pink)",
-      "price": 83990,
+      "price": 80990,
       "price_site": 75990,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/903684655281430539c7b5332786ba3501d9aa67.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-16-plus-256gb-rozovyy-pink/",
       "meta": {
@@ -1887,14 +1887,14 @@
         "sim": "",
         "color": "Pink"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "8397f357faa9a89b2e952a14c7df5b04dcddbc73",
       "title": "iPhone 16 Plus 256GB Черный (Black)",
-      "price": 83990,
+      "price": 80990,
       "price_site": 75990,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/9941c50eff1eb5d2d81020c1321530a845a757a6.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-16-plus-256gb-chernyy-black-1/",
       "meta": {
@@ -1903,14 +1903,14 @@
         "sim": "",
         "color": "Black"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "99bd6fb2b85eb66109d3730e36323160c5abd288",
       "title": "iPhone 16 Plus 256GB Бирюзовый (Teal)",
-      "price": 83990,
+      "price": 80990,
       "price_site": 75990,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/4a01f2197e1f4ae9cd1a407d3b7c2a78e6ffdadd.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-16-plus-256gb-biryuzovyy-teal-1/",
       "meta": {
@@ -1919,14 +1919,14 @@
         "sim": "",
         "color": "Teal"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "c9a52454945af6f6d836d08295335e37d88c90b3",
       "title": "iPhone 16 Plus 512GB Белый (White)",
-      "price": 94690,
+      "price": 91690,
       "price_site": 86690,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/03a16f701bb2a590cc6083226a903efa3be3ee85.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-16-plus-512gb-belyy-white-1/",
       "meta": {
@@ -1935,14 +1935,14 @@
         "sim": "",
         "color": "White"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "b677121c30c865bfd25268a93e94d8d94c190c83",
       "title": "iPhone 16 Plus 512GB Розовый (Pink)",
-      "price": 94690,
+      "price": 91690,
       "price_site": 86690,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/182c9f4cd80aed9a0ab088b6892d06ef5651c6a5.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-16-plus-512gb-belyy-white/",
       "meta": {
@@ -1951,14 +1951,14 @@
         "sim": "",
         "color": "Pink"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "556de56d5658e55129075281668b5dd3e109e8e3",
       "title": "iPhone 16 Plus 512GB Бирюзовый (Teal)",
-      "price": 94690,
+      "price": 91690,
       "price_site": 86690,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/38e8e6f1e03a8e8ca78f9aa5058359ea793157a3.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-16-plus-512gb-biryuzovyy-teal/",
       "meta": {
@@ -1967,14 +1967,14 @@
         "sim": "",
         "color": "Teal"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "3614e5de1fe339343a1a5fd7007c8dbadd31f9bb",
       "title": "iPhone 16 Plus 512GB Ультрамарин (Ultramarine)",
-      "price": 94690,
+      "price": 91690,
       "price_site": 86690,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/388dc3a54c5790011febefe476e7313eee93f60b.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-16-plus-512gb-ultramarin-ultramarine/",
       "meta": {
@@ -1983,14 +1983,14 @@
         "sim": "",
         "color": "Ultramarine"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "3c1db0891189098af53e23c62498602063af124f",
       "title": "iPhone 16 Plus 512GB Черный (Black)",
-      "price": 94990,
+      "price": 91990,
       "price_site": 86990,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/56a91eba48293bad03bc35c223ee1284632b90a6.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-16-plus-512gb-chernyy-black/",
       "meta": {
@@ -1999,14 +1999,14 @@
         "sim": "",
         "color": "Black"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "d5166a3acb7e947e98f334c7edef02f1f2a5d796",
       "title": "iPhone 16 Pro 128GB Пустынный титан (Desert Titanium) DualSim",
-      "price": 84390,
+      "price": 80390,
       "price_site": 75390,
-      "markup": 9000,
+      "markup": 5000,
       "image": "assets/images2/84d89205892cb17b197708850faab3de08d7f08e.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-16-pro-128gb-pustynnyy-titan-desert-titanium-dualsim-1/",
       "meta": {
@@ -2015,14 +2015,14 @@
         "sim": "DualSim",
         "color": "Desert Titanium"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "6e66527ec52f024c589da4ea0f20776fb9c3b2cf",
       "title": "iPhone 16 Pro 128GB Белый титан (White Titanium) DualSim",
-      "price": 85890,
+      "price": 81890,
       "price_site": 76890,
-      "markup": 9000,
+      "markup": 5000,
       "image": "assets/images2/69bb3b64ed882761e0981f651ba1f71d460858f9.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-16-pro-128gb-belyy-titan-white-titanium-dualsim/",
       "meta": {
@@ -2031,14 +2031,14 @@
         "sim": "DualSim",
         "color": "White Titanium"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "c682387df2555c9b11592586169f6c5297c723e0",
       "title": "iPhone 16 Pro 128GB Натуральный титан (Natural Titanium) DualSim",
-      "price": 86590,
+      "price": 82590,
       "price_site": 77590,
-      "markup": 9000,
+      "markup": 5000,
       "image": "assets/images2/846084918712fd3ba79db0b0d44ee994efccf0a8.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-16-pro-128gb-naturalnyy-titan-natural-titanium-dualsim-1/",
       "meta": {
@@ -2047,14 +2047,14 @@
         "sim": "DualSim",
         "color": "Natural Titanium"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "3246ae1dfa0e5d08884d9fbfecbb567080a09b34",
       "title": "iPhone 16 Pro 128GB Черный титан (Black Titanium) DualSim",
-      "price": 90890,
+      "price": 86890,
       "price_site": 81890,
-      "markup": 9000,
+      "markup": 5000,
       "image": "assets/images2/08fbecec79deb3507c1e311b33aa2e387ef552f3.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-16-pro-128gb-chernyy-titan-black-titanium-dualsim/",
       "meta": {
@@ -2063,14 +2063,14 @@
         "sim": "DualSim",
         "color": "Black Titanium"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "75a948d7de830ee7b33adfba403058c488b20d37",
       "title": "iPhone 16 Pro 128GB Белый титан (White Titanium)",
-      "price": 95090,
+      "price": 91090,
       "price_site": 86090,
-      "markup": 9000,
+      "markup": 5000,
       "image": "assets/images2/9659cef0bcc3813cc3f367cfebee85de4b200957.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-16-pro-128gb-belyy-titan-white-titanium-1/",
       "meta": {
@@ -2079,14 +2079,14 @@
         "sim": "",
         "color": "White Titanium"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "2c587228bc73ba66ba581e5492a9a1b841f3b6d4",
       "title": "iPhone 16 Pro 128GB Пустынный титан (Desert Titanium)",
-      "price": 96690,
+      "price": 92690,
       "price_site": 87690,
-      "markup": 9000,
+      "markup": 5000,
       "image": "assets/images2/5ce4588260791196f3aa69d5e6869db863ac0c84.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-16-pro-128gb-pustynnyy-titan-desert-titanium-1/",
       "meta": {
@@ -2095,14 +2095,14 @@
         "sim": "",
         "color": "Desert Titanium"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "627801b19d6f22804392c592ec5cc00887347806",
       "title": "iPhone 16 Pro 128GB Натуральный титан (Natural Titanium)",
-      "price": 98290,
+      "price": 94290,
       "price_site": 89290,
-      "markup": 9000,
+      "markup": 5000,
       "image": "assets/images2/9c856fd49a362ca519e30882863dd2556e216aab.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-16-pro-128gb-naturalnyy-titan-natural-titanium/",
       "meta": {
@@ -2111,14 +2111,14 @@
         "sim": "",
         "color": "Natural Titanium"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "35283b01cbc16d5933ab316af2d452237bc6dfcd",
       "title": "iPhone 16 Pro 128GB Черный титан (Black Titanium)",
-      "price": 103990,
+      "price": 99990,
       "price_site": 94990,
-      "markup": 9000,
+      "markup": 5000,
       "image": "assets/images2/740a21c3998ce1b7f82e453bfefa60f2be526a83.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-16-pro-128gb-chernyy-titan-black-titanium-1/",
       "meta": {
@@ -2127,14 +2127,14 @@
         "sim": "",
         "color": "Black Titanium"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "25f28dd5806cafffbdc4de0b827fefcae66ef155",
       "title": "iPhone 16 Pro 256GB Пустынный титан (Desert Titanium)",
-      "price": 111490,
+      "price": 107490,
       "price_site": 102490,
-      "markup": 9000,
+      "markup": 5000,
       "image": "assets/images2/ee5a389011637d653f4733903812b64558f37631.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-16-pro-256gb-pustynnyy-titan-desert-titanium/",
       "meta": {
@@ -2143,14 +2143,14 @@
         "sim": "",
         "color": "Desert Titanium"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "405fa6b3099c4dd673ec3be66eb5c19f2b5decb7",
       "title": "iPhone 16 Pro 256GB Натуральный титан (Natural Titanium) eSIM",
-      "price": 115590,
+      "price": 111590,
       "price_site": 106590,
-      "markup": 9000,
+      "markup": 5000,
       "image": "assets/images2/b67dfa1760e37b69a7ee52df289055d2c7bfcd5b.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-16-pro-256gb-naturalnyy-titan-natural-titanium-esim-1/",
       "meta": {
@@ -2159,14 +2159,14 @@
         "sim": "eSIM",
         "color": "Natural Titanium"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "3990314077eace1b6281e1766dcc60acca56ba68",
       "title": "iPhone 16 Pro 256GB Натуральный титан (Natural Titanium)",
-      "price": 116490,
+      "price": 112490,
       "price_site": 107490,
-      "markup": 9000,
+      "markup": 5000,
       "image": "assets/images2/c44970bb951652c8049d1c5639a45b7609bd1bdd.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-16-pro-256gb-naturalnyy-titan-natural-titanium/",
       "meta": {
@@ -2175,14 +2175,14 @@
         "sim": "",
         "color": "Natural Titanium"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "8a97e57d678f728600998ee6d174861e9d73d9b3",
       "title": "iPhone 16 Pro 256GB Белый титан (White Titanium)",
-      "price": 120290,
+      "price": 116290,
       "price_site": 111290,
-      "markup": 9000,
+      "markup": 5000,
       "image": "assets/images2/d1ffcd61cd9f80666fd714eeb7f6a6cac52f4985.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-16-pro-256gb-belyy-titan-white-titanium-1/",
       "meta": {
@@ -2191,14 +2191,14 @@
         "sim": "",
         "color": "White Titanium"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "96b84ef8f60b6a0d7fae9a2a7d846335f69eba0c",
       "title": "iPhone 16 Pro 256GB Черный титан (Black Titanium)",
-      "price": 122390,
+      "price": 118390,
       "price_site": 113390,
-      "markup": 9000,
+      "markup": 5000,
       "image": "assets/images2/dca38259df9bfcf17a8d56c753b5137c400c0798.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-16-pro-256gb-chernyy-titan-black-titanium-1/",
       "meta": {
@@ -2207,14 +2207,14 @@
         "sim": "",
         "color": "Black Titanium"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "62773b9349508b35bbd335bdb2cdc4e6ecb4fc99",
       "title": "iPhone 16 Pro 512GB Белый титан (White Titanium)",
-      "price": 123390,
+      "price": 119390,
       "price_site": 114390,
-      "markup": 9000,
+      "markup": 5000,
       "image": "assets/images2/9a41ae940e51b24ed78fbd120bda6ea3e95c903b.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-16-pro-512gb-belyy-titan-white-titanium-1/",
       "meta": {
@@ -2223,14 +2223,14 @@
         "sim": "",
         "color": "White Titanium"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "9411999f70cfc370eba86b297af66d460c4b6c9b",
       "title": "iPhone 16 Pro 512GB Пустынный титан (Desert Titanium)",
-      "price": 133690,
+      "price": 129690,
       "price_site": 124690,
-      "markup": 9000,
+      "markup": 5000,
       "image": "assets/images2/853d92a699e66160e286f5d6daa793b2b5837496.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-16-pro-512gb-pustynnyy-titan-desert-titanium-1/",
       "meta": {
@@ -2239,14 +2239,14 @@
         "sim": "",
         "color": "Desert Titanium"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "2e5cec7df35e6026b8d7d029aa213f00789df281",
       "title": "iPhone 16 Pro 512GB Черный титан (Black Titanium)",
-      "price": 136290,
+      "price": 132290,
       "price_site": 127290,
-      "markup": 9000,
+      "markup": 5000,
       "image": "assets/images2/305c2537101d30643106975bf43a7b1aba8a0857.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-16-pro-512gb-chernyy-titan-black-titanium/",
       "meta": {
@@ -2255,14 +2255,14 @@
         "sim": "",
         "color": "Black Titanium"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "ce9eb764ec463095ef503d0144fa1e025983454f",
       "title": "iPhone 16 Pro 512GB Черный титан (Black Titanium) DualSim",
-      "price": 136290,
+      "price": 132290,
       "price_site": 127290,
-      "markup": 9000,
+      "markup": 5000,
       "image": "assets/images2/bd1906e430e35fbf1905831a8262e3555e1b01db.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-16-pro-512gb-chernyy-titan-black-titanium-dualsim-1/",
       "meta": {
@@ -2271,14 +2271,14 @@
         "sim": "DualSim",
         "color": "Black Titanium"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "8531163da43a6c3f1eb2272ce4b075046914585f",
       "title": "iPhone 16 Pro 512GB Натуральный титан (Natural Titanium)",
-      "price": 141190,
+      "price": 137190,
       "price_site": 132190,
-      "markup": 9000,
+      "markup": 5000,
       "image": "assets/images2/ee8ca55ff53d980600a3c4c0bb858f74d50b72ee.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-16-pro-512gb-naturalnyy-titan-natural-titanium-1/",
       "meta": {
@@ -2287,14 +2287,14 @@
         "sim": "",
         "color": "Natural Titanium"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "d61c792b3c9a65e7181e7194348002f56f6dc7f4",
       "title": "iPhone 16 Pro 1024GB Белый титан (White Titanium)",
-      "price": 127190,
+      "price": 123190,
       "price_site": 118190,
-      "markup": 9000,
+      "markup": 5000,
       "image": "assets/images2/348c86d78d15c430b1e8d4e41dce291fff73912e.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-16-pro-1024gb-belyy-titan-white-titanium/",
       "meta": {
@@ -2303,14 +2303,14 @@
         "sim": "",
         "color": "White Titanium"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "1f6633ce7860a1087fd05bd6e33d7e22cb9445bd",
       "title": "iPhone 16 Pro 1024GB Пустынный титан (Desert Titanium) DualSim",
-      "price": 137990,
+      "price": 133990,
       "price_site": 128990,
-      "markup": 9000,
+      "markup": 5000,
       "image": "assets/images2/b2c4954ec9393d9df4ab1fd3f3699d15e7f3f739.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-16-pro-1024gb-pustynnyy-titan-desert-titanium-dualsim/",
       "meta": {
@@ -2319,14 +2319,14 @@
         "sim": "DualSim",
         "color": "Desert Titanium"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "3d6ff1619583669ddf89efdc82a347bbb99feece",
       "title": "iPhone 16 Pro 1024GB Пустынный титан (Desert Titanium)",
-      "price": 140890,
+      "price": 136890,
       "price_site": 131890,
-      "markup": 9000,
+      "markup": 5000,
       "image": "assets/images2/0c782a72ba0e874bad9c177e2c3c21bf8ecce207.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-16-pro-1024gb-pustynnyy-titan-desert-titanium/",
       "meta": {
@@ -2335,14 +2335,14 @@
         "sim": "",
         "color": "Desert Titanium"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "8e72734cddc4da0a296eeb4f842a76d423f4d522",
       "title": "iPhone 16 Pro 1024GB Натуральный титан (Natural Titanium)",
-      "price": 162790,
+      "price": 158790,
       "price_site": 153790,
-      "markup": 9000,
+      "markup": 5000,
       "image": "assets/images2/171531e1632e1ef2cc6f028b1273f2c0f2b8e797.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-16-pro-1024gb-naturalnyy-titan-natural-titanium/",
       "meta": {
@@ -2351,14 +2351,14 @@
         "sim": "",
         "color": "Natural Titanium"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "509486c7bcb73c3c2668a28a0057812a685a7606",
       "title": "iPhone 16 Pro 1024GB Черный титан (Black Titanium)",
-      "price": 171390,
+      "price": 167390,
       "price_site": 162390,
-      "markup": 9000,
+      "markup": 5000,
       "image": "assets/images2/e4d0a8704e40522da8508ad2337b927f86cd6996.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-16-pro-1024gb-chernyy-titan-black-titanium-1/",
       "meta": {
@@ -2367,14 +2367,14 @@
         "sim": "",
         "color": "Black Titanium"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "3adcc027185619cec045090a8c0e4787eb4009b1",
       "title": "iPhone 16 Pro Max 256GB Пустынный титан (Desert Titanium) eSIM",
-      "price": 102290,
+      "price": 98290,
       "price_site": 93290,
-      "markup": 9000,
+      "markup": 5000,
       "image": "assets/images2/6d3d78dc2b90ba55d267f0c5f2754a7577c7e9a5.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-16-pro-max-256gb-pustynnyy-titan-desert-titanium-esim-1/",
       "meta": {
@@ -2383,14 +2383,14 @@
         "sim": "eSIM",
         "color": "Desert Titanium"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "94f150721bcc5bd52daf5a6900c826bff63a6058",
       "title": "iPhone 16 Pro Max 256GB Пустынный титан (Desert Titanium)",
-      "price": 104190,
+      "price": 100190,
       "price_site": 95190,
-      "markup": 9000,
+      "markup": 5000,
       "image": "assets/images2/681ae54b96ff8544a8e9729a5ecf22f551bd9351.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-16-pro-max-256gb-pustynnyy-titan-desert-titanium/",
       "meta": {
@@ -2399,14 +2399,14 @@
         "sim": "",
         "color": "Desert Titanium"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "569f05af94e9edb34a80a17212c7628659855b57",
       "title": "iPhone 16 Pro Max 256GB Черный титан (Black Titanium) DualSim",
-      "price": 112290,
+      "price": 108290,
       "price_site": 103290,
-      "markup": 9000,
+      "markup": 5000,
       "image": "assets/images2/40760a83dbb8a828697cb8c4246699cfbb8e8bfc.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-16-pro-max-256gb-chernyy-titan-black-titanium-dualsim/",
       "meta": {
@@ -2415,14 +2415,14 @@
         "sim": "DualSim",
         "color": "Black Titanium"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "1f7f0c6e84ac410a6a3a510791061585d8da0c27",
       "title": "iPhone 16 Pro Max 256GB Черный титан (Black Titanium)",
-      "price": 116490,
+      "price": 112490,
       "price_site": 107490,
-      "markup": 9000,
+      "markup": 5000,
       "image": "assets/images2/dad63fa2d46fb65ba072f174e88360c582be21e3.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-16-pro-max-256gb-chernyy-titan-black-titanium-1/",
       "meta": {
@@ -2431,14 +2431,14 @@
         "sim": "",
         "color": "Black Titanium"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "3fa1da00a04d36745223c0b4148134577c82fd37",
       "title": "iPhone 16 Pro Max 256GB Белый титан (White Titanium)",
-      "price": 119190,
+      "price": 115190,
       "price_site": 110190,
-      "markup": 9000,
+      "markup": 5000,
       "image": "assets/images2/faaab80cfd7f8fdbe943bd58d1647de3fcba336a.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-16-pro-max-256gb-belyy-titan-white-titanium-1/",
       "meta": {
@@ -2447,14 +2447,14 @@
         "sim": "",
         "color": "White Titanium"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "f46d6b45732ebd17b6ee3f05caf319e6151befcb",
       "title": "iPhone 16 Pro Max 256GB Натуральный титан (Natural Titanium)",
-      "price": 120290,
+      "price": 116290,
       "price_site": 111290,
-      "markup": 9000,
+      "markup": 5000,
       "image": "assets/images2/8638b0d0bde305b4f9f7424345645f7abfa0b12e.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-16-pro-max-256gb-naturalnyy-titan-natural-titanium-1/",
       "meta": {
@@ -2463,14 +2463,14 @@
         "sim": "",
         "color": "Natural Titanium"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "814da09e467e9b04a45e5dcabb21b62e8984a503",
       "title": "iPhone 16 Pro Max 512GB Пустынный титан (Desert Titanium)",
-      "price": 123990,
+      "price": 119990,
       "price_site": 114990,
-      "markup": 9000,
+      "markup": 5000,
       "image": "assets/images2/c04f2976268d658a130cdceff8dfd9bc51857dab.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-16-pro-max-512gb-pustynnyy-titan-desert-titanium-1/",
       "meta": {
@@ -2479,14 +2479,14 @@
         "sim": "",
         "color": "Desert Titanium"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "b2409eb70dcba5cfdf41a2683590891d381bfc81",
       "title": "iPhone 16 Pro Max 512GB Черный титан (Black Titanium) DualSim",
-      "price": 126690,
+      "price": 122690,
       "price_site": 117690,
-      "markup": 9000,
+      "markup": 5000,
       "image": "assets/images2/76ab21dc97bb7065d498c493fd157f44c875e9ad.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-16-pro-max-512gb-chernyy-titan-black-titanium-dualsim/",
       "meta": {
@@ -2495,14 +2495,14 @@
         "sim": "DualSim",
         "color": "Black Titanium"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "282de3829185635667629cc8ad9ff9945e709170",
       "title": "iPhone 16 Pro Max 512GB Натуральный титан (Natural Titanium)",
-      "price": 131490,
+      "price": 127490,
       "price_site": 122490,
-      "markup": 9000,
+      "markup": 5000,
       "image": "assets/images2/b9a6bad6e0604742c24a0a519d7fce27c2d05118.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-16-pro-max-512gb-naturalnyy-titan-natural-titanium-1/",
       "meta": {
@@ -2511,14 +2511,14 @@
         "sim": "",
         "color": "Natural Titanium"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "d6f6d2e0662d4e02e5949699f7cd2dceb87a2fec",
       "title": "iPhone 16 Pro Max 512GB Черный титан (Black Titanium)",
-      "price": 135290,
+      "price": 131290,
       "price_site": 126290,
-      "markup": 9000,
+      "markup": 5000,
       "image": "assets/images2/fc2676269f7f3f16f4866f1377ec180fed990e64.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-16-pro-max-512gb-chernyy-titan-black-titanium/",
       "meta": {
@@ -2527,14 +2527,14 @@
         "sim": "",
         "color": "Black Titanium"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "83ca37e8cdb1359087aade04b6564c857afe04bd",
       "title": "iPhone 16 Pro Max 512GB Белый титан (White Titanium) DualSim",
-      "price": 136190,
+      "price": 132190,
       "price_site": 127190,
-      "markup": 9000,
+      "markup": 5000,
       "image": "assets/images2/63545b9a8ae7dbc6db881810936b2b383e9aa114.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-16-pro-max-512gb-belyy-titan-white-titanium-dualsim/",
       "meta": {
@@ -2543,14 +2543,14 @@
         "sim": "DualSim",
         "color": "White Titanium"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "3eeb8516ec848d2fe741e59ef86f568e12d8eaed",
       "title": "iPhone 16 Pro Max 1024GB Черный титан (Black Titanium) DualSim",
-      "price": 136890,
+      "price": 132890,
       "price_site": 127890,
-      "markup": 9000,
+      "markup": 5000,
       "image": "assets/images2/c6044e49c8fe3bdf7c117d4f2e49726fb68e4bf9.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-16-pro-max-1024gb-chernyy-titan-black-titanium-dualsim/",
       "meta": {
@@ -2559,14 +2559,14 @@
         "sim": "DualSim",
         "color": "Black Titanium"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "bab9709e260fc7e49b5bd3f90e7bd1f6c37a0a19",
       "title": "iPhone 16 Pro Max 1024GB Пустынный титан (Desert Titanium) Dua...",
-      "price": 136890,
+      "price": 132890,
       "price_site": 127890,
-      "markup": 9000,
+      "markup": 5000,
       "image": "assets/images2/b50cc3510d7c06d5d1321d5da553cad0e164f0ef.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-16-pro-max-1024gb-pustynnyy-titan-desert-titanium-dualsim/",
       "meta": {
@@ -2575,14 +2575,14 @@
         "sim": "",
         "color": "Desert Titanium"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "2a70c6308f94a7ca75b9a37d5e2406bd61b5e52a",
       "title": "iPhone 16 Pro Max 1024GB Белый титан (White Titanium) DualSim",
-      "price": 136890,
+      "price": 132890,
       "price_site": 127890,
-      "markup": 9000,
+      "markup": 5000,
       "image": "assets/images2/f2256641ec6019a11a623abadb0a825fa4fe0857.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-16-pro-max-1024gb-belyy-titan-white-titanium-dualsim/",
       "meta": {
@@ -2591,14 +2591,14 @@
         "sim": "DualSim",
         "color": "White Titanium"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "34563f64ec1aac800b2ae2d30bf82146d9ad363c",
       "title": "iPhone 16 Pro Max 1024GB Черный титан (Black Titanium)",
-      "price": 140890,
+      "price": 136890,
       "price_site": 131890,
-      "markup": 9000,
+      "markup": 5000,
       "image": "assets/images2/2ce4b71c5ce9b8fc9746b84f7758977100dedb19.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-16-pro-max-1024gb-chernyy-titan-black-titanium/",
       "meta": {
@@ -2607,14 +2607,14 @@
         "sim": "",
         "color": "Black Titanium"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "0de403006966ce55db3be64b685ddc096e7b93aa",
       "title": "iPhone 16 Pro Max 1024GB Натуральный титан (Natural Titanium)",
-      "price": 141590,
+      "price": 137590,
       "price_site": 132590,
-      "markup": 9000,
+      "markup": 5000,
       "image": "assets/images2/7a2991531b99b6e328d6fef8f3280a612c5387bc.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-16-pro-max-1024gb-naturalnyy-titan-natural-titanium/",
       "meta": {
@@ -2623,14 +2623,14 @@
         "sim": "",
         "color": "Natural Titanium"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "9b5c805200df3fc0a9eb286bc19164ea8525fbf0",
       "title": "iPhone 16 Pro Max 1024GB Пустынный титан (Desert Titanium)",
-      "price": 142190,
+      "price": 138190,
       "price_site": 133190,
-      "markup": 9000,
+      "markup": 5000,
       "image": "assets/images2/40662ae857e8a7d1444af966a293d0bc89f7dc6d.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-16-pro-max-1024gb-pustynnyy-titan-desert-titanium-1/",
       "meta": {
@@ -2639,14 +2639,14 @@
         "sim": "",
         "color": "Desert Titanium"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "a26db1d3d90fd8b0ad438cc4fb307d2007e7fee6",
       "title": "iPhone 16 Pro Max 1024GB Белый титан (White Titanium)",
-      "price": 154490,
+      "price": 150490,
       "price_site": 145490,
-      "markup": 9000,
+      "markup": 5000,
       "image": "assets/images2/54497d9e5aff6d6330ce9a1fac878c62b557b511.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-16-pro-max-1024gb-belyy-titan-white-titanium-1/",
       "meta": {
@@ -2655,14 +2655,14 @@
         "sim": "",
         "color": "White Titanium"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "e2b389e3db0efdd43aa9ef03b08cb515417a1f7a",
       "title": "iPhone 16e 128GB Белый (White)",
-      "price": 51790,
+      "price": 48790,
       "price_site": 43790,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/6bc2bdb3b7327e08aefc4bf15d98692d8ac9db5e.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-16e-128gb-belyy-white-1/",
       "meta": {
@@ -2671,14 +2671,14 @@
         "sim": "",
         "color": "White"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "78a701d9d18a0a8ca682be3c58b7c6bd971703c5",
       "title": "iPhone 16e 128GB Черный (Black)",
-      "price": 52590,
+      "price": 49590,
       "price_site": 44590,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/92b3034a16b9133de2d9599575718cb031b21bf3.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-16e-128gb-chernyy-black-1/",
       "meta": {
@@ -2687,14 +2687,14 @@
         "sim": "",
         "color": "Black"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "8e1279a2c719b6e91c66821bf172444c332c9a90",
       "title": "iPhone 16e 256GB Белый (White)",
-      "price": 62590,
+      "price": 59590,
       "price_site": 54590,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/dae959a637f2bbac48d850557c154c200015b4d3.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-16e-256gb-belyy-white-1/",
       "meta": {
@@ -2703,14 +2703,14 @@
         "sim": "",
         "color": "White"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "e8bcccacbef218eedf3bec9e882aaae3b4ca5484",
       "title": "iPhone 16e 256GB Черный (Black)",
-      "price": 63890,
+      "price": 60890,
       "price_site": 55890,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/19ca8308286849cf5f3497281dd3165ac5dd0b89.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-16e-256gb-chernyy-black-1/",
       "meta": {
@@ -2719,14 +2719,14 @@
         "sim": "",
         "color": "Black"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "8e36d50ba0943b450dd554f0d6b51a08f9f25a24",
       "title": "iPhone 16e 512GB Черный (Black)",
-      "price": 73090,
+      "price": 70090,
       "price_site": 65090,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/ae9ebd4da45f1214d31c034fb93c8cfc4d391139.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-16e-512gb-chernyy-black-1/",
       "meta": {
@@ -2735,14 +2735,14 @@
         "sim": "",
         "color": "Black"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "72141fc1209424ce21b5ea905fee2d5f41041790",
       "title": "iPhone 16e 512GB Белый (White)",
-      "price": 73090,
+      "price": 70090,
       "price_site": 65090,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/8c6be97f282cb74c5850685bf6186d2e6f5b0149.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-16e-512gb-belyy-white-1/",
       "meta": {
@@ -2751,14 +2751,14 @@
         "sim": "",
         "color": "White"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "5c59ce26c1ceb544f493f2616cea4048b0da42dc",
       "title": "iPhone 17 256GB Фиолетовый (Lavender) eSim",
-      "price": 77190,
+      "price": 72190,
       "price_site": 67190,
-      "markup": 10000,
+      "markup": 5000,
       "image": "assets/images2/41438721cdf9ff28660c0fc1459d7c3292c73118.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-17-256gb-fioletovyy-purple-esim/",
       "meta": {
@@ -2767,14 +2767,14 @@
         "sim": "eSIM",
         "color": "Lavender"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "84dffcbb87fb9b851a4166f983cca7ef692b15b5",
       "title": "iPhone 17 256GB Белый (White) eSim",
-      "price": 77190,
+      "price": 72190,
       "price_site": 67190,
-      "markup": 10000,
+      "markup": 5000,
       "image": "assets/images2/c984b960251aee66f2c01ba3386068428e642495.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-17-256gb-belyy-white-esim/",
       "meta": {
@@ -2783,14 +2783,14 @@
         "sim": "eSIM",
         "color": "White"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "d8195df222d73e60aa3a653e37889c92011c13ed",
       "title": "iPhone 17 256GB Голубой (Mist Blue) eSim",
-      "price": 77190,
+      "price": 72190,
       "price_site": 67190,
-      "markup": 10000,
+      "markup": 5000,
       "image": "assets/images2/ca2fb3fb6c80ce6c486d3c64a8e5fd4c0396e128.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-17-256gb-goluboy-light-blue-esim/",
       "meta": {
@@ -2799,14 +2799,14 @@
         "sim": "eSIM",
         "color": "Mist Blue"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "b9bc0f045ed71f1a3b469e7520e237c4555bd27d",
       "title": "iPhone 17 256GB Черный (Black) eSim",
-      "price": 77190,
+      "price": 72190,
       "price_site": 67190,
-      "markup": 10000,
+      "markup": 5000,
       "image": "assets/images2/c0568d528e5c43d037f3ae5d3c510192b7494dc6.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-17-256gb-seryy-steel-gray-esim/",
       "meta": {
@@ -2815,14 +2815,14 @@
         "sim": "eSIM",
         "color": "Black"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "248fe56b212a2efc1936067fbbe2b25f05e10e4c",
       "title": "iPhone 17 256GB Зеленый (Sage) eSim",
-      "price": 79490,
+      "price": 74490,
       "price_site": 69490,
-      "markup": 10000,
+      "markup": 5000,
       "image": "assets/images2/b93470dc33352828a2eb729e3b8d3c23a7845112.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-17-256gb-zelenyy-green-esim/",
       "meta": {
@@ -2831,14 +2831,14 @@
         "sim": "eSIM",
         "color": "Sage"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "bf0cdb88ddf0708651d798731222e9fed91c8b66",
       "title": "iPhone 17 256GB Белый (White)",
-      "price": 81190,
+      "price": 76190,
       "price_site": 71190,
-      "markup": 10000,
+      "markup": 5000,
       "image": "assets/images2/8876e6f425e65e9f7933001bdffec725f2b309f8.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-17-256gb-belyy-white/",
       "meta": {
@@ -2847,14 +2847,14 @@
         "sim": "",
         "color": "White"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "84e2e39ac3f6634dd6ac8d5c2fd387b5424f3e72",
       "title": "iPhone 17 256GB Голубой (Mist Blue)",
-      "price": 81190,
+      "price": 76190,
       "price_site": 71190,
-      "markup": 10000,
+      "markup": 5000,
       "image": "assets/images2/f9ade1da5bed704fca7291ecc94518b678745f6e.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-17-256gb-goluboy-light-blue/",
       "meta": {
@@ -2863,14 +2863,14 @@
         "sim": "",
         "color": "Mist Blue"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "bc6b77570f7bf1f3243fef3c27b944e1e924034c",
       "title": "iPhone 17 256GB Зеленый (Sage)",
-      "price": 81190,
+      "price": 76190,
       "price_site": 71190,
-      "markup": 10000,
+      "markup": 5000,
       "image": "assets/images2/cc35b55d6efc7ba9bef1f250d22fd2902b071bac.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-17-256gb-zelenyy-green/",
       "meta": {
@@ -2879,14 +2879,14 @@
         "sim": "",
         "color": "Sage"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "18075c79d94719a4507a15ca5ab05c96d5d0d4a1",
       "title": "iPhone 17 256GB Черный (Black)",
-      "price": 81890,
+      "price": 76890,
       "price_site": 71890,
-      "markup": 10000,
+      "markup": 5000,
       "image": "assets/images2/6a698832030a3c98f02571d7e49d9ff99ef1f829.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-17-256gb-seryy-steel-gray/",
       "meta": {
@@ -2895,14 +2895,14 @@
         "sim": "",
         "color": "Black"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "641201ec2aa752918e7dbdbe9c828ee41da2229f",
       "title": "iPhone 17 256GB Фиолетовый (Lavender)",
-      "price": 81890,
+      "price": 76890,
       "price_site": 71890,
-      "markup": 10000,
+      "markup": 5000,
       "image": "assets/images2/8a43b1d1fe3ba1a70173a9fbc0a9c777d1e88533.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-17-256gb-fioletovyy-purple/",
       "meta": {
@@ -2911,14 +2911,14 @@
         "sim": "",
         "color": "Lavender"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "252b06867e7cf062a774e6f0531a6475495d9b62",
       "title": "iPhone 17 512GB Черный (Black) eSim",
-      "price": 93790,
+      "price": 88790,
       "price_site": 83790,
-      "markup": 10000,
+      "markup": 5000,
       "image": "assets/images2/e56699746afb23a69245af5879f07ee63c7ca5ce.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-17-512gb-seryy-steel-gray-esim/",
       "meta": {
@@ -2927,14 +2927,14 @@
         "sim": "eSIM",
         "color": "Black"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "97b188e0f1323e4ce8cf49707a2daf8d3438ec15",
       "title": "iPhone 17 512GB Голубой (Mist Blue) eSim",
-      "price": 93890,
+      "price": 88890,
       "price_site": 83890,
-      "markup": 10000,
+      "markup": 5000,
       "image": "assets/images2/fb2cc155086aae5867d6cf1576d8fc91652e8b12.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-17-512gb-goluboy-light-blue-esim/",
       "meta": {
@@ -2943,14 +2943,14 @@
         "sim": "eSIM",
         "color": "Mist Blue"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "fd1dff0065b2d389410fb118349a0f4d98716883",
       "title": "iPhone 17 512GB Зеленый (Sage) eSim",
-      "price": 98190,
+      "price": 93190,
       "price_site": 88190,
-      "markup": 10000,
+      "markup": 5000,
       "image": "assets/images2/f5bb6c2490b799429f9c790aff2f7bb3f0e036aa.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-17-512gb-zelenyy-green-esim/",
       "meta": {
@@ -2959,14 +2959,14 @@
         "sim": "eSIM",
         "color": "Sage"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "f3fe6fa65565bb8ff7583de481981a8d719c5287",
       "title": "iPhone 17 512GB Фиолетовый (Lavender) eSim",
-      "price": 98190,
+      "price": 93190,
       "price_site": 88190,
-      "markup": 10000,
+      "markup": 5000,
       "image": "assets/images2/d1f5d76594e7057dec1106cf11737647b8d836f4.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-17-512gb-fioletovyy-purple-esim/",
       "meta": {
@@ -2975,14 +2975,14 @@
         "sim": "eSIM",
         "color": "Lavender"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "002829a14bd1e4d2468c8c789c017ec8034cfc2d",
       "title": "iPhone 17 512GB Голубой (Mist Blue)",
-      "price": 98990,
+      "price": 93990,
       "price_site": 88990,
-      "markup": 10000,
+      "markup": 5000,
       "image": "assets/images2/93efe2bec0dcc9cafff44a95611a41f38dad2e12.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-17-512gb-goluboy-light-blue/",
       "meta": {
@@ -2991,14 +2991,14 @@
         "sim": "",
         "color": "Mist Blue"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "1d2a79e50d235b920381deb496fee8a76819b1cb",
       "title": "iPhone 17 512GB Белый (White) eSim",
-      "price": 99290,
+      "price": 94290,
       "price_site": 89290,
-      "markup": 10000,
+      "markup": 5000,
       "image": "assets/images2/863db81ca8b53a58a6ae50aa7734515ac928897f.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-17-512gb-belyy-white-esim/",
       "meta": {
@@ -3007,14 +3007,14 @@
         "sim": "eSIM",
         "color": "White"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "5e044629f43ef95e1fe9df17573ef1eef8690476",
       "title": "iPhone 17 512GB Черный (Black)",
-      "price": 99990,
+      "price": 94990,
       "price_site": 89990,
-      "markup": 10000,
+      "markup": 5000,
       "image": "assets/images2/ba40b9afb962575ec50637512544c94b21996e7e.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-17-512gb-seryy-steel-gray/",
       "meta": {
@@ -3023,14 +3023,14 @@
         "sim": "",
         "color": "Black"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "746044f6f90e3c1fcfb15c7990d23fdf9811c65e",
       "title": "iPhone 17 512GB Фиолетовый (Lavender)",
-      "price": 101990,
+      "price": 96990,
       "price_site": 91990,
-      "markup": 10000,
+      "markup": 5000,
       "image": "assets/images2/01df2bbe0d691b10fcebb4966846cb85479be451.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-17-512gb-fioletovyy-purple/",
       "meta": {
@@ -3039,14 +3039,14 @@
         "sim": "",
         "color": "Lavender"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "4a1abb7705b768adeb50ac1760fb3bffa3c5ef17",
       "title": "iPhone 17 512GB Зеленый (Sage)",
-      "price": 103590,
+      "price": 98590,
       "price_site": 93590,
-      "markup": 10000,
+      "markup": 5000,
       "image": "assets/images2/49167546d58eec52d6f4ef5d6730e5528fbd8710.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-17-512gb-zelenyy-green/",
       "meta": {
@@ -3055,14 +3055,14 @@
         "sim": "",
         "color": "Sage"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "af8896984e26d6538e8bedf4e22181102b50ac1f",
       "title": "iPhone 17 512GB Белый (White)",
-      "price": 103590,
+      "price": 98590,
       "price_site": 93590,
-      "markup": 10000,
+      "markup": 5000,
       "image": "assets/images2/3a13123e2abb8ff97c884b347a3a48a5dfdc5aa7.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-17-512gb-belyy-white/",
       "meta": {
@@ -3071,14 +3071,14 @@
         "sim": "",
         "color": "White"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "41799c9179ba6767f6c3dda24d2d5a2f13cebb7d",
       "title": "iPhone 17 Pro 256GB Оранжевый (Cosmic Orange) eSim",
-      "price": 106890,
+      "price": 96890,
       "price_site": 91890,
-      "markup": 15000,
+      "markup": 5000,
       "image": "assets/images2/8d107bc7a5a85de98b1b73b4a11ab1285812e52f.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-17-pro-256gb-oranzhevyy-orange-esim/",
       "meta": {
@@ -3087,14 +3087,14 @@
         "sim": "eSIM",
         "color": "Cosmic Orange"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "fb0d346a121a00809074f042b3a1b5589c6422d3",
       "title": "iPhone 17 Pro 256GB Синий (Deep Blue) eSim",
-      "price": 107890,
+      "price": 97890,
       "price_site": 92890,
-      "markup": 15000,
+      "markup": 5000,
       "image": "assets/images2/d916ef8f913a3894afd962d4da3083f3245700aa.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-17-pro-256gb-siniy-dark-blue-esim/",
       "meta": {
@@ -3103,14 +3103,14 @@
         "sim": "eSIM",
         "color": "Deep Blue"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "ce08f94b695c5542a75809187a18f264aa510850",
       "title": "iPhone 17 Pro 256GB Белый (Silver) eSim",
-      "price": 108490,
+      "price": 98490,
       "price_site": 93490,
-      "markup": 15000,
+      "markup": 5000,
       "image": "assets/images2/886bd5c9b531503440034bb2ae837eefcbd1c155.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-17-pro-256gb-belyy-white-esim/",
       "meta": {
@@ -3119,14 +3119,14 @@
         "sim": "eSIM",
         "color": "Silver"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "29b9e268119010d93d99729356b06420c145e7a2",
       "title": "iPhone 17 Pro 256GB Оранжевый (Cosmic Orange)",
-      "price": 116690,
+      "price": 106690,
       "price_site": 101690,
-      "markup": 15000,
+      "markup": 5000,
       "image": "assets/images2/4119dca2d37533a52add46692c98033eff0b5c27.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-17-pro-256gb-oranzhevyy-orange/",
       "meta": {
@@ -3135,14 +3135,14 @@
         "sim": "",
         "color": "Cosmic Orange"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "8b354589953fa5f8182b8a205ab4c65db15eed4b",
       "title": "iPhone 17 Pro 256GB Синий (Deep Blue)",
-      "price": 117690,
+      "price": 107690,
       "price_site": 102690,
-      "markup": 15000,
+      "markup": 5000,
       "image": "assets/images2/68ed1c748460765985130021886fb0842bc0b037.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-17-pro-256gb-siniy-dark-blue/",
       "meta": {
@@ -3151,14 +3151,14 @@
         "sim": "",
         "color": "Deep Blue"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "52de3b50e6ec6c32e7b71d3bc40c3211d450c3c5",
       "title": "iPhone 17 Pro 256GB Белый (Silver)",
-      "price": 118790,
+      "price": 108790,
       "price_site": 103790,
-      "markup": 15000,
+      "markup": 5000,
       "image": "assets/images2/2f9c6b64abeb3909a54acb0a66f454aa2408c3f4.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-17-pro-256gb-serebro-silver/",
       "meta": {
@@ -3167,14 +3167,14 @@
         "sim": "",
         "color": "Silver"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "a79ce4e2d83375e1334672decc9caa8297d88b8a",
       "title": "iPhone 17 Pro 512GB Оранжевый (Cosmic Orange) eSim",
-      "price": 121790,
+      "price": 111790,
       "price_site": 106790,
-      "markup": 15000,
+      "markup": 5000,
       "image": "assets/images2/6401527ecbdc020c41ce479786f4d806f12a7006.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-17-pro-512gb-oranzhevyy-orange-esim/",
       "meta": {
@@ -3183,14 +3183,14 @@
         "sim": "eSIM",
         "color": "Cosmic Orange"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "7dd0347f04036c3e582fdb69f016cc0812f32b63",
       "title": "iPhone 17 Pro 512GB Синий (Deep Blue) eSim",
-      "price": 121790,
+      "price": 111790,
       "price_site": 106790,
-      "markup": 15000,
+      "markup": 5000,
       "image": "assets/images2/ee3b33fe1d64c7c0aa1ea08d63cc2480086cf7dc.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-17-pro-512gb-siniy-dark-blue-esim/",
       "meta": {
@@ -3199,14 +3199,14 @@
         "sim": "eSIM",
         "color": "Deep Blue"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "2e31d20170c522284e530cd092ab731ac3fd5f17",
       "title": "iPhone 17 Pro 512GB Белый (Silver) eSim",
-      "price": 122090,
+      "price": 112090,
       "price_site": 107090,
-      "markup": 15000,
+      "markup": 5000,
       "image": "assets/images2/b38a6b75549fb7494b43670cfd16f2098ccba987.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-17-pro-512gb-belyy-white-esim/",
       "meta": {
@@ -3215,14 +3215,14 @@
         "sim": "eSIM",
         "color": "Silver"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "e91f0bb01f45935e084d23ad7fba5a145622c603",
       "title": "iPhone 17 Pro 512GB Оранжевый (Cosmic Orange)",
-      "price": 134790,
+      "price": 124790,
       "price_site": 119790,
-      "markup": 15000,
+      "markup": 5000,
       "image": "assets/images2/fc29b066f03382290756a6fac6dac0d4dd01ff65.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-17-pro-512gb-oranzhevyy-orange/",
       "meta": {
@@ -3231,14 +3231,14 @@
         "sim": "",
         "color": "Cosmic Orange"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "abbcf5c5b71dd2789c912251443793582a091b84",
       "title": "iPhone 17 Pro 512GB Синий (Deep Blue)",
-      "price": 138090,
+      "price": 128090,
       "price_site": 123090,
-      "markup": 15000,
+      "markup": 5000,
       "image": "assets/images2/60922bd3ea76d218c7da9d6ebe20d37fecd6302c.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-17-pro-512gb-siniy-dark-blue/",
       "meta": {
@@ -3247,14 +3247,14 @@
         "sim": "",
         "color": "Deep Blue"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "0f1b10595faccdd0d846d329bb3b13e49dade469",
       "title": "iPhone 17 Pro 512GB Белый (Silver)",
-      "price": 142890,
+      "price": 132890,
       "price_site": 127890,
-      "markup": 15000,
+      "markup": 5000,
       "image": "assets/images2/d5a2725cd7748f2df247ebd950149318bb69472a.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-17-pro-512gb-serebro-silver-1/",
       "meta": {
@@ -3263,14 +3263,14 @@
         "sim": "",
         "color": "Silver"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "c253389571f12f80fd3ea8b4d736800a0a5dd9e1",
       "title": "iPhone 17 Pro 1024GB Оранжевый (Cosmic Orange) eSim",
-      "price": 135790,
+      "price": 125790,
       "price_site": 120790,
-      "markup": 15000,
+      "markup": 5000,
       "image": "assets/images2/3d3c454290ebc2488ade5d47bb5dc0fd247a7ceb.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-17-pro-1024gb-oranzhevyy-orange-esim/",
       "meta": {
@@ -3279,14 +3279,14 @@
         "sim": "eSIM",
         "color": "Cosmic Orange"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "02df34e5f798804b45f27215a6513887efc0dc04",
       "title": "iPhone 17 Pro 1024GB Синий (Deep Blue) eSim",
-      "price": 138890,
+      "price": 128890,
       "price_site": 123890,
-      "markup": 15000,
+      "markup": 5000,
       "image": "assets/images2/73b9033c0039314e5c2ccc2cc56619b6c97cdff6.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-17-pro-1024gb-siniy-dark-blue-esim/",
       "meta": {
@@ -3295,14 +3295,14 @@
         "sim": "eSIM",
         "color": "Deep Blue"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "d962b4ab27191818c6618a501d7b9177cbecf936",
       "title": "iPhone 17 Pro 1024GB Белый (Silver) eSim",
-      "price": 143590,
+      "price": 133590,
       "price_site": 128590,
-      "markup": 15000,
+      "markup": 5000,
       "image": "assets/images2/46a5ea0297c77fd8a3141db2df7b2c728ddf2d23.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-17-pro-1024gb-belyy-white-esim/",
       "meta": {
@@ -3311,14 +3311,14 @@
         "sim": "eSIM",
         "color": "Silver"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "33da47df59811184f98b8f0a506ef4fb239d4f44",
       "title": "iPhone 17 Pro 1024GB Оранжевый (Cosmic Orange)",
-      "price": 151390,
+      "price": 141390,
       "price_site": 136390,
-      "markup": 15000,
+      "markup": 5000,
       "image": "assets/images2/7759758d0002382a0958afa117ae914b572d12f2.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-17-pro-1024gb-oranzhevyy-orange/",
       "meta": {
@@ -3327,14 +3327,14 @@
         "sim": "",
         "color": "Cosmic Orange"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "bc50786080223c3d019da75164dc80493e45fd1b",
       "title": "iPhone 17 Pro 1024GB Синий (Deep Blue)",
-      "price": 159990,
+      "price": 149990,
       "price_site": 144990,
-      "markup": 15000,
+      "markup": 5000,
       "image": "assets/images2/fcfd13fe864bfd1665d6efdb84720ca31d7337a4.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-17-pro-1024gb-siniy-dark-blue/",
       "meta": {
@@ -3343,14 +3343,14 @@
         "sim": "",
         "color": "Deep Blue"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "e1d006a10259d36ce9836ad8c5db61225dac215b",
       "title": "iPhone 17 Pro 1024GB Белый (Silver)",
-      "price": 163590,
+      "price": 153590,
       "price_site": 148590,
-      "markup": 15000,
+      "markup": 5000,
       "image": "assets/images2/813bda0b4388f91e9716270cc98edcbaa5ccd6dc.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-17-pro-1024gb-serebro-silver/",
       "meta": {
@@ -3359,14 +3359,14 @@
         "sim": "",
         "color": "Silver"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "56df8952f0263f41a8bc8fa1c64f3c827ee2c321",
       "title": "iPhone 17 Pro Max 256GB Оранжевый (Cosmic Orange) eSim",
-      "price": 118390,
+      "price": 108390,
       "price_site": 103390,
-      "markup": 15000,
+      "markup": 5000,
       "image": "assets/images2/b2e74b84050fb2d41a3ffd3978258b429e3297e0.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-17-pro-max-256gb-oranzhevyy-orange-esim/",
       "meta": {
@@ -3375,14 +3375,14 @@
         "sim": "eSIM",
         "color": "Cosmic Orange"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "dbfd32a1db97cd0cff14c01b769a53cefe27957c",
       "title": "iPhone 17 Pro Max 256GB Синий (Deep Blue) eSim",
-      "price": 118390,
+      "price": 108390,
       "price_site": 103390,
-      "markup": 15000,
+      "markup": 5000,
       "image": "assets/images2/b206fd3f6dbf36c4563d2f7768db403df5de7b0e.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-17-pro-max-256gb-siniy-dark-blue-esim/",
       "meta": {
@@ -3391,14 +3391,14 @@
         "sim": "eSIM",
         "color": "Deep Blue"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "cf44c5b4376f461fd3824156511ef08099029182",
       "title": "iPhone 17 Pro Max 256GB Белый (Silver) eSim",
-      "price": 118990,
+      "price": 108990,
       "price_site": 103990,
-      "markup": 15000,
+      "markup": 5000,
       "image": "assets/images2/093c36705ad6b7797ea8ee1e931c3a06b55ef04e.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-17-pro-max-256gb-belyy-white-esim/",
       "meta": {
@@ -3407,14 +3407,14 @@
         "sim": "eSIM",
         "color": "Silver"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "b6d8ce9400870a95c491cf95dd50dd670ce55606",
       "title": "iPhone 17 Pro Max 256GB Оранжевый (Cosmic Orange)",
-      "price": 126290,
+      "price": 116290,
       "price_site": 111290,
-      "markup": 15000,
+      "markup": 5000,
       "image": "assets/images2/8491fa4938a4875e08155068013f56ec2a0a6d29.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-17-pro-max-256gb-oranzhevyy-orange/",
       "meta": {
@@ -3423,14 +3423,14 @@
         "sim": "",
         "color": "Cosmic Orange"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "e9f10f60b75db3afc0ddc65f0b046e03058c4852",
       "title": "iPhone 17 Pro Max 256GB Синий (Deep Blue)",
-      "price": 131590,
+      "price": 121590,
       "price_site": 116590,
-      "markup": 15000,
+      "markup": 5000,
       "image": "assets/images2/68556fdb128586d6f740fe9f61b161101fc8fbf3.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-17-pro-max-256gb-siniy-dark-blue/",
       "meta": {
@@ -3439,14 +3439,14 @@
         "sim": "",
         "color": "Deep Blue"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "467a4bd497a67d05a4f81995d7a2a1adc29bd984",
       "title": "iPhone 17 Pro Max 256GB Белый (Silver)",
-      "price": 132690,
+      "price": 122690,
       "price_site": 117690,
-      "markup": 15000,
+      "markup": 5000,
       "image": "assets/images2/c6e4cd88b120c82e23f3c83b8738de50585b7bef.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-17-pro-max-256gb-serebro-silver/",
       "meta": {
@@ -3455,14 +3455,14 @@
         "sim": "",
         "color": "Silver"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "8fa9a90e825afbc8414a796f6d8168cc32083df1",
       "title": "iPhone 17 Pro Max 512GB Оранжевый (Cosmic Orange) eSim",
-      "price": 129490,
+      "price": 119490,
       "price_site": 114490,
-      "markup": 15000,
+      "markup": 5000,
       "image": "assets/images2/b62c355c32bc34547089bc1e4a5af77cdb273e64.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-17-pro-max-512gb-oranzhevyy-orange-esim/",
       "meta": {
@@ -3471,14 +3471,14 @@
         "sim": "eSIM",
         "color": "Cosmic Orange"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "f09e4efde564f682b2e1f2611020a25ca75c4b82",
       "title": "iPhone 17 Pro Max 512GB Синий (Deep Blue) eSim",
-      "price": 132090,
+      "price": 122090,
       "price_site": 117090,
-      "markup": 15000,
+      "markup": 5000,
       "image": "assets/images2/ee97d5fc68da5149614da9660e787c5bb6cf5720.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-17-pro-max-512gb-siniy-dark-blue-esim/",
       "meta": {
@@ -3487,14 +3487,14 @@
         "sim": "eSIM",
         "color": "Deep Blue"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "0d758f363af694ce42371f2765afaa180026e6c6",
       "title": "iPhone 17 Pro Max 512GB Белый (Silver) eSim",
-      "price": 133890,
+      "price": 123890,
       "price_site": 118890,
-      "markup": 15000,
+      "markup": 5000,
       "image": "assets/images2/38a23b2796a1abfb65c61daf58cb08f5942e4af4.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-17-pro-max-512gb-belyy-white-esim/",
       "meta": {
@@ -3503,14 +3503,14 @@
         "sim": "eSIM",
         "color": "Silver"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "9e2a26313bbb8502fb6c15351b9c68f02fccd6d7",
       "title": "iPhone 17 Pro Max 512GB Оранжевый (Cosmic Orange)",
-      "price": 146590,
+      "price": 136590,
       "price_site": 131590,
-      "markup": 15000,
+      "markup": 5000,
       "image": "assets/images2/0a16f964539d98b5782e87592a1238bb1926994c.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-17-pro-max-512gb-oranzhevyy-orange/",
       "meta": {
@@ -3519,14 +3519,14 @@
         "sim": "",
         "color": "Cosmic Orange"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "df41e3f500a221d44962f0f53fc68f48102fbc3f",
       "title": "iPhone 17 Pro Max 512GB Синий (Deep Blue)",
-      "price": 153590,
+      "price": 143590,
       "price_site": 138590,
-      "markup": 15000,
+      "markup": 5000,
       "image": "assets/images2/d88221f101473f7b8ee68c6d7ecc3ebd3762e0af.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-17-pro-max-512gb-siniy-dark-blue/",
       "meta": {
@@ -3535,14 +3535,14 @@
         "sim": "",
         "color": "Deep Blue"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "7538dfb2fcaae320deb2ba722d1dc61de22fb7eb",
       "title": "iPhone 17 Pro Max 512GB Белый (Silver)",
-      "price": 156190,
+      "price": 146190,
       "price_site": 141190,
-      "markup": 15000,
+      "markup": 5000,
       "image": "assets/images2/e3ad5f6fcd96bb343ad5a9a1489093f1ee7e7c77.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-17-pro-max-512gb-serebro-silver/",
       "meta": {
@@ -3551,14 +3551,14 @@
         "sim": "",
         "color": "Silver"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "3f0c5331708e95be078b659a0148b2925fc377f6",
       "title": "iPhone 17 Pro Max 512GB Синий (Deep Blue) DualSim",
-      "price": 163690,
+      "price": 153690,
       "price_site": 148690,
-      "markup": 15000,
+      "markup": 5000,
       "image": "assets/images2/79ffba2c804e1a1ce7bed098a90beff7d2848390.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-17-pro-max-512gb-siniy-dark-blue-dualsim/",
       "meta": {
@@ -3567,14 +3567,14 @@
         "sim": "DualSim",
         "color": "Deep Blue"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "fbcc7c027233c432de8a7fba4d1260ffc075ce6c",
       "title": "iPhone 17 Pro Max 1024GB Оранжевый (Cosmic Orange) eSim",
-      "price": 144390,
+      "price": 134390,
       "price_site": 129390,
-      "markup": 15000,
+      "markup": 5000,
       "image": "assets/images2/94f2baefdf0a65df8abf6945b88184c9e840e6a6.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-17-pro-max-1024gb-oranzhevyy-orange-esim/",
       "meta": {
@@ -3583,14 +3583,14 @@
         "sim": "eSIM",
         "color": "Cosmic Orange"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "61d6249ffdd47d9331b9297c80413136e0238477",
       "title": "iPhone 17 Pro Max 1024GB Синий (Deep Blue) eSim",
-      "price": 146490,
+      "price": 136490,
       "price_site": 131490,
-      "markup": 15000,
+      "markup": 5000,
       "image": "assets/images2/d9c9a4d89b0f30da244e28c9410c267d150038b5.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-17-pro-max-1024gb-siniy-dark-blue-esim/",
       "meta": {
@@ -3599,14 +3599,14 @@
         "sim": "eSIM",
         "color": "Deep Blue"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "482c28ccb673d93a88c33298d964e93525c09dac",
       "title": "iPhone 17 Pro Max 1024GB Белый (Silver) eSim",
-      "price": 151490,
+      "price": 141490,
       "price_site": 136490,
-      "markup": 15000,
+      "markup": 5000,
       "image": "assets/images2/4b723f297f457031eb94c180bbf8c6b8d3c5cb50.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-17-pro-max-1024gb-belyy-white-esim/",
       "meta": {
@@ -3615,14 +3615,14 @@
         "sim": "eSIM",
         "color": "Silver"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "ee208793592c1541f3cebb49867fdb28854f65cc",
       "title": "iPhone 17 Pro Max 1024GB Оранжевый (Cosmic Orange)",
-      "price": 164290,
+      "price": 154290,
       "price_site": 149290,
-      "markup": 15000,
+      "markup": 5000,
       "image": "assets/images2/9564ca754d14b79712f3fe79a9268064c8110d80.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-17-pro-max-1024gb-oranzhevyy-orange/",
       "meta": {
@@ -3631,14 +3631,14 @@
         "sim": "",
         "color": "Cosmic Orange"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "b0e124c349622dbb06b4a27e4450b6b3e6bf4791",
       "title": "iPhone 17 Pro Max 1024GB Синий (Deep Blue)",
-      "price": 169090,
+      "price": 159090,
       "price_site": 154090,
-      "markup": 15000,
+      "markup": 5000,
       "image": "assets/images2/015352b3078509261e2b306fe1964934aaf57bb4.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-17-pro-max-1024gb-siniy-dark-blue/",
       "meta": {
@@ -3647,14 +3647,14 @@
         "sim": "",
         "color": "Deep Blue"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "c2924e1e6b363160cfdcb1e7cb73448cb2615a01",
       "title": "iPhone 17 Pro Max 1024GB Белый (Silver)",
-      "price": 172290,
+      "price": 162290,
       "price_site": 157290,
-      "markup": 15000,
+      "markup": 5000,
       "image": "assets/images2/bb7b071340f4276d33f43e22bede742c74e51d9b.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-17-pro-max-1024gb-serebro-silver/",
       "meta": {
@@ -3663,14 +3663,14 @@
         "sim": "",
         "color": "Silver"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "5d50a53c9e688fd5dba1dee6204213f8fc338ebe",
       "title": "iPhone 17 Pro Max 2048GB Оранжевый (Cosmic Orange) eSim",
-      "price": 169890,
+      "price": 159890,
       "price_site": 154890,
-      "markup": 15000,
+      "markup": 5000,
       "image": "assets/images2/da3b15a9430d4104df2778ccdf6241bdbf5666c9.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-17-pro-max-2048gb-oranzhevyy-orange-esim/",
       "meta": {
@@ -3679,14 +3679,14 @@
         "sim": "eSIM",
         "color": "Cosmic Orange"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "905480a540b3e0f8fb3fe82940d22043d70fe6d4",
       "title": "iPhone 17 Pro Max 2048GB Синий (Deep Blue) eSim",
-      "price": 170390,
+      "price": 160390,
       "price_site": 155390,
-      "markup": 15000,
+      "markup": 5000,
       "image": "assets/images2/39061a68b08148149ed033a69e798df97b0443df.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-17-pro-max-2048gb-siniy-dark-blue-esim/",
       "meta": {
@@ -3695,14 +3695,14 @@
         "sim": "eSIM",
         "color": "Deep Blue"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "4629221a3cdbf29506133f1e62ebd4eb90d4570a",
       "title": "iPhone 17 Pro Max 2048GB Белый (Silver) eSim",
-      "price": 175090,
+      "price": 165090,
       "price_site": 160090,
-      "markup": 15000,
+      "markup": 5000,
       "image": "assets/images2/fdcee6eb78c7992557ae50695eb399b20e791f77.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-17-pro-max-2048gb-belyy-white-esim/",
       "meta": {
@@ -3711,14 +3711,14 @@
         "sim": "eSIM",
         "color": "Silver"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "7152ae07f0d617302daf9fad150986a8f789d89f",
       "title": "iPhone 17 Pro Max 2048GB Белый (Silver)",
-      "price": 200090,
+      "price": 190090,
       "price_site": 185090,
-      "markup": 15000,
+      "markup": 5000,
       "image": "assets/images2/6d8fb37a9a2e52970fde38753738867ce5deb9d4.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-17-pro-max-2048gb-belyy-white/",
       "meta": {
@@ -3727,14 +3727,14 @@
         "sim": "",
         "color": "Silver"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "1d215863424e827cdf430174dd275399209dd90a",
       "title": "iPhone 17 Pro Max 2048GB Синий (Deep Blue)",
-      "price": 200990,
+      "price": 190990,
       "price_site": 185990,
-      "markup": 15000,
+      "markup": 5000,
       "image": "assets/images2/25eac74fae08100d61419a3478b385094993cd52.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-17-pro-512gb-seryy-grey/",
       "meta": {
@@ -3743,14 +3743,14 @@
         "sim": "",
         "color": "Deep Blue"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "df4a867d7029bc757a05622902523b8a46b74b71",
       "title": "iPhone 17 Pro Max 2048GB Оранжевый (Cosmic Orange)",
-      "price": 200990,
+      "price": 190990,
       "price_site": 185990,
-      "markup": 15000,
+      "markup": 5000,
       "image": "assets/images2/a28d540480e99faee2be1a2f96b38d8a1f99b9bc.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-17-pro-2048gb-seryy-grey/",
       "meta": {
@@ -3759,14 +3759,14 @@
         "sim": "",
         "color": "Cosmic Orange"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "435cc1e55e95a2430778bed145c4deb3a90f06c7",
       "title": "iPhone Air 256GB Голубой (Sky Blue) eSim",
-      "price": 84690,
+      "price": 81690,
       "price_site": 76690,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/2259d475e8a73ce4c4df11c7a4e2bc36c83d0c47.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-17-air-256gb-nebesno-goluboy-sky-blue/",
       "meta": {
@@ -3775,14 +3775,14 @@
         "sim": "eSIM",
         "color": "Sky Blue"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "838dce62949a41cf2ea1f2add514d0324d372652",
       "title": "iPhone Air 256GB Золотой (Light Gold) eSim",
-      "price": 85690,
+      "price": 82690,
       "price_site": 77690,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/804d0cb519e1aef5e1e40a9846e9cf86b87f966c.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-17-air-128gb-zolotoy-gold-1/",
       "meta": {
@@ -3791,14 +3791,14 @@
         "sim": "eSIM",
         "color": "Light Gold"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "136ea3595530c0a81982b9a06fa65f22c01b2465",
       "title": "iPhone Air 256GB Черный (Space Black) eSim",
-      "price": 86790,
+      "price": 83790,
       "price_site": 78790,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/03e528a5f07d7e05335277c7ea259f9e466507c2.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-17-air-256gb-chernyy-black/",
       "meta": {
@@ -3807,14 +3807,14 @@
         "sim": "eSIM",
         "color": "Space Black"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "0ecead4a472f397a780604a6f5f4405f32b41e88",
       "title": "iPhone Air 256GB Белый (Cloud White) eSim",
-      "price": 88890,
+      "price": 85890,
       "price_site": 80890,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/986631bad9afc4e334d0690cb34deab0f96acdcd.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-17-air-256gb-belyy-white/",
       "meta": {
@@ -3823,14 +3823,14 @@
         "sim": "eSIM",
         "color": "Cloud White"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "9643399d5eed373ac50f2c2a815f45a340dd1ca4",
       "title": "iPhone Air 512GB Золотой (Light Gold) eSim",
-      "price": 95190,
+      "price": 92190,
       "price_site": 87190,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/6f8fff3a24766f249871ad66a2bd9c8a2ed378ae.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-17-air-512gb-zolotoy-gold/",
       "meta": {
@@ -3839,14 +3839,14 @@
         "sim": "eSIM",
         "color": "Light Gold"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "1d040d5694afbf22e35335da26c5a476c1873203",
       "title": "iPhone Air 512GB Голубой (Sky Blue) eSim",
-      "price": 96190,
+      "price": 93190,
       "price_site": 88190,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/7b6fa74b034e4eecdd5ef8fdd5d3563b9caeed79.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-17-air-512gb-nebesno-goluboy-sky-blue/",
       "meta": {
@@ -3855,14 +3855,14 @@
         "sim": "eSIM",
         "color": "Sky Blue"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "c80eafc6dad239f46b76b221f4c853de3a17e4f5",
       "title": "iPhone Air 512GB Черный (Space Black) eSim",
-      "price": 96690,
+      "price": 93690,
       "price_site": 88690,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/8f15676ffe33e44129610c53de23c465e834dfb5.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-17-air-512gb-chernyy-black/",
       "meta": {
@@ -3871,14 +3871,14 @@
         "sim": "eSIM",
         "color": "Space Black"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "efdd74b31c36941c3d7e16f76af2a4f5860bfa0b",
       "title": "iPhone Air 512GB Белый (Cloud White) eSim",
-      "price": 99890,
+      "price": 96890,
       "price_site": 91890,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/74d70ec38751af878c4f73dda3b993fe8a7f865e.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-17-air-512gb-belyy-white/",
       "meta": {
@@ -3887,14 +3887,14 @@
         "sim": "eSIM",
         "color": "Cloud White"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "eb3b2cab5c70f9ed856ef1233df677c2fefdb4dc",
       "title": "iPhone Air 1024GB Голубой (Sky Blue) eSim",
-      "price": 118290,
+      "price": 115290,
       "price_site": 110290,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/3f8e808077a44c7474107ff97062abea731cb527.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-17-air-1024gb-nebesno-goluboy-sky-blue/",
       "meta": {
@@ -3903,14 +3903,14 @@
         "sim": "eSIM",
         "color": "Sky Blue"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "35858471ca673526ab47e1c26b126677d0bdb397",
       "title": "iPhone Air 1024GB Золотой (Light Gold) eSim",
-      "price": 118790,
+      "price": 115790,
       "price_site": 110790,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/d3d8781773e8e81a36025eb6572c573d57b3960e.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-17-air-1024gb-zolotoy-gold/",
       "meta": {
@@ -3919,14 +3919,14 @@
         "sim": "eSIM",
         "color": "Light Gold"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "578c6078b7aa23dbd89def656dc94db95b189811",
       "title": "iPhone Air 1024GB Черный (Space Black) eSim",
-      "price": 122490,
+      "price": 119490,
       "price_site": 114490,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/3b45ac0ff0ca361daa8ea3fe90a75ad5a7791a5a.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-17-air-1024gb-chernyy-black/",
       "meta": {
@@ -3935,14 +3935,14 @@
         "sim": "eSIM",
         "color": "Space Black"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "1b377e684ec1ba9aedbfe8136b0b29ca4838baba",
       "title": "iPhone Air 1024GB Белый (Cloud White) eSim",
-      "price": 122790,
+      "price": 119790,
       "price_site": 114790,
-      "markup": 8000,
+      "markup": 5000,
       "image": "assets/images2/59d9010f8a1fe3d362774aaced98cad4ab79e4b1.jpg",
       "url": "https://syomastore.ru/product/smartfon-apple-iphone-17-air-1024gb-belyy-white/",
       "meta": {
@@ -3951,7 +3951,7 @@
         "sim": "eSIM",
         "color": "Cloud White"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "adacd60ffbe1a436813734f60705e55bab986fd2",
@@ -3967,7 +3967,7 @@
         "sim": "",
         "color": "Red"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "dbfbaf4653d46fe65eb8e850b354f72f55f693d6",
@@ -3983,7 +3983,7 @@
         "sim": "",
         "color": "Starlight"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "436fe8fc737859fbf8ab900e7c05237bcc22580d",
@@ -3999,7 +3999,7 @@
         "sim": "",
         "color": "Midnight"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "0cb4156299eb970da90e8d330c88a0c612ab4395",
@@ -4015,7 +4015,7 @@
         "sim": "",
         "color": "Midnight"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "5bf7390f4f0f124b376f959383c1fe00956549d5",
@@ -4031,7 +4031,7 @@
         "sim": "",
         "color": "Red"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     },
     {
       "id": "353c29f58a9d0de63475e8d67ad8560d5681e05a",
@@ -4047,7 +4047,7 @@
         "sim": "",
         "color": "Starlight"
       },
-      "updated_ts": 1769658967
+      "updated_ts": 1769659610
     }
   ]
 }
