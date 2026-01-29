@@ -13,7 +13,6 @@ const clearCartBtn = document.getElementById("clearCartBtn");
 const checkoutBtn = document.getElementById("checkoutBtn");
 const scrollTopBtn = document.getElementById("scrollTopBtn");
 const tgHint = document.getElementById("tgHint");
-const tgStatus = document.getElementById("tgStatus");
 const leadBackdrop = document.getElementById("leadBackdrop");
 const leadModal = document.getElementById("leadModal");
 const leadName = document.getElementById("leadName");
@@ -44,54 +43,16 @@ function getTgContext() {
 
 const ctx = getTgContext();
 const tg = ctx.tg;
-const tgReady = Boolean(tg);
-if (tgStatus) {
-  tgStatus.textContent = tgReady ? "TG: OK" : "TG: NO";
-  tgStatus.title = `qid=${ctx.qid ? String(ctx.qid).slice(0, 10) : "none"} host=${location.hostname}`;
-}
 try {
   tg?.ready();
   tg?.expand();
 } catch {}
 
-const urlParams = new URLSearchParams(location.search);
-const debugEnabled = urlParams.get("debug") === "1" || localStorage.getItem("DEBUG") === "1";
-const debugBot = urlParams.get("bot") || "";
-const debugNonce = urlParams.get("nonce") || "";
-const debugPanel = document.getElementById("debugPanel");
-const debugInfo = document.getElementById("debugInfo");
-const debugStatus = document.getElementById("debugStatus");
-const debugCopy = document.getElementById("debugCopy");
-const debugTest = document.getElementById("debugTest");
 const MINI_APP_ERROR = "Открыто НЕ как Mini App. Открой через кнопку бота.";
 
 function isMiniAppReady() {
   const local = getTgContext();
   return Boolean(local.tg && local.initData);
-}
-
-function getBotUsername() {
-  let value = debugBot || "";
-  if (value.startsWith("@")) value = value.slice(1);
-  return value;
-}
-
-function buildDeepLink(nonce) {
-  const botName = getBotUsername();
-  if (!botName) return "";
-  const token = nonce || "1";
-  return `https://t.me/${botName}?startapp=${encodeURIComponent(token)}`;
-}
-
-function openViaDeepLink() {
-  const link = buildDeepLink(debugNonce);
-  if (!link) return;
-  const local = getTgContext();
-  if (local.tg?.openTelegramLink) {
-    local.tg.openTelegramLink(link);
-  } else {
-    window.location.href = link;
-  }
 }
 
 function applyMiniAppLock() {
@@ -103,7 +64,6 @@ function applyMiniAppLock() {
     if (leadHint) {
       leadHint.style.color = "";
     }
-    if (debugTest) debugTest.disabled = false;
     return;
   }
   if (tgHint) {
@@ -115,21 +75,6 @@ function applyMiniAppLock() {
     leadHint.textContent = MINI_APP_ERROR;
     leadHint.style.color = "#ff5a5a";
     leadHint.classList.add("show");
-  }
-  if (debugTest) debugTest.disabled = false;
-}
-
-function setDebugStatus(text) {
-  if (debugStatus) debugStatus.textContent = text;
-}
-
-function debugAlert(message) {
-  if (!debugEnabled) return;
-  const local = getTgContext();
-  if (local.tg?.showAlert) {
-    local.tg.showAlert(message);
-  } else if (local.tg?.showPopup) {
-    local.tg.showPopup({ message });
   }
 }
 
@@ -150,44 +95,10 @@ async function sendRelay(payload) {
   return data;
 }
 
-function renderDebugInfo() {
-  if (!debugInfo) return;
-  const local = getTgContext();
-  const info = [
-    `TG_API: ${local.tg ? "OK" : "NO"}`,
-    `initData: ${local.initData?.length || 0}`,
-    `qid: ${local.qid ? String(local.qid).slice(0, 10) : "none"}`,
-    `user: ${local.user?.id || "none"}`,
-    `bot: ${debugBot || "none"}`,
-    `nonce: ${debugNonce || "none"}`,
-    `platform: ${local.tg?.platform || "n/a"}`,
-    `version: ${local.tg?.version || "n/a"}`,
-  ].join(" | ");
-  debugInfo.textContent = info;
-}
-
-if (debugEnabled && debugPanel) {
-  debugPanel.classList.add("show");
-  renderDebugInfo();
-  setDebugStatus(tgReady ? "READY" : "NO TG");
-}
-
-if (debugPanel) {
-  const debugActions = debugPanel.querySelector(".debug-actions");
-  if (debugActions) {
-    const openBtn = document.createElement("button");
-    openBtn.className = "debug-btn";
-    openBtn.textContent = "OPEN VIA BOT";
-    openBtn.addEventListener("click", openViaDeepLink);
-    debugActions.appendChild(openBtn);
-  }
-}
-
 applyMiniAppLock();
 let miniCheckCount = 0;
 const miniCheckTimer = setInterval(() => {
   applyMiniAppLock();
-  if (debugEnabled) renderDebugInfo();
   miniCheckCount += 1;
   if (isMiniAppReady() || miniCheckCount >= 15) {
     clearInterval(miniCheckTimer);
@@ -637,12 +548,8 @@ leadSend.addEventListener("click", async () => {
     tg_last_name: tgUser.last_name ?? null,
   };
 
-  if (debugEnabled) {
-    setDebugStatus("RELAY SENDING...");
-  }
-
   try {
-    const relayRes = await sendRelay(payload);
+    await sendRelay(payload);
     if (localCtx.tg?.HapticFeedback) {
       localCtx.tg.HapticFeedback.notificationOccurred("success");
     }
@@ -651,9 +558,6 @@ leadSend.addEventListener("click", async () => {
     state.cart.items = [];
     saveCart();
     renderCart();
-    if (debugEnabled) {
-      setDebugStatus(`RELAY OK ${relayRes?.order_id || ""}`.trim());
-    }
     if (localCtx.tg?.showPopup) {
       localCtx.tg.showPopup({ message: "✅ Заявка отправлена" });
     } else if (localCtx.tg?.showAlert) {
@@ -671,48 +575,12 @@ leadSend.addEventListener("click", async () => {
     leadHint.classList.add("show");
     leadSend.disabled = false;
     leadSend.textContent = "Отправить заявку";
-    if (debugEnabled) {
-      setDebugStatus("RELAY FAILED");
-    }
   }
 });
 
 scrollTopBtn.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
-
-if (debugEnabled) {
-  debugCopy?.addEventListener("click", async () => {
-    renderDebugInfo();
-    const text = debugInfo?.textContent || "";
-    try {
-      await navigator.clipboard.writeText(text);
-      setDebugStatus("COPIED");
-    } catch {
-      setDebugStatus("COPY FAILED");
-    }
-  });
-
-  debugTest?.addEventListener("click", async () => {
-    try {
-      setDebugStatus("RELAY TEST...");
-      const pingPayload = {
-        type: "ping",
-        order_id: makeOrderId(),
-        ts: Date.now(),
-        name: "TEST",
-        phone: "0000000000",
-        comment: "debug ping",
-        items: [],
-        total: 0,
-      };
-      await sendRelay(pingPayload);
-      setDebugStatus("RELAY TEST OK");
-    } catch {
-      setDebugStatus("RELAY TEST FAILED");
-    }
-  });
-}
 
 renderCart();
 loadCatalog();
