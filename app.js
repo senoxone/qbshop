@@ -377,6 +377,7 @@ function addToCart(item, btn) {
       price: item.price,
       qty: 1,
       image: item.image,
+      url: item.url || "",
       meta: buildMetaLine(item),
     });
   }
@@ -644,6 +645,7 @@ leadSend.addEventListener("click", async (event) => {
       title: it.title,
       price: it.price,
       qty: it.qty,
+      url: it.url || state.items.find((x) => x.id === it.id)?.url || "",
     })),
     total,
     source: {
