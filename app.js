@@ -24,6 +24,10 @@ const leadHint = document.getElementById("leadHint");
 const leadCancel = document.getElementById("leadCancel");
 const leadSend = document.getElementById("leadSend");
 
+const RELAY_URL = "https://qbstore-relay.senoxone.workers.dev/lead";
+const RELAY_AUTH = "QBSTORE_7f3a9c1d2e6b4a91f0c3d8aa";
+const BUILD_ID = "20260129-0305";
+
 const state = {
   baseItems: [],
   items: [],
@@ -112,8 +116,6 @@ function applyMiniAppLock() {
     leadHint.style.color = "#ff5a5a";
     leadHint.classList.add("show");
   }
-  if (checkoutBtn) checkoutBtn.disabled = true;
-  if (leadSend) leadSend.disabled = true;
   if (debugTest) debugTest.disabled = false;
 }
 
@@ -129,6 +131,23 @@ function debugAlert(message) {
   } else if (local.tg?.showPopup) {
     local.tg.showPopup({ message });
   }
+}
+
+async function sendRelay(payload) {
+  const res = await fetch(RELAY_URL, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "X-Auth": RELAY_AUTH,
+    },
+    body: JSON.stringify(payload),
+  });
+  const data = await res.json().catch(() => ({}));
+  if (!res.ok || !data.ok) {
+    const message = data?.error || `HTTP ${res.status}`;
+    throw new Error(message);
+  }
+  return data;
 }
 
 function renderDebugInfo() {
@@ -324,7 +343,7 @@ function renderCart() {
 
   updateCartBadge();
   updateCartTotal();
-  checkoutBtn.disabled = !isMiniAppReady() || state.cart.items.length === 0;
+  checkoutBtn.disabled = state.cart.items.length === 0;
 }
 
 function updateQty(id, qty) {
@@ -579,13 +598,6 @@ leadTg.addEventListener("change", updateLeadState);
 
 leadSend.addEventListener("click", async () => {
   console.log("CLICK submit");
-  if (!isMiniAppReady()) {
-    leadHint.textContent = MINI_APP_ERROR;
-    leadHint.style.color = "#ff5a5a";
-    leadHint.classList.add("show");
-    leadSend.disabled = true;
-    return;
-  }
   const name = leadName.value.trim();
   const phoneRaw = leadPhone.value.trim();
   const phoneDigits = normalizePhone(phoneRaw);
@@ -602,15 +614,11 @@ leadSend.addEventListener("click", async () => {
   const tgUser = localCtx.user || {};
   const payload = {
     type: "lead_order",
-    bot: debugBot || null,
-    nonce: debugNonce || null,
     order_id: makeOrderId(),
     ts: Date.now(),
-    contact: {
-      name,
-      phone: phoneRaw,
-      comment: leadComment.value.trim() || "",
-    },
+    name,
+    phone: phoneRaw,
+    comment: leadComment.value.trim() || "",
     items: state.cart.items.map((it) => ({
       id: it.id,
       title: it.title,
@@ -621,73 +629,30 @@ leadSend.addEventListener("click", async () => {
     source: {
       webapp: true,
       page_url: location.href,
+      build: BUILD_ID,
     },
-    tg_user: {
-      id: tgUser.id ?? null,
-      username: tgUser.username ?? null,
-      first_name: tgUser.first_name ?? null,
-      last_name: tgUser.last_name ?? null,
-    },
+    tg_user_id: tgUser.id ?? null,
+    tg_username: tgUser.username ?? null,
+    tg_first_name: tgUser.first_name ?? null,
+    tg_last_name: tgUser.last_name ?? null,
   };
 
-  console.log(
-    "tg exists",
-    !!localCtx.tg,
-    "initData",
-    localCtx.initData?.length,
-    "initDataUnsafe",
-    localCtx.tg?.initDataUnsafe
-  );
   if (debugEnabled) {
-    setDebugStatus("SENDING...");
+    setDebugStatus("RELAY SENDING...");
   }
 
-  const payloadStr = JSON.stringify(payload);
-  console.log("PAYLOAD", payloadStr);
-  if (!localCtx.tg) {
-    leadHint.textContent = MINI_APP_ERROR;
-    leadHint.classList.add("show");
-    leadSend.disabled = false;
-    leadSend.textContent = "Отправить заявку";
-    if (debugEnabled) {
-      setDebugStatus("NO TG");
-    }
-    return;
-  }
-  if (!localCtx.initData) {
-    leadHint.textContent = MINI_APP_ERROR;
-    leadHint.classList.add("show");
-    leadSend.disabled = false;
-    leadSend.textContent = "Отправить заявку";
-    if (debugEnabled) {
-      setDebugStatus("NO INIT_DATA");
-    }
-    return;
-  }
-  if (payloadStr.length > 3800) {
-    leadHint.textContent = "Слишком большой заказ, уберите часть позиций";
-    leadHint.classList.add("show");
-    leadSend.disabled = false;
-    leadSend.textContent = "Отправить заявку";
-    if (debugEnabled) {
-      setDebugStatus("PAYLOAD TOO LARGE");
-    }
-    return;
-  }
   try {
-    debugAlert(`DEBUG: sendData called nonce=${debugNonce || "none"} len=${payloadStr.length}`);
-    localCtx.tg.sendData(payloadStr);
-    debugAlert("DEBUG: sendData done");
+    const relayRes = await sendRelay(payload);
     if (localCtx.tg?.HapticFeedback) {
       localCtx.tg.HapticFeedback.notificationOccurred("success");
     }
-    leadHint.textContent = "Заявка отправлена, менеджер свяжется";
+    leadHint.textContent = "✅ Заявка отправлена";
     leadHint.classList.add("show");
     state.cart.items = [];
     saveCart();
     renderCart();
     if (debugEnabled) {
-      setDebugStatus("SENT");
+      setDebugStatus(`RELAY OK ${relayRes?.order_id || ""}`.trim());
     }
     if (localCtx.tg?.showPopup) {
       localCtx.tg.showPopup({ message: "✅ Заявка отправлена" });
@@ -699,14 +664,15 @@ leadSend.addEventListener("click", async () => {
       closeDrawer();
       leadHint.classList.remove("show");
       localCtx.tg?.close?.();
+      leadSend.textContent = "Отправить заявку";
     }, 200);
   } catch {
-    leadHint.textContent = "Не удалось отправить заявку, попробуйте еще раз";
+    leadHint.textContent = "Ошибка отправки, попробуйте еще раз";
     leadHint.classList.add("show");
     leadSend.disabled = false;
     leadSend.textContent = "Отправить заявку";
     if (debugEnabled) {
-      setDebugStatus("SEND FAILED");
+      setDebugStatus("RELAY FAILED");
     }
   }
 });
@@ -728,26 +694,22 @@ if (debugEnabled) {
   });
 
   debugTest?.addEventListener("click", async () => {
-    const payload = JSON.stringify({ type: "ping", bot: debugBot || null, nonce: debugNonce || null, ts: Date.now() });
-    const local = await waitForInitData();
-    if (!local.tg) {
-      setDebugStatus("NO TG");
-      return;
-    }
-    if (!local.initData) {
-      setDebugStatus("NO INIT_DATA");
-      return;
-    }
-    setDebugStatus("TEST SENDING...");
     try {
-      debugAlert(`DEBUG: sendData called nonce=${debugNonce || "none"} len=${payload.length}`);
-      local.tg.sendData(payload);
-      setDebugStatus("TEST SENT");
-      setTimeout(() => {
-        local.tg?.close?.();
-      }, 200);
+      setDebugStatus("RELAY TEST...");
+      const pingPayload = {
+        type: "ping",
+        order_id: makeOrderId(),
+        ts: Date.now(),
+        name: "TEST",
+        phone: "0000000000",
+        comment: "debug ping",
+        items: [],
+        total: 0,
+      };
+      await sendRelay(pingPayload);
+      setDebugStatus("RELAY TEST OK");
     } catch {
-      setDebugStatus("TEST FAILED");
+      setDebugStatus("RELAY TEST FAILED");
     }
   });
 }

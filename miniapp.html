@@ -35,6 +35,8 @@
   </div>
 
   <script>
+    const RELAY_URL = "https://qbstore-relay.senoxone.workers.dev/lead";
+    const RELAY_AUTH = "QBSTORE_7f3a9c1d2e6b4a91f0c3d8aa";
     const tg = window.Telegram?.WebApp || null;
     const initData = tg?.initData || "";
     const qid = tg?.initDataUnsafe?.query_id || null;
@@ -51,17 +53,35 @@
     try { tg?.ready(); tg?.expand(); } catch {}
 
     const sendBtn = document.getElementById("sendBtn");
-    sendBtn.disabled = !tg;
 
-    sendBtn.addEventListener("click", () => {
-      if (!tg) return;
-      const payload = JSON.stringify({ type: "ping", nonce: Date.now().toString(), ts: Date.now() });
+    sendBtn.addEventListener("click", async () => {
+      const status = document.getElementById("status");
+      status.textContent = "SENDING...";
+      const payload = {
+        type: "ping",
+        order_id: `ping-${Date.now()}`,
+        ts: Date.now(),
+        name: "TEST",
+        phone: "0000000000",
+        comment: "miniapp ping",
+        items: [],
+        total: 0,
+        tg_user_id: user?.id || null,
+      };
       try {
-        tg.sendData(payload);
-        document.getElementById("status").textContent = "SENT";
-        setTimeout(() => { tg?.close?.(); }, 200);
+        const res = await fetch(RELAY_URL, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "X-Auth": RELAY_AUTH,
+          },
+          body: JSON.stringify(payload),
+        });
+        const data = await res.json().catch(() => ({}));
+        if (!res.ok || !data.ok) throw new Error(data?.error || `HTTP ${res.status}`);
+        status.textContent = `OK ${data.order_id || ""}`.trim();
       } catch {
-        document.getElementById("status").textContent = "SEND FAILED";
+        status.textContent = "FAILED";
       }
     });
   </script>
