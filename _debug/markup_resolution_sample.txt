@@ -1,30 +1,30 @@
-Смартфон Apple iPhone 16 Pro Max 256GB Черный титан (Black Titanium) | iPhone 16 Pro Max | - | 6000 | default
-Смартфон Apple iPhone 16 Pro Max 256GB Пустынный титан (Desert Titanium) | iPhone 16 Pro Max | - | 6000 | default
-Смартфон Apple iPhone 16 Pro Max 256GB Натуральный титан (Natural Titanium) | iPhone 16 Pro Max | - | 6000 | default
-Смартфон Apple iPhone 16 Pro 256GB Пустынный титан (Desert Titanium) | iPhone 16 Pro | - | 6000 | default
-Смартфон Apple iPhone 16 Pro 256GB Черный титан (Black Titanium) | iPhone 16 Pro | - | 6000 | default
-Смартфон Apple iPhone 16 Pro Max 256GB Белый титан (White Titanium) | iPhone 16 Pro Max | - | 6000 | default
-Смартфон Apple iPhone 17 Pro Max 256GB Оранжевый (Cosmic Orange) eSim | iPhone 17 Pro Max | - | 6000 | default
-Смартфон Apple iPhone 17 Pro Max 256GB Белый (Silver) eSim | iPhone 17 Pro Max | - | 6000 | default
-Смартфон Apple iPhone 16 Pro 256GB Натуральный титан (Natural Titanium) | iPhone 16 Pro | - | 6000 | default
-Смартфон Apple iPhone 17 Pro Max 256GB Оранжевый (Cosmic Orange) | iPhone 17 Pro Max | - | 6000 | default
-Смартфон Apple iPhone 17 Pro Max 256GB Синий (Deep Blue) eSim | iPhone 17 Pro Max | - | 6000 | default
-Смартфон Apple iPhone 17 Pro 256GB Белый (Silver) | iPhone 17 Pro | - | 6000 | default
-Смартфон Apple iPhone 16 Pro 256GB Белый титан (White Titanium) | iPhone 16 Pro | - | 6000 | default
-Смартфон Apple iPhone 16 128GB Черный (Black) | iPhone 16 | - | 6000 | default
-Смартфон Apple iPhone 16 Pro Max 512GB Натуральный титан (Natural Titanium) | iPhone 16 Pro Max | - | 6000 | default
-Смартфон Apple iPhone 16 Pro Max 512GB Пустынный титан (Desert Titanium) | iPhone 16 Pro Max | - | 6000 | default
-Смартфон Apple iPhone 16 Pro Max 512GB Черный титан (Black Titanium) | iPhone 16 Pro Max | - | 6000 | default
-Смартфон Apple iPhone 17 Pro 256GB Белый (Silver) eSim | iPhone 17 Pro | - | 6000 | default
-Смартфон Apple iPhone 17 Pro Max 256GB Белый (Silver) | iPhone 17 Pro Max | - | 6000 | default
-Смартфон Apple iPhone 17 Pro Max 256GB Синий (Deep Blue) | iPhone 17 Pro Max | - | 6000 | default
-Смартфон Apple iPhone 17 Pro 256GB Оранжевый (Cosmic Orange) | iPhone 17 Pro | - | 6000 | default
-Смартфон Apple iPhone 16 Pro 128GB Пустынный титан (Desert Titanium) | iPhone 16 Pro | - | 6000 | default
-Смартфон Apple iPhone 16 256GB Черный (Black) | iPhone 16 | - | 6000 | default
-Смартфон Apple iPhone 16 Pro 128GB Черный титан (Black Titanium) | iPhone 16 Pro | - | 6000 | default
-Смартфон Apple iPhone 16 128GB Белый (White) | iPhone 16 | - | 6000 | default
-Смартфон Apple iPhone 17 Pro Max 512GB Синий (Deep Blue) | iPhone 17 Pro Max | - | 6000 | default
-Смартфон Apple iPhone 17 Pro Max 512GB Белый (Silver) eSim | iPhone 17 Pro Max | - | 6000 | default
-Смартфон Apple iPhone 17 Pro Max 512GB Белый (Silver) | iPhone 17 Pro Max | - | 6000 | default
-Смартфон Apple iPhone 16 128GB Ультрамарин (Ultramarine) | iPhone 16 | - | 6000 | default
-Смартфон Apple iPhone 17 Pro 256GB Оранжевый (Cosmic Orange) eSim | iPhone 17 Pro | - | 6000 | default
+Смартфон Apple iPhone 16 Pro Max 256GB Черный титан (Black Titanium) | iPhone 16 Pro Max | - | 5000 | default
+Смартфон Apple iPhone 16 Pro Max 256GB Пустынный титан (Desert Titanium) | iPhone 16 Pro Max | - | 5000 | default
+Смартфон Apple iPhone 16 Pro Max 256GB Натуральный титан (Natural Titanium) | iPhone 16 Pro Max | - | 5000 | default
+Смартфон Apple iPhone 16 Pro 256GB Пустынный титан (Desert Titanium) | iPhone 16 Pro | - | 5000 | default
+Смартфон Apple iPhone 16 Pro 256GB Черный титан (Black Titanium) | iPhone 16 Pro | - | 5000 | default
+Смартфон Apple iPhone 16 Pro Max 256GB Белый титан (White Titanium) | iPhone 16 Pro Max | - | 5000 | default
+Смартфон Apple iPhone 17 Pro Max 256GB Оранжевый (Cosmic Orange) eSim | iPhone 17 Pro Max | - | 5000 | default
+Смартфон Apple iPhone 17 Pro Max 256GB Белый (Silver) eSim | iPhone 17 Pro Max | - | 5000 | default
+Смартфон Apple iPhone 16 Pro 256GB Натуральный титан (Natural Titanium) | iPhone 16 Pro | - | 5000 | default
+Смартфон Apple iPhone 17 Pro Max 256GB Оранжевый (Cosmic Orange) | iPhone 17 Pro Max | - | 5000 | default
+Смартфон Apple iPhone 17 Pro Max 256GB Синий (Deep Blue) eSim | iPhone 17 Pro Max | - | 5000 | default
+Смартфон Apple iPhone 17 Pro 256GB Белый (Silver) | iPhone 17 Pro | - | 5000 | default
+Смартфон Apple iPhone 16 Pro 256GB Белый титан (White Titanium) | iPhone 16 Pro | - | 5000 | default
+Смартфон Apple iPhone 16 128GB Черный (Black) | iPhone 16 | - | 5000 | default
+Смартфон Apple iPhone 16 Pro Max 512GB Натуральный титан (Natural Titanium) | iPhone 16 Pro Max | - | 5000 | default
+Смартфон Apple iPhone 16 Pro Max 512GB Пустынный титан (Desert Titanium) | iPhone 16 Pro Max | - | 5000 | default
+Смартфон Apple iPhone 16 Pro Max 512GB Черный титан (Black Titanium) | iPhone 16 Pro Max | - | 5000 | default
+Смартфон Apple iPhone 17 Pro 256GB Белый (Silver) eSim | iPhone 17 Pro | - | 5000 | default
+Смартфон Apple iPhone 17 Pro Max 256GB Белый (Silver) | iPhone 17 Pro Max | - | 5000 | default
+Смартфон Apple iPhone 17 Pro Max 256GB Синий (Deep Blue) | iPhone 17 Pro Max | - | 5000 | default
+Смартфон Apple iPhone 17 Pro 256GB Оранжевый (Cosmic Orange) | iPhone 17 Pro | - | 5000 | default
+Смартфон Apple iPhone 16 Pro 128GB Пустынный титан (Desert Titanium) | iPhone 16 Pro | - | 5000 | default
+Смартфон Apple iPhone 16 256GB Черный (Black) | iPhone 16 | - | 5000 | default
+Смартфон Apple iPhone 16 Pro 128GB Черный титан (Black Titanium) | iPhone 16 Pro | - | 5000 | default
+Смартфон Apple iPhone 16 128GB Белый (White) | iPhone 16 | - | 5000 | default
+Смартфон Apple iPhone 17 Pro Max 512GB Синий (Deep Blue) | iPhone 17 Pro Max | - | 5000 | default
+Смартфон Apple iPhone 17 Pro Max 512GB Белый (Silver) eSim | iPhone 17 Pro Max | - | 5000 | default
+Смартфон Apple iPhone 17 Pro Max 512GB Белый (Silver) | iPhone 17 Pro Max | - | 5000 | default
+Смартфон Apple iPhone 16 128GB Ультрамарин (Ultramarine) | iPhone 16 | - | 5000 | default
+Смартфон Apple iPhone 17 Pro 256GB Оранжевый (Cosmic Orange) eSim | iPhone 17 Pro | - | 5000 | default
