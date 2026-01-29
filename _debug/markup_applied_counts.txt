@@ -1,4 +1,5 @@
 source=worker
 default=6000
 map_size=6
-unknown	markup=6000	count=253
+iphone air	markup=6000	count=12
+unknown	markup=6000	count=241
