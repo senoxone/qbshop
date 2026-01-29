@@ -30,6 +30,9 @@ const state = {
   cart: loadCart(),
 };
 
+const RELAY_URL = "https://qbstore-relay.senoxone.workers.dev";
+const RELAY_AUTH = "QBSTORE_7f3a9c1d2e6b4a91f0c3d8aa";
+
 function getTgContext() {
   const tg = window.Telegram?.WebApp || null;
   const initData = tg?.initData || "";
@@ -115,6 +118,29 @@ function applyMiniAppLock() {
   if (checkoutBtn) checkoutBtn.disabled = true;
   if (leadSend) leadSend.disabled = true;
   if (debugTest) debugTest.disabled = false;
+}
+
+async function sendLead(payload) {
+  const res = await fetch(`${RELAY_URL}/lead`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "X-Auth": RELAY_AUTH,
+    },
+    body: JSON.stringify(payload),
+  });
+  let data = null;
+  try {
+    data = await res.json();
+  } catch {
+    data = null;
+  }
+  if (!res.ok || !data || data.ok !== true) {
+    const err = data?.error || `http_${res.status}`;
+    const detail = data?.detail ? `: ${data.detail}` : "";
+    throw new Error(`Ошибка отправки (${err}${detail})`);
+  }
+  return data;
 }
 
 function setDebugStatus(text) {
@@ -577,7 +603,9 @@ leadPhone.addEventListener("input", updateLeadState);
 leadComment.addEventListener("input", updateLeadState);
 leadTg.addEventListener("change", updateLeadState);
 
-leadSend.addEventListener("click", async () => {
+leadSend.addEventListener("click", async (event) => {
+  event.preventDefault();
+  event.stopPropagation();
   console.log("CLICK submit");
   if (!isMiniAppReady()) {
     leadHint.textContent = MINI_APP_ERROR;
@@ -630,58 +658,24 @@ leadSend.addEventListener("click", async () => {
     },
   };
 
-  console.log(
-    "tg exists",
-    !!localCtx.tg,
-    "initData",
-    localCtx.initData?.length,
-    "initDataUnsafe",
-    localCtx.tg?.initDataUnsafe
-  );
-  if (debugEnabled) {
-    setDebugStatus("SENDING...");
-  }
-
-  const payloadStr = JSON.stringify(payload);
-  console.log("PAYLOAD", payloadStr);
-  if (!localCtx.tg) {
-    leadHint.textContent = MINI_APP_ERROR;
-    leadHint.classList.add("show");
-    leadSend.disabled = false;
-    leadSend.textContent = "Отправить заявку";
-    if (debugEnabled) {
-      setDebugStatus("NO TG");
-    }
-    return;
-  }
-  if (!localCtx.initData) {
-    leadHint.textContent = MINI_APP_ERROR;
-    leadHint.classList.add("show");
-    leadSend.disabled = false;
-    leadSend.textContent = "Отправить заявку";
-    if (debugEnabled) {
-      setDebugStatus("NO INIT_DATA");
-    }
-    return;
-  }
-  if (payloadStr.length > 3800) {
-    leadHint.textContent = "Слишком большой заказ, уберите часть позиций";
-    leadHint.classList.add("show");
-    leadSend.disabled = false;
-    leadSend.textContent = "Отправить заявку";
-    if (debugEnabled) {
-      setDebugStatus("PAYLOAD TOO LARGE");
-    }
-    return;
-  }
   try {
-    debugAlert(`DEBUG: sendData called nonce=${debugNonce || "none"} len=${payloadStr.length}`);
-    localCtx.tg.sendData(payloadStr);
-    debugAlert("DEBUG: sendData done");
+    const payloadStr = JSON.stringify(payload);
+    console.log("PAYLOAD", payloadStr);
+    if (payloadStr.length > 3800) {
+      leadHint.textContent = "Слишком большой заказ, уберите часть позиций";
+      leadHint.classList.add("show");
+      leadSend.disabled = false;
+      leadSend.textContent = "Отправить заявку";
+      return;
+    }
+    if (debugEnabled) {
+      setDebugStatus("SENDING...");
+    }
+    await sendLead(payload);
     if (localCtx.tg?.HapticFeedback) {
       localCtx.tg.HapticFeedback.notificationOccurred("success");
     }
-    leadHint.textContent = "Заявка отправлена, менеджер свяжется";
+    leadHint.textContent = "✅ Заявка отправлена";
     leadHint.classList.add("show");
     state.cart.items = [];
     saveCart();
@@ -700,8 +694,9 @@ leadSend.addEventListener("click", async () => {
       leadHint.classList.remove("show");
       localCtx.tg?.close?.();
     }, 200);
-  } catch {
-    leadHint.textContent = "Не удалось отправить заявку, попробуйте еще раз";
+  } catch (err) {
+    const msg = err?.message || "Не удалось отправить заявку, попробуйте еще раз";
+    leadHint.textContent = msg;
     leadHint.classList.add("show");
     leadSend.disabled = false;
     leadSend.textContent = "Отправить заявку";
