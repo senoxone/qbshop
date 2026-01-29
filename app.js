@@ -13,6 +13,7 @@ const clearCartBtn = document.getElementById("clearCartBtn");
 const checkoutBtn = document.getElementById("checkoutBtn");
 const scrollTopBtn = document.getElementById("scrollTopBtn");
 const tgHint = document.getElementById("tgHint");
+const tgStatus = document.getElementById("tgStatus");
 const leadBackdrop = document.getElementById("leadBackdrop");
 const leadModal = document.getElementById("leadModal");
 const leadName = document.getElementById("leadName");
@@ -22,10 +23,6 @@ const leadTg = document.getElementById("leadTg");
 const leadHint = document.getElementById("leadHint");
 const leadCancel = document.getElementById("leadCancel");
 const leadSend = document.getElementById("leadSend");
-
-const RELAY_URL = "https://qbstore-relay.senoxone.workers.dev/lead";
-const RELAY_AUTH = "QBSTORE_7f3a9c1d2e6b4a91f0c3d8aa";
-const BUILD_ID = "20260129-0305";
 
 const state = {
   baseItems: [],
@@ -43,16 +40,54 @@ function getTgContext() {
 
 const ctx = getTgContext();
 const tg = ctx.tg;
+const tgReady = Boolean(tg);
+if (tgStatus) {
+  tgStatus.textContent = tgReady ? "TG: OK" : "TG: NO";
+  tgStatus.title = `qid=${ctx.qid ? String(ctx.qid).slice(0, 10) : "none"} host=${location.hostname}`;
+}
 try {
   tg?.ready();
   tg?.expand();
 } catch {}
 
+const urlParams = new URLSearchParams(location.search);
+const debugEnabled = urlParams.get("debug") === "1" || localStorage.getItem("DEBUG") === "1";
+const debugBot = urlParams.get("bot") || "";
+const debugNonce = urlParams.get("nonce") || "";
+const debugPanel = document.getElementById("debugPanel");
+const debugInfo = document.getElementById("debugInfo");
+const debugStatus = document.getElementById("debugStatus");
+const debugCopy = document.getElementById("debugCopy");
+const debugTest = document.getElementById("debugTest");
 const MINI_APP_ERROR = "Открыто НЕ как Mini App. Открой через кнопку бота.";
 
 function isMiniAppReady() {
   const local = getTgContext();
   return Boolean(local.tg && local.initData);
+}
+
+function getBotUsername() {
+  let value = debugBot || "";
+  if (value.startsWith("@")) value = value.slice(1);
+  return value;
+}
+
+function buildDeepLink(nonce) {
+  const botName = getBotUsername();
+  if (!botName) return "";
+  const token = nonce || "1";
+  return `https://t.me/${botName}?startapp=${encodeURIComponent(token)}`;
+}
+
+function openViaDeepLink() {
+  const link = buildDeepLink(debugNonce);
+  if (!link) return;
+  const local = getTgContext();
+  if (local.tg?.openTelegramLink) {
+    local.tg.openTelegramLink(link);
+  } else {
+    window.location.href = link;
+  }
 }
 
 function applyMiniAppLock() {
@@ -64,6 +99,7 @@ function applyMiniAppLock() {
     if (leadHint) {
       leadHint.style.color = "";
     }
+    if (debugTest) debugTest.disabled = false;
     return;
   }
   if (tgHint) {
@@ -76,29 +112,63 @@ function applyMiniAppLock() {
     leadHint.style.color = "#ff5a5a";
     leadHint.classList.add("show");
   }
+  if (checkoutBtn) checkoutBtn.disabled = true;
+  if (leadSend) leadSend.disabled = true;
+  if (debugTest) debugTest.disabled = false;
 }
 
-async function sendRelay(payload) {
-  const res = await fetch(RELAY_URL, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      "X-Auth": RELAY_AUTH,
-    },
-    body: JSON.stringify(payload),
-  });
-  const data = await res.json().catch(() => ({}));
-  if (!res.ok || !data.ok) {
-    const message = data?.error || `HTTP ${res.status}`;
-    throw new Error(message);
+function setDebugStatus(text) {
+  if (debugStatus) debugStatus.textContent = text;
+}
+
+function debugAlert(message) {
+  if (!debugEnabled) return;
+  const local = getTgContext();
+  if (local.tg?.showAlert) {
+    local.tg.showAlert(message);
+  } else if (local.tg?.showPopup) {
+    local.tg.showPopup({ message });
   }
-  return data;
+}
+
+function renderDebugInfo() {
+  if (!debugInfo) return;
+  const local = getTgContext();
+  const info = [
+    `TG_API: ${local.tg ? "OK" : "NO"}`,
+    `initData: ${local.initData?.length || 0}`,
+    `qid: ${local.qid ? String(local.qid).slice(0, 10) : "none"}`,
+    `user: ${local.user?.id || "none"}`,
+    `bot: ${debugBot || "none"}`,
+    `nonce: ${debugNonce || "none"}`,
+    `platform: ${local.tg?.platform || "n/a"}`,
+    `version: ${local.tg?.version || "n/a"}`,
+  ].join(" | ");
+  debugInfo.textContent = info;
+}
+
+if (debugEnabled && debugPanel) {
+  debugPanel.classList.add("show");
+  renderDebugInfo();
+  setDebugStatus(tgReady ? "READY" : "NO TG");
+}
+
+if (debugPanel) {
+  const debugActions = debugPanel.querySelector(".debug-actions");
+  if (debugActions) {
+    const openBtn = document.createElement("button");
+    openBtn.className = "debug-btn";
+    openBtn.textContent = "OPEN VIA BOT";
+    openBtn.addEventListener("click", openViaDeepLink);
+    debugActions.appendChild(openBtn);
+  }
 }
 
 applyMiniAppLock();
 let miniCheckCount = 0;
 const miniCheckTimer = setInterval(() => {
   applyMiniAppLock();
+  if (debugEnabled) renderDebugInfo();
   miniCheckCount += 1;
   if (isMiniAppReady() || miniCheckCount >= 15) {
     clearInterval(miniCheckTimer);
@@ -254,7 +324,7 @@ function renderCart() {
 
   updateCartBadge();
   updateCartTotal();
-  checkoutBtn.disabled = state.cart.items.length === 0;
+  checkoutBtn.disabled = !isMiniAppReady() || state.cart.items.length === 0;
 }
 
 function updateQty(id, qty) {
@@ -509,6 +579,13 @@ leadTg.addEventListener("change", updateLeadState);
 
 leadSend.addEventListener("click", async () => {
   console.log("CLICK submit");
+  if (!isMiniAppReady()) {
+    leadHint.textContent = MINI_APP_ERROR;
+    leadHint.style.color = "#ff5a5a";
+    leadHint.classList.add("show");
+    leadSend.disabled = true;
+    return;
+  }
   const name = leadName.value.trim();
   const phoneRaw = leadPhone.value.trim();
   const phoneDigits = normalizePhone(phoneRaw);
@@ -525,11 +602,15 @@ leadSend.addEventListener("click", async () => {
   const tgUser = localCtx.user || {};
   const payload = {
     type: "lead_order",
+    bot: debugBot || null,
+    nonce: debugNonce || null,
     order_id: makeOrderId(),
     ts: Date.now(),
-    name,
-    phone: phoneRaw,
-    comment: leadComment.value.trim() || "",
+    contact: {
+      name,
+      phone: phoneRaw,
+      comment: leadComment.value.trim() || "",
+    },
     items: state.cart.items.map((it) => ({
       id: it.id,
       title: it.title,
@@ -540,24 +621,74 @@ leadSend.addEventListener("click", async () => {
     source: {
       webapp: true,
       page_url: location.href,
-      build: BUILD_ID,
     },
-    tg_user_id: tgUser.id ?? null,
-    tg_username: tgUser.username ?? null,
-    tg_first_name: tgUser.first_name ?? null,
-    tg_last_name: tgUser.last_name ?? null,
+    tg_user: {
+      id: tgUser.id ?? null,
+      username: tgUser.username ?? null,
+      first_name: tgUser.first_name ?? null,
+      last_name: tgUser.last_name ?? null,
+    },
   };
 
+  console.log(
+    "tg exists",
+    !!localCtx.tg,
+    "initData",
+    localCtx.initData?.length,
+    "initDataUnsafe",
+    localCtx.tg?.initDataUnsafe
+  );
+  if (debugEnabled) {
+    setDebugStatus("SENDING...");
+  }
+
+  const payloadStr = JSON.stringify(payload);
+  console.log("PAYLOAD", payloadStr);
+  if (!localCtx.tg) {
+    leadHint.textContent = MINI_APP_ERROR;
+    leadHint.classList.add("show");
+    leadSend.disabled = false;
+    leadSend.textContent = "Отправить заявку";
+    if (debugEnabled) {
+      setDebugStatus("NO TG");
+    }
+    return;
+  }
+  if (!localCtx.initData) {
+    leadHint.textContent = MINI_APP_ERROR;
+    leadHint.classList.add("show");
+    leadSend.disabled = false;
+    leadSend.textContent = "Отправить заявку";
+    if (debugEnabled) {
+      setDebugStatus("NO INIT_DATA");
+    }
+    return;
+  }
+  if (payloadStr.length > 3800) {
+    leadHint.textContent = "Слишком большой заказ, уберите часть позиций";
+    leadHint.classList.add("show");
+    leadSend.disabled = false;
+    leadSend.textContent = "Отправить заявку";
+    if (debugEnabled) {
+      setDebugStatus("PAYLOAD TOO LARGE");
+    }
+    return;
+  }
   try {
-    await sendRelay(payload);
+    debugAlert(`DEBUG: sendData called nonce=${debugNonce || "none"} len=${payloadStr.length}`);
+    localCtx.tg.sendData(payloadStr);
+    debugAlert("DEBUG: sendData done");
     if (localCtx.tg?.HapticFeedback) {
       localCtx.tg.HapticFeedback.notificationOccurred("success");
     }
-    leadHint.textContent = "✅ Заявка отправлена";
+    leadHint.textContent = "Заявка отправлена, менеджер свяжется";
     leadHint.classList.add("show");
     state.cart.items = [];
     saveCart();
     renderCart();
+    if (debugEnabled) {
+      setDebugStatus("SENT");
+    }
     if (localCtx.tg?.showPopup) {
       localCtx.tg.showPopup({ message: "✅ Заявка отправлена" });
     } else if (localCtx.tg?.showAlert) {
@@ -568,19 +699,58 @@ leadSend.addEventListener("click", async () => {
       closeDrawer();
       leadHint.classList.remove("show");
       localCtx.tg?.close?.();
-      leadSend.textContent = "Отправить заявку";
     }, 200);
   } catch {
-    leadHint.textContent = "Ошибка отправки, попробуйте еще раз";
+    leadHint.textContent = "Не удалось отправить заявку, попробуйте еще раз";
     leadHint.classList.add("show");
     leadSend.disabled = false;
     leadSend.textContent = "Отправить заявку";
+    if (debugEnabled) {
+      setDebugStatus("SEND FAILED");
+    }
   }
 });
 
 scrollTopBtn.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
+
+if (debugEnabled) {
+  debugCopy?.addEventListener("click", async () => {
+    renderDebugInfo();
+    const text = debugInfo?.textContent || "";
+    try {
+      await navigator.clipboard.writeText(text);
+      setDebugStatus("COPIED");
+    } catch {
+      setDebugStatus("COPY FAILED");
+    }
+  });
+
+  debugTest?.addEventListener("click", async () => {
+    const payload = JSON.stringify({ type: "ping", bot: debugBot || null, nonce: debugNonce || null, ts: Date.now() });
+    const local = await waitForInitData();
+    if (!local.tg) {
+      setDebugStatus("NO TG");
+      return;
+    }
+    if (!local.initData) {
+      setDebugStatus("NO INIT_DATA");
+      return;
+    }
+    setDebugStatus("TEST SENDING...");
+    try {
+      debugAlert(`DEBUG: sendData called nonce=${debugNonce || "none"} len=${payload.length}`);
+      local.tg.sendData(payload);
+      setDebugStatus("TEST SENT");
+      setTimeout(() => {
+        local.tg?.close?.();
+      }, 200);
+    } catch {
+      setDebugStatus("TEST FAILED");
+    }
+  });
+}
 
 renderCart();
 loadCatalog();
