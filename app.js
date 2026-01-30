@@ -24,10 +24,13 @@ const leadHint = document.getElementById("leadHint");
 const leadCancel = document.getElementById("leadCancel");
 const leadSend = document.getElementById("leadSend");
 
+const FAVORITES_KEY = "qb_favorites";
+
 const state = {
   baseItems: [],
   items: [],
   cart: loadCart(),
+  favorites: loadFavorites(),
 };
 
 const RELAY_URL = "https://qbstore-relay.senoxone.workers.dev";
@@ -232,6 +235,42 @@ function getStorage(item) {
   const num = parseInt(raw, 10);
   if (!Number.isNaN(num)) return `${num}GB`;
   return "";
+}
+
+function loadFavorites() {
+  try {
+    const raw = localStorage.getItem(FAVORITES_KEY);
+    const list = raw ? JSON.parse(raw) : [];
+    if (!Array.isArray(list)) return new Set();
+    return new Set(list);
+  } catch {
+    return new Set();
+  }
+}
+
+function saveFavorites() {
+  try {
+    const list = Array.from(state.favorites);
+    localStorage.setItem(FAVORITES_KEY, JSON.stringify(list));
+  } catch {}
+}
+
+function updateFavoriteButton(btn, isFav) {
+  btn.classList.toggle("is-fav", isFav);
+  btn.setAttribute("aria-pressed", isFav ? "true" : "false");
+  btn.textContent = isFav ? "♥" : "♡";
+  btn.title = isFav ? "В избранном" : "В избранное";
+}
+
+function toggleFavorite(itemId, btn) {
+  if (!itemId) return;
+  if (state.favorites.has(itemId)) {
+    state.favorites.delete(itemId);
+  } else {
+    state.favorites.add(itemId);
+  }
+  saveFavorites();
+  if (btn) updateFavoriteButton(btn, state.favorites.has(itemId));
 }
 
 function getSim(item) {
@@ -465,6 +504,16 @@ function renderItems(items) {
       img.src = "assets/placeholder.png";
     };
     media.appendChild(img);
+
+    const favBtn = document.createElement("button");
+    favBtn.type = "button";
+    favBtn.className = "fav-btn";
+    updateFavoriteButton(favBtn, state.favorites.has(item.id));
+    favBtn.onclick = (ev) => {
+      ev.stopPropagation();
+      toggleFavorite(item.id, favBtn);
+    };
+    media.appendChild(favBtn);
 
     const body = document.createElement("div");
     body.className = "card-body";
