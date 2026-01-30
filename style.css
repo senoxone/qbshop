@@ -51,6 +51,30 @@ body {
   backdrop-filter: blur(8px);
 }
 
+.topbar-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.fav-top-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 8px 10px;
+  border-radius: 999px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.fav-top-btn.active {
+  background: rgba(255, 74, 99, 0.18);
+  border-color: rgba(255, 74, 99, 0.5);
+}
+
 .brand {
   display: flex;
   align-items: center;

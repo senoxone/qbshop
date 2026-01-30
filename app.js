@@ -3,6 +3,8 @@ const searchInput = document.getElementById("searchInput");
 const modelFilter = document.getElementById("modelFilter");
 const sortFilter = document.getElementById("sortFilter");
 const cartBtn = document.getElementById("cartBtn");
+const favBtn = document.getElementById("favBtn");
+const favCountEl = document.getElementById("favCount");
 const cartDrawer = document.getElementById("cartDrawer");
 const drawerBackdrop = document.getElementById("drawerBackdrop");
 const drawerClose = document.getElementById("drawerClose");
@@ -31,6 +33,7 @@ const state = {
   items: [],
   cart: loadCart(),
   favorites: loadFavorites(),
+  showFavorites: false,
 };
 
 const RELAY_URL = "https://qbstore-relay.senoxone.workers.dev";
@@ -255,6 +258,11 @@ function saveFavorites() {
   } catch {}
 }
 
+function updateFavoritesCount() {
+  if (!favCountEl) return;
+  favCountEl.textContent = String(state.favorites.size);
+}
+
 function updateFavoriteButton(btn, isFav) {
   btn.classList.toggle("is-fav", isFav);
   btn.setAttribute("aria-pressed", isFav ? "true" : "false");
@@ -270,7 +278,9 @@ function toggleFavorite(itemId, btn) {
     state.favorites.add(itemId);
   }
   saveFavorites();
+  updateFavoritesCount();
   if (btn) updateFavoriteButton(btn, state.favorites.has(itemId));
+  if (state.showFavorites) applyFilters();
 }
 
 function getSim(item) {
@@ -574,6 +584,10 @@ function applyFilters() {
     return hay.includes(q);
   });
 
+  if (state.showFavorites) {
+    result = result.filter((item) => state.favorites.has(item.id));
+  }
+
   const sort = sortFilter.value;
   if (sort === "cheap") {
     result = result.slice().sort((a, b) => a.price - b.price);
@@ -616,6 +630,15 @@ async function loadCatalog() {
 searchInput.addEventListener("input", applyFilters);
 modelFilter.addEventListener("change", applyFilters);
 sortFilter.addEventListener("change", applyFilters);
+
+if (favBtn) {
+  favBtn.addEventListener("click", () => {
+    state.showFavorites = !state.showFavorites;
+    favBtn.classList.toggle("active", state.showFavorites);
+    favBtn.setAttribute("aria-pressed", state.showFavorites ? "true" : "false");
+    applyFilters();
+  });
+}
 
 cartBtn.addEventListener("click", () => {
   renderCart();
@@ -799,4 +822,5 @@ if (debugEnabled) {
 }
 
 renderCart();
+updateFavoritesCount();
 loadCatalog();
