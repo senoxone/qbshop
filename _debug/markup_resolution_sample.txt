@@ -14,17 +14,17 @@ model="iPhone 16 Pro" -> line_key="iphone 16 pro" -> used="iphone 16 pro" -> mar
 model="iPhone 16" -> line_key="iphone 16" -> used="iphone 16" -> markup=6000 | exact
 model="iPhone 16 Pro Max" -> line_key="iphone 16 pro max" -> used="iphone 16 pro max" -> markup=7500 | exact
 model="iPhone 16 Pro Max" -> line_key="iphone 16 pro max" -> used="iphone 16 pro max" -> markup=7500 | exact
-model="iPhone 17 Pro Max" -> line_key="iphone 17 pro max" -> used="iphone 17 pro max" -> markup=15000 | exact
 model="iPhone 17 Pro" -> line_key="iphone 17 pro" -> used="iphone 17 pro" -> markup=12000 | exact
+model="iPhone 17 Pro Max" -> line_key="iphone 17 pro max" -> used="iphone 17 pro max" -> markup=15000 | exact
 model="iPhone 16 Pro Max" -> line_key="iphone 16 pro max" -> used="iphone 16 pro max" -> markup=7500 | exact
 model="iPhone 17 Pro Max" -> line_key="iphone 17 pro max" -> used="iphone 17 pro max" -> markup=15000 | exact
 model="iPhone 17 Pro" -> line_key="iphone 17 pro" -> used="iphone 17 pro" -> markup=12000 | exact
 model="iPhone 16 Pro" -> line_key="iphone 16 pro" -> used="iphone 16 pro" -> markup=7000 | exact
 model="iPhone 16" -> line_key="iphone 16" -> used="iphone 16" -> markup=6000 | exact
-model="iPhone 16 Pro" -> line_key="iphone 16 pro" -> used="iphone 16 pro" -> markup=7000 | exact
 model="iPhone 17 Pro Max" -> line_key="iphone 17 pro max" -> used="iphone 17 pro max" -> markup=15000 | exact
 model="iPhone 16" -> line_key="iphone 16" -> used="iphone 16" -> markup=6000 | exact
 model="iPhone 17 Pro Max" -> line_key="iphone 17 pro max" -> used="iphone 17 pro max" -> markup=15000 | exact
 model="iPhone 17 Pro Max" -> line_key="iphone 17 pro max" -> used="iphone 17 pro max" -> markup=15000 | exact
 model="iPhone 17 Pro" -> line_key="iphone 17 pro" -> used="iphone 17 pro" -> markup=12000 | exact
 model="iPhone 17 Pro" -> line_key="iphone 17 pro" -> used="iphone 17 pro" -> markup=12000 | exact
+model="iPhone 16" -> line_key="iphone 16" -> used="iphone 16" -> markup=6000 | exact
