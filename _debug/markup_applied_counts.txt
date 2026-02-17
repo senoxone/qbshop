@@ -5,16 +5,16 @@ iphone 12	markup=5000	count=3
 iphone 12 mini	markup=5000	count=1
 iphone 13	markup=7000	count=8
 iphone 13 mini	markup=7000	count=1
-iphone 14	markup=7000	count=17
+iphone 14	markup=7000	count=15
 iphone 14 plus	markup=7000	count=13
-iphone 15	markup=5500	count=14
-iphone 15 plus	markup=5500	count=18
+iphone 15	markup=5500	count=12
+iphone 15 plus	markup=5500	count=17
 iphone 15 pro	markup=6000	count=15
 iphone 15 pro max	markup=6000	count=11
 iphone 16	markup=6000	count=12
 iphone 16 plus	markup=5500	count=15
-iphone 16 pro	markup=7000	count=17
-iphone 16 pro max	markup=7500	count=16
+iphone 16 pro	markup=7000	count=16
+iphone 16 pro max	markup=7500	count=14
 iphone 16e	markup=6500	count=6
 iphone 17	markup=10000	count=20
 iphone 17 pro	markup=12000	count=18
