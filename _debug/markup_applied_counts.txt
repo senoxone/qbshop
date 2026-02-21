@@ -3,10 +3,10 @@ default=5000
 map_size=16
 iphone 12	markup=5000	count=3
 iphone 12 mini	markup=5000	count=1
-iphone 13	markup=7000	count=8
-iphone 13 mini	markup=7000	count=1
-iphone 14	markup=7000	count=18
-iphone 14 plus	markup=7000	count=13
+iphone 13	markup=5000	count=8
+iphone 13 mini	markup=5000	count=1
+iphone 14	markup=5500	count=18
+iphone 14 plus	markup=5500	count=13
 iphone 15	markup=5500	count=14
 iphone 15 plus	markup=5500	count=19
 iphone 15 pro	markup=6000	count=15
