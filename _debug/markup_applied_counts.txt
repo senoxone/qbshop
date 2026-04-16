@@ -18,7 +18,7 @@ iphone 16 pro max	markup=7500	count=15
 iphone 16e	markup=6500	count=5
 iphone 17	markup=10000	count=20
 iphone 17 pro	markup=12000	count=18
-iphone 17 pro max	markup=15000	count=24
+iphone 17 pro max	markup=15000	count=26
 iphone 17e	markup=10000	count=8
 iphone air	markup=7500	count=12
 iphone se	markup=5000	count=3
