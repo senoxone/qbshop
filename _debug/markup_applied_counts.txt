@@ -8,7 +8,7 @@ iphone 14	markup=5500	count=13
 iphone 14 plus	markup=5500	count=9
 iphone 15	markup=5500	count=10
 iphone 15 plus	markup=5500	count=15
-iphone 15 pro	markup=6000	count=10
+iphone 15 pro	markup=6000	count=9
 iphone 15 pro max	markup=6000	count=14
 iphone 16	markup=6000	count=11
 iphone 16 plus	markup=5500	count=13
