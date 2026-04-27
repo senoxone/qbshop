@@ -1,0 +1,2 @@
+status=502
+url=https://syomastore.ru/category/smartfony-apple/
